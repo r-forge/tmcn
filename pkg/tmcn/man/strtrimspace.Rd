@@ -1,0 +1,28 @@
+\name{strtrimspace}
+\alias{strtrimspace}
+\title{Trim space of a string.}
+\usage{
+  strtrimspace(string, side = c("both", "left", "right"))
+}
+\arguments{
+  \item{string}{A character vector.}
+
+  \item{side}{Which side of the string to be trimed,
+  'both', 'left' or 'right'.}
+}
+\value{
+  Trimed vector.
+}
+\description{
+  Trim space of a string.
+}
+\examples{
+\dontrun{
+strtrimspace(c("\\taaaa ", " bbbb    "))
+}
+}
+\author{
+  Jian Li <\email{rweibo@sina.com}>
+}
+\keyword{string}
+

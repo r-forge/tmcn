@@ -1,0 +1,401 @@
+<html>
+	<head>
+		<title>Pocket CRF</title>
+		<link type="text/css" rel="stylesheet" href="default.css">
+	</head>
+
+<body>
+	<h1>Pocket CRF</h1>
+	<h2>Contents</h2>
+	<ul>
+      		<li><a href="#introduction">Introduction</a></li>
+      		<li><a href="#highlights">Highlights</a></li>
+      		<li><a href="#news">News</a></li>
+      		<li><a href="#usage">Usage</a></li>
+      		<li><a href="#reference">Reference</a></li>
+      		<li><a href="#todo">To do</a></li>
+      	</ul>
+	<h2><a name="introduction">Introduction</a></h2>
+      	<p>Pocket CRF is a simple open source <a href="http://www.cis.upenn.edu/~pereira/papers/crf.pdf">Conditional Random Fields (CRFs)</a>
+      	package, developed for practical sequence labeling tasks in NLP research. </p>
+      	
+      	
+	<h2><a name="highlights">Highlights</a></h2>
+	<ul>
+		<li>No order limitation: Any n-gram features can be adopted for	training and testing.</li>
+		<li>Can handle real valued features</li>
+		<li>Use L1 norm regularization for fast feature selection.</li>
+		<li>Multi-thread training.</li>
+		<li>Less memory requirement for training.</li>
+		<li>Can perform averaged perceptron and passive aggressive training.</li>
+		<li>Use LBFGS method for fast training.</li>
+		<li>Can perform n-best outputs.</li>
+		<li>Can output marginal probabilities for all candidates.</li>
+	</ul>
+	
+	
+	<h2><a name="news">News</a></h2>
+	<ul>
+		<li>Pocket CRF 0.47</li>
+		<ul>
+			<li>Fast decoding using double array trie.</li>
+			<li>Test option "-m" in old version is replaced by two options "-m" and "-p", see "Options in crf_test command"</li>
+		</ul>
+
+		<li>Pocket CRF 0.46</li>
+		<ul>
+			<li>Can handle real valued features</li>
+			<li>Code clean</li>
+			<li>Option '-l' is not supported, it is replaced by option '-a 3', see "Options in crf_learn command" for details</li>
+			<li>Old APIs and model files are not supported</li>
+		</ul>
+		<li>Pocket CRF 0.45</li>
+		<ul>
+			<li>Support online passive aggressive learning, which requires much less iterations than CRF, while keeps comparable performance. To use passive aggressive, add option "-a 2" in training command. Note that the iteration number should be specified, e.g. "-i 10"</li>
+			<li>Add option "-m" to for efficient training: load all data into memory for fast training, or save them to disk to reduce memory cost.</li>
+			<li>Support union of features, see "training file format".</li>
+		</ul>
+		<li>Pocket CRF 0.44</li>
+		<ul>
+			<li>Speed up first order markov chain training</li>
+			<li>Add averaged perceptron training algorithm, which requires much less iterations than CRF, while keeps comparable performance. 
+			To use averaged perceptron, add option "-a 1" in training command. Note that the iteration number should be specified 
+			when average perceptron used. e.g. "-i 10"</li>
+			<li>Add option "-d" to specify iteration depth in LBFGS</li>
+			<li>Templates share the same "%y" no longer need arranged closedly</li>
+		</ul>
+		<li>Pocket CRF 0.43</li>
+		<ul>
+			<li>Fix several bugs</li>
+			<li>Less memory requirement for training, which implies you could use much more features than before. Empirically, 
+			you could use more than 30,000,000 features on 32 bit 2G memory system. Memory requirement grows when more threads
+			used. The cost is additional disk space requirement, the volume is (sometimes more than) 128*feature_number 
+			bytes, e.g., if you use 10,000,000 features, 1.28 G disk space is required. And training process is a little bit
+			longer due to the IO operation. However, for large training data set, the additional time cost is trivial compared
+			with the whole training process.</li>
+		</ul>
+	</ul>
+	<ul>
+		<li>Pocket CRF 0.42</li>
+		<ul>
+			<li>Fix several bugs</li>
+			<li>Support empty features</li>
+			<li>Provide command</li>
+			<li>Old APIs in version 0.41 are remained</li>
+		</ul>
+	</ul>
+	<ul>
+		<li>Pocket CRF 0.41</li>
+		<ul>
+			<li>Refine feature count cut off method</li>
+			<li>Can perform L1 norm regularization for feature selection</li>
+			<li>Can perform multi-thread training</li>
+			<li>Old APIs in version 0.40 are remained, can read version 0.40 model file</li>
+		</ul>
+	</ul>
+
+	<h2><a name="usage">Usage</a></h2>
+	<ul>
+		<li>Testing Pocket CRF on your computer</li>
+		<p>After downloading Pocket CRF package, unzip it, and switch to the directory that contains this document.<br>
+		If you are in Windows platform, type the following command to learn model:<br>
+		<b>crf_learn chunking_template chunking_train model</b><br>
+		After learning, type the following command to test:<br>
+		<b>crf_test model chunking_key result</b><br>
+		When you see "label precision:0.936", this means Pocket CRF has run correctly on your computer.<br><br>
+		If you use Linux or cgywin, you could follow the steps below:<br>
+		Type command to generate crf_test:<br>
+		<b>make</b><br>
+		<b>mv crf crf_test</b><br>
+		Edit main.cpp, go to line 391 change the code "return main_test(argc,argv);" to "return main_learn(argc,argv);"<br>
+		Quit editing, type command to generate crf_learn:<br>
+		<b>make</b><br>
+		<b>mv crf crf_learn</b><br>
+		Then type command to test:<br>
+		<b>./crf_learn chunking_template chunking_train model</b><br>
+		<b>./crf_test model chunking_key result</b><br>
+		Then you will see "label precision:0.936", testing success!<br>
+		</p>
+		
+		<li>Training</li>
+		<p>
+		To use Pocket CRF for training model, use command like "<b>crf_learn chunking_template chunking_train model</b>". Here 3 file names should
+		be given one by one: template file, train file, model file. In this example, the 3 names are "chunking_template","chunking_train","model".
+		The first 2 files should be prepared, and the last file is generated by Pocket CRF.</p>
+		<li>Training file format</li>
+		<p>Training data should be arranged like tables in the file. Each table denotes a labeled sequence. Use enter character to 
+		separate the tables. Each row in the table denotes the observation(s) and the labels for the corresponding token, separated by
+		tabular character. Number of columns should be fixed through out, and the last column denotes the label sequence. 
+		Each cell in the row denotes union of observation(s), separated by space. 
+                Here is an example: </p>
+		<pre>
+At	IN	IN DT JJ	O
+the	DT	IN DT JJ NN	B
+same	JJ	IN DT JJ NN ,	I
+time	NN	DT JJ NN , PRP	I
+,	,	JJ NN , PRP VBZ	O
+he	PRP	NN , PRP VBZ RB	B
+remains	VBZ	, PRP VBZ RB JJ	O
+fairly	RB	PRP VBZ RB JJ IN	O
+pessimistic	JJ	VBZ RB JJ IN DT	O
+about	IN	RB JJ IN DT NN	O
+the	DT	JJ IN DT NN IN	B
+outlook	NN	IN DT NN IN NNS	I
+for	IN	DT NN IN NNS ,	O
+imports	NNS	NN IN NNS , VBN	B
+,	,	IN NNS , VBN VBD	O
+given	VBN	NNS , VBN VBD JJ	O
+continued	VBD	, VBN VBD JJ NN	B
+high	JJ	VBN VBD JJ NN CC	I
+consumer	NN	VBD JJ NN CC NN	I
+and	CC	JJ NN CC NN NNS	I
+capital	NN	NN CC NN NNS NNS	I
+goods	NNS	CC NN NNS NNS .	I
+inflows	NNS	NN NNS NNS .	I
+.	.	NNS NNS .	O
+
+He	PRP	PRP VBZ DT	B
+reckons	VBZ	PRP VBZ DT JJ	O
+the	DT	PRP VBZ DT JJ NN	B
+current	JJ	VBZ DT JJ NN NN	I
+account	NN	DT JJ NN NN MD	I
+deficit	NN	JJ NN NN MD VB	I
+will	MD	NN NN MD VB TO	O
+narrow	VB	NN MD VB TO RB	O
+to	TO	MD VB TO RB #	O
+only	RB	VB TO RB # CD	B
+#	#	TO RB # CD CD	I
+1.8	CD	RB # CD CD IN	I
+billion	CD	# CD CD IN NNP	I
+in	IN	CD CD IN NNP .	O
+September	NNP	CD IN NNP .	B
+.	.	IN NNP .	O
+		</pre>
+		<p>First column denotes the word of each token, second column denotes their part of speech, third column denotes surrounding part of speech tags within window size 5, last column is label.</p>
+		
+		<p>If you use real valued features, format of each observation is "FeatureString:FeatureValue", for example, training corpus above is equivalent to the following:</p>
+		<pre>
+At:1	IN:1	DT:1 IN:1 JJ:1	O
+the:1	DT:1	DT:1 IN:1 JJ:1 NN:1	B
+same:1	JJ:1	,:1 DT:1 IN:1 JJ:1 NN:1	I
+time:1	NN:1	,:1 DT:1 JJ:1 NN:1 PRP:1	I
+,:1	,:1	,:1 JJ:1 NN:1 PRP:1 VBZ:1	O
+he:1	PRP:1	,:1 NN:1 PRP:1 RB:1 VBZ:1	B
+remains:1	VBZ:1	,:1 JJ:1 PRP:1 RB:1 VBZ:1	O
+fairly:1	RB:1	IN:1 JJ:1 PRP:1 RB:1 VBZ:1	O
+pessimistic:1	JJ:1	DT:1 IN:1 JJ:1 RB:1 VBZ:1	O
+about:1	IN:1	DT:1 IN:1 JJ:1 NN:1 RB:1	O
+the:1	DT:1	DT:1 IN:2 JJ:1 NN:1	B
+outlook:1	NN:1	DT:1 IN:2 NN:1 NNS:1	I
+for:1	IN:1	,:1 DT:1 IN:1 NN:1 NNS:1	O
+imports:1	NNS:1	,:1 IN:1 NN:1 NNS:1 VBN:1	B
+,:1	,:1	,:1 IN:1 NNS:1 VBD:1 VBN:1	O
+given:1	VBN:1	,:1 JJ:1 NNS:1 VBD:1 VBN:1	O
+continued:1	VBD:1	,:1 JJ:1 NN:1 VBD:1 VBN:1	B
+high:1	JJ:1	CC:1 JJ:1 NN:1 VBD:1 VBN:1	I
+consumer:1	NN:1	CC:1 JJ:1 NN:2 VBD:1	I
+and:1	CC:1	CC:1 JJ:1 NN:2 NNS:1	I
+capital:1	NN:1	CC:1 NN:2 NNS:2	I
+goods:1	NNS:1	.:1 CC:1 NN:1 NNS:2	I
+inflows:1	NNS:1	.:1 NN:1 NNS:2	I
+.:1	.:1	.:1 NNS:2	O
+
+He:1	PRP:1	DT:1 PRP:1 VBZ:1	B
+reckons:1	VBZ:1	DT:1 JJ:1 PRP:1 VBZ:1	O
+the:1	DT:1	DT:1 JJ:1 NN:1 PRP:1 VBZ:1	B
+current:1	JJ:1	DT:1 JJ:1 NN:2 VBZ:1	I
+account:1	NN:1	DT:1 JJ:1 MD:1 NN:2	I
+deficit:1	NN:1	JJ:1 MD:1 NN:2 VB:1	I
+will:1	MD:1	MD:1 NN:2 TO:1 VB:1	O
+narrow:1	VB:1	MD:1 NN:1 RB:1 TO:1 VB:1	O
+to:1	TO:1	#:1 MD:1 RB:1 TO:1 VB:1	O
+only:1	RB:1	#:1 CD:1 RB:1 TO:1 VB:1	B
+#:1	#:1	#:1 CD:2 RB:1 TO:1	I
+1.8:1	CD:1	#:1 CD:2 IN:1 RB:1	I
+billion:1	CD:1	#:1 CD:2 IN:1 NNP:1	I
+in:1	IN:1	.:1 CD:2 IN:1 NNP:1	O
+September:1	NNP:1	.:1 CD:1 IN:1 NNP:1	B
+.:1	.:1	.:1 IN:1 NNP:1	O
+		</pre>
+		<p>Real numbers after colons are the feature values. Another example is text classification. The corpus is like</p>
+		<pre>
+(5,000:8.83768 (ccc):3.72569 .:0.615933 ..:1.37432 10,000:4.41884 19,:3.72569 1986,:2.02095 1987,:4.6788 1988,:3.72569 27,:4.41884 473.99:4.41884 8,500:4.41884 accept:3.32023 add:2.3394 agricultur:2.22162 announc:2.47293 august,:3.72569 bid:3.72569 bonus:11.1771 ccc:3.72569 commod:6.06509 corpor:3.03255 cove:3.03255 credit:2.11626 dec:4.41884 depart:4.6788 dlr:0.922333 egypt:4.41884 egypt,:4.41884 enhanc:3.32023 export:2.56669 feb:3.72569 food,:3.72569 form:3.03255 froz:11.1771 fry:4.41884 gress:4.41884 initiat:3.32023 intern:1.93393 leg.:4.41884 made:2.3394 novemb,:4.41884 off:3.32023 paid:3.72569 poultr:9.09764 program:3.72569 remain:2.02095 sale:2.47293 serv:3.72569 ship:2.47293 stock.:3.72569 subsid:2.62708 ton:3.15463 ton),:4.41884 ton).:4.41884	carcass
+
+":3.2925 (japan):4.41884 (tea):4.41884 ,":2.8094 -year:4.41884 .:1.23187 ..:16.4918 10:2.62708 177,000:4.41884 1977:4.41884 1988,:3.72569 2000:4.41884 27.14:4.41884 28.51:4.41884 3.2:3.72569 47.42:4.41884 480:4.41884 58,400:4.41884 6.5:3.72569 700,000:4.41884 78:3.72569 800,000:3.72569 9.77:4.41884 administ:4.41884 aggress:3.32023 agree:1.93393 agricultur:4.44323 americ,:4.41884 annual,:4.41884 april,:4.41884 april.:4.41884 asian:4.41884 assist:3.72569 assoc:3.72569 attribut:3.72569 aver:9.96068 awar:8.83768 award:3.32023 beef:42.0333 beef,:3.32023 beef.:4.41884 billion:2.32149 bright:4.41884 buy:6.06509 call:2.8094 campaign:6.64046 caus:2.62708 compar:1.52847 complet:3.03255 confer:4.41884 constrain:4.41884 consum:14.8376 current:2.56669 decreas:3.03255 depart:2.3394 direct:2.3394 dlr:7.37866 eat:4.41884 end:1.85389 expand:2.47293 expect:1.58563 expir:4.41884 export:5.13339 export,":4.41884 fall.:3.72569 federat:9.09764 federat.:3.72569 foreign:2.47293 fund:2.62708 govern:1.71079 gradual:3.72569 heavy:3.32023 high:4.4232 hope:2.62708 impl:4.41884 import:5.69243 import.:4.41884 increas:5.13339 industr:3.42158 japan:29.009 japan,:4.41884 japan-produc:4.41884 japan.:3.72569 launch:7.45139 lb.:3.03255 lbs:8.83768 level,:8.83768 liber:3.72569 lift:3.72569 limit:3.32023 made:4.6788 major:2.47293 march:2.47293 market:4.23251 meat:21.2278 mln:2.26584 modest:3.72569 negot:3.72569 offic:6.87159 partial:4.41884 pay:3.72569 persuad:4.41884 philip:4.41884 point:3.32023 pound,:4.41884 press:3.72569 pressur.:4.41884 pric:1.64625 pric,:3.32023 program,:3.72569 promis:4.41884 promot:8.83768 protect:3.32023 qual:4.41884 quot:23.2416 quot,:4.41884 quot.:8.83768 reag:4.41884 relax:4.41884 remov:8.83768 restaur:8.83768 retail:3.72569 sale:2.47293 sell:5.25416 seng:8.83768 seng,:4.41884 set:2.3394 ship:2.47293 shop:3.72569 spot:3.72569 steak:4.41884 steak,:4.41884 striploin:4.41884 suppl:2.22162 system,:4.41884 target:3.72569 tenderloin:4.41884 time:2.62708 today.:3.72569 told:2.11626 ton:2.10309 ton,:2.3394 ton.:2.47293 total:2.9488 underway:4.41884 year:2.17327 year,:3.55957	carcass
+
+,:1.37432 ..:1.37432 150:3.72569 175-225:4.41884 450:3.03255 alcan:2.47293 alumin:0.755279 anod:4.41884 baie:4.41884 baie,:4.41884 compan:1.123 cost:8.08378 cut:5.25416 decid:2.22162 dlr:0.922333 dlr,:2.22162 dlr.:2.3394 end:1.85389 enhanc:3.32023 estimat:5.25416 expect:1.58563 grand:8.83768 held:3.72569 ky.,:4.41884 laterrier,:4.41884 low:1.93393 mid-,:3.72569 mln:2.26584 phas:3.72569 plan:3.55957 prebak:4.41884 prim:1.71079 project:2.3394 quebec,:8.83768 rang:3.32023 reason.:4.41884 reduc:2.11626 result,:4.41884 sebree,:4.41884 smelt:5.13237 techn.:4.41884 technolg:4.41884 total:1.4744	alum
+		</pre>
+		<p>Each table is an article. Since articles are independently classified, so they are separated by blank line, that is, each table has exactly one row. Each row has two cells, 
+		the first cell is the words (after stemming, and stopwords are removed) and their TFIDF values. For example, in observation "(5,000:8.83768", the word is "(5,000", 
+		its TFIDF value is "8.83768". The second cell is class label.</p>
+		
+		<li>Template file format</li>
+		<p>Each line in the template file denotes one template. Each template is designed in the format: <br>
+		%x[<b>i1</b>,<b>j1</b>]%x[<b>i2</b>,<b>j2</b>] ... %x[<b>im</b>,<b>jm</b>]%y[<b>k1</b>]%y[<b>k2</b>]...%y[0]<br>
+		Bold parts are customized parameters. The first index (i1,...,im) of x specified the relative position from the current focusing token,
+		while the second index (j1,...,jm) of x specified absolute position of the column. Index of y specified the label of the token in the relative position.
+		Here are some attentions:<br></p>
+		<ul>
+			<li>Indexes of y in each template (k1,...,kn) should be arranged in ascending order, with kn = 0. 
+			Any templates with kn unequal to 0 can be regularized to the above format by subtract kn from the first index of each x
+			(i1-kn,i2-kn,...,im-kn) and index of y (k1-kn,...,kn-kn)</li>
+		</ul>
+		<p>Here is an example: <br>Training data</p>
+		<pre>
+He      PRP     PRP VBZ DT      B
+reckons VBZ     PRP VBZ DT JJ   O
+the     DT      PRP VBZ DT JJ NN        B
+current JJ      VBZ DT JJ NN NN I
+account NN      DT JJ NN NN MD  I
+deficit NN      JJ NN NN MD VB  I		<= current token
+will    MD      NN NN MD VB TO  O
+narrow  VB      NN MD VB TO RB  O
+to      TO      MD VB TO RB #   O
+only    RB      VB TO RB # CD   B
+#       #       TO RB # CD CD   I
+1.8     CD      RB # CD CD IN   I
+billion CD      # CD CD IN NNP  I
+in      IN      CD CD IN NNP .  O
+September       NNP     CD IN NNP .     B
+.       .       IN NNP .        O
+		</pre>
+		<pre>
+templates			generated features
+
+%x[-1,0]%y[0]			if previous word is "account", then current label is "B"
+				if previous word is "account", then current label is "I"
+				if previous word is "account", then current label is "O"
+				
+%x[0,1]%y[0]			if current pos is "NN", then current label is "B"
+				if current pos is "NN", then current label is "I"
+				if current pos is "NN", then current label is "O"
+
+%x[0,2]%y[0]			if the surrounding part of speech tags contain "JJ", then current label is "B"
+				if the surrounding part of speech tags contain "JJ", then current label is "I"
+				if the surrounding part of speech tags contain "JJ", then current label is "O"
+				if the surrounding part of speech tags contain "NN", then current label is "B".
+					Since "NN" appears twice in this cell, such feature function value is 2.
+				if the surrounding part of speech tags contain "NN", then current label is "I"
+				if the surrounding part of speech tags contain "NN", then current label is "O"
+				...
+		</pre>
+		<p>Another example:</p>
+		<pre>
+illegal				legal
+
+%x[-1,0]%x[1,0]%y[0]%y[1]	%x[-2,0]%x[0,0]%y[-1]%y[0]
+		</pre>
+		<p>Here , first illegal template ended with y[1], it should be regularized. </p>	
+			
+		<li>Empty features</li>
+		<p>
+		In some case, features could be empty. For example, in Chinese word part of speech tagging, if you choose the second Chinese character
+		in word as feature, then for single character words, this feature is empty. In such case, set this cell with "" (empty string).
+		</p>
+		
+		<li>Options in crf_learn command</li>
+		<p>
+		Several training options could be added to Pocket CRF, as a more complex case, type command:<br>
+		<b>crf_learn -i 100 chunking_template chunking_train model</b><br>
+		Here "-i 100" tells Pocket CRF to train no more than 100 iterations. Defaultly, this parameter is 10000.<br>
+		All the training options are given below:
+		</p>
+		<table border=1>
+		<tr><td>option</td><td>type</td><td>default</td><td>meaning</td></tr>
+		<tr><td>-h</td><td></td><td></td><td>Print help message.</td></tr>
+		<tr><td>-c</td><td>double</td><td>1</td><td>Training prior. If option '-a 0', then this is Gaussian smooth factor, with low value, CRF trends to underfit the training sample, with high vaule, CRF trend to overfit.
+								If option '-a 2', then this is prior for passive-aggressive learning.
+								If option '-a 3', then this is l1 norm regularizer for fast feature selection. With higher l1 value, CRF selected more features.
+
+								
+		<tr><td>-f</td><td>int</td><td>0</td><td>Frequency threshold. Features occur less than the threshold are eliminated. Usually, set "-f 1" to use all features, when features are too many to store in the memory, set higher value to eliminated rare features. </td></tr>
+		<tr><td>-p</td><td>int</td><td>1</td><td>Thread number for multi-thread training</td></tr>
+		<tr><td>-i</td><td>int</td><td>10000</td><td>Max iteration number.</td></tr>
+		<tr><td>-e</td><td>double</td><td>0.0001</td><td>Controls the training precision</td></tr>
+		<tr><td>-d</td><td>int</td><td>5</td><td>Iteration depth in LBFGS. With higher value, CRF convergence in less iteration at the cost of more hard disk space requirement.</td></tr>
+		<tr><td>-a</td><td>int</td><td>0</td><td>Training algorithm, 0: CRFs, 1: averaged perceptron, 2: passive aggressive algorithm, 3:L1 CRFs</td></tr>
+		<tr><td>-m</td><td>int</td><td>0</td><td>Efficiency of CRF training, 0: Keep all data in memory for fast training, 1: Save some data on disk to reduce memory requirement.</td></tr>
+		</table>
+		<p>
+		So you could try several other examples:<br>
+		<b>crf_learn -c 5 -a 3 -c 10000 chunking_template chunking_train model</b><br>
+		<b>crf_learn -p 2 -e 0.0000001 chunking_template chunking_train model</b><br>
+		</p>
+		
+		<li>Testing</li>
+		<p>To use Pocket CRF for testing, type command "<b>crf_test model chunking_key result</b>". Here 3 file names should
+		be given one by one: model file, key file, result file. In this example, the 3 names are "model","chunking_key","result".
+		The first 2 files should be prepared, and the last file is generated by Pocket CRF.</p>
+		
+		<li>Key file format</li>
+		<p>Key file format are exactly the same as train file.</p>
+		
+		<li>Result file format</li>
+		<p>For the simplest case "<b>crf_test model chunking_key result</b>", the result file adds one column to key file, which is the label predicts by Pocket CRF</p>
+		
+		<li>Options in crf_test command</li>
+		<p>
+		All the testing options are given below:
+		</p>
+		<table border=1>
+		<tr><td>option</td><td>type</td><td>default</td><td>meaning</td></tr>
+		<tr><td>-h</td><td></td><td></td><td>Print help message.</td></tr>
+		<tr><td>-m</td><td>int</td><td>0</td><td>0 or 1, if "-m 1", CRF will calculate the marginal probability for each label.</td></tr>
+		<tr><td>-p</td><td>int</td><td>0</td><td>0 or 1, if "-p 1", CRF will calculate the label sequence probability.</td></tr>
+		<tr><td>-n</td><td>int</td><td>1</td><td>performs n best outputs.</td></tr>
+		</table>
+		
+		<li>Complex result file format</li>
+		<p>When you use option "-m" or "-n" the format of result file is a little more complex, here is an example:<br>
+		Type command "<b>crf_test -m 1 -n 2 model chunking_key result</b>", the format of result file is like:</p>
+		<pre>
+0.215599	0.188386
+Rockwell	NNP	NNP NNP NNP	B	B	B	0.971332	0.00956263	0.0191057
+International	NNP	NNP NNP NNP POS	I	I	I	0.0314838	0.952058	0.0164578
+Corp.	NNP	NNP NNP NNP POS NNP	I	I	I	0.0124564	0.865556	0.121988
+'s	POS	NNP NNP POS NNP NN	B	B	B	0.983355	0.00712179	0.00952363
+Tulsa	NNP	NNP POS NNP NN VBD	I	I	I	0.0200547	0.976798	0.00314771
+unit	NN	POS NNP NN VBD PRP	I	I	I	0.0177974	0.971673	0.0105301
+said	VBD	NNP NN VBD PRP VBD	O	O	O	0.00212388	0.00594751	0.991929
+it	PRP	NN VBD PRP VBD DT	B	B	B	0.931512	0.00249844	0.0659896
+signed	VBD	VBD PRP VBD DT JJ	O	O	O	0.00175296	0.01177	0.986477
+a	DT	PRP VBD DT JJ NN	B	B	B	0.987941	0.004259	0.00780048
+tentative	JJ	VBD DT JJ NN VBG	I	I	I	0.0105634	0.987723	0.00171371
+agreement	NN	DT JJ NN VBG PRP$	I	I	I	0.00163019	0.993041	0.00532836
+extending	VBG	JJ NN VBG PRP$ NN	O	O	O	0.0100744	0.195163	0.794763
+its	PRP$	NN VBG PRP$ NN IN	B	B	B	0.855771	0.11976	0.0244686
+contract	NN	VBG PRP$ NN IN NNP	I	I	I	0.0160464	0.969485	0.0144683
+with	IN	PRP$ NN IN NNP NNP	O	O	O	0.000604569	0.00266452	0.996731
+Boeing	NNP	NN IN NNP NNP TO	B	B	B	0.997052	0.00125232	0.00169534
+Co.	NNP	IN NNP NNP TO VB	I	I	I	0.00186632	0.967228	0.0309055
+to	TO	NNP NNP TO VB JJ	O	O	O	0.00109984	0.0151333	0.983767
+provide	VB	NNP TO VB JJ NNS	O	O	O	0.0303232	0.0016614	0.968015
+structural	JJ	TO VB JJ NNS IN	B	B	B	0.956521	0.0264189	0.0170596
+parts	NNS	VB JJ NNS IN NNP	I	I	I	0.00954294	0.972637	0.0178201
+for	IN	JJ NNS IN NNP POS	O	O	O	0.000444656	0.00116046	0.998395
+Boeing	NNP	NNS IN NNP POS CD	B	B	B	0.9699	0.00192518	0.0281745
+'s	POS	IN NNP POS CD NNS	B	B	I	0.506898	0.420992	0.0721092
+747	CD	NNP POS CD NNS .	I	I	I	0.0669382	0.914383	0.0186788
+jetliners	NNS	POS CD NNS .	I	I	I	0.0272642	0.96365	0.00908543
+.	.	CD NNS .	O	O	O	0.00117729	0.00124712	0.997576
+		</pre>
+		<p>The 2 double values in the first line are the top 2 label sequence joint probabilities. From the second line to the last, the 4th and 5th columns represent the top first and second label sequences respectively. 
+		The 6th 7th 8th columns represent the marginal probabilities for labels in alphabetic order, i.e., "B","I","O" respectively. 
+		</p>
+	</ul>
+	
+	<h2><a name="reference">Reference</a></h2>
+	<ul>
+		<li>J. Lafferty, A. McCallum, and F. Pereira. <a href="http://www.cis.upenn.edu/~pereira/papers/crf.pdf">Conditional random fields: Probabilistic models for segmenting and labeling sequence data</a>, In Proc. of ICML, pp.282-289, 2001 </li>
+		<li>Taku kudo. <a href="http://sourceforge.net/projects/crfpp/">CRF++: Yet Another CRF toolkit</a></li>
+		<li>Mark Schmidt, Glenn Fung, Romer Rosales. <a href="http://pages.cs.wisc.edu/~gfung/GeneralL1/FastGeneralL1.pdf">Fast Optimization Methods for L1 Regularization: A Comparative Study and Two New Approaches</a></li>
+	</ul>
+
+	<h2><a name="todo">To do</a></h2>
+	<ul>
+		<li>High Dimensional CRF</li>
+	</ul>
+	Contact: <i>qianxian@fudan.edu.cn</i>
+	</body>
+</html>
+
