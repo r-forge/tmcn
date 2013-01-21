@@ -7,6 +7,6 @@ Author: Jian Li <rweibo@sina.com>
 Maintainer: Jian Li <rweibo@sina.com>
 Description: Text mining for Chinese.
 Version: 0.0-1
-Date: 2013-01-19
+Date: 2013-01-22
 Depends: R (>= 2.14.0)
 
