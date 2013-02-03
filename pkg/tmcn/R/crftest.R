@@ -7,7 +7,7 @@
 ##' @param result_file Path of result file.
 ##' @param margin Whether output margin probability.
 ##' @param seqp Whether output label sequence probability.
-##' @param nbest Output n best results..
+##' @param nbest Output n best results.
 ##' @return No results.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 

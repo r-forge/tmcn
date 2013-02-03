@@ -16,7 +16,7 @@
 
   \item{seqp}{Whether output label sequence probability.}
 
-  \item{nbest}{Output n best results..}
+  \item{nbest}{Output n best results.}
 }
 \value{
   No results.
