@@ -3,6 +3,7 @@
 ##' 
 ##' @title Convert a Chinese text from simplified to traditional characters and vice versa.
 ##' @param string A Chinese string vector.
+##' @param rev Reverse. TRUE means traditional to simplified. Default is FALSE.
 ##' @return Converted vectors.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 

@@ -6,6 +6,9 @@
 }
 \arguments{
   \item{string}{A Chinese string vector.}
+
+  \item{rev}{Reverse. TRUE means traditional to simplified.
+  Default is FALSE.}
 }
 \value{
   Converted vectors.

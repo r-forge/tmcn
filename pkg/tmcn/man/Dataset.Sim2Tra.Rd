@@ -14,7 +14,4 @@ Dictionary of simplified and traditional Chinese
   }
 }
 
-\examples{
-data(Dataset.Sim2Tra, envir = .tmcnEnv)
-}
 \keyword{datasets}

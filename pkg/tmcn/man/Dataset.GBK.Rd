@@ -15,7 +15,4 @@ GBK character set including all Phonetic.
   }
 }
 
-\examples{
-data(Dataset.GBK, envir = .tmcnEnv)
-}
 \keyword{datasets}
