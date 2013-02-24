@@ -1,0 +1,23 @@
+
+##' Convert a chinese text from simplified to traditional characters and vice versa.
+##' 
+##' @title Convert a Chinese text from simplified to traditional characters and vice versa.
+##' @param string A Chinese string vector.
+##' @return Converted vectors.
+##' @author Jian Li <\email{rweibo@@sina.com}>
+
+toTrad <- function(string, rev = FALSE)
+{
+	string <- .verifyChar(string)
+	string <- toUTF8(string)
+	if (!exists("Dataset.Sim2Tra", envir = .tmcnEnv)) data(Dataset.Sim2Tra, envir = .tmcnEnv)
+	transDf <- get("Dataset.Sim2Tra", envir = .tmcnEnv)
+	if (rev) {
+		OUT <- chartr(transDf$Tra, transDf$Sim, string)
+	} else {
+		OUT <- chartr(transDf$Sim, transDf$Tra, string)
+	}
+		
+	return(OUT)
+}
+

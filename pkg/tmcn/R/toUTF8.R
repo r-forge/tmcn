@@ -1,24 +1,29 @@
 
-##' Convert encoding to UTF-8.
+##' Convert encoding of Chinese string to UTF-8.
 ##' 
-##' @title Convert encoding to UTF-8.
-##' @param string A character vector.
+##' @title Convert encoding of Chinese string to UTF-8.
+##' @param cnstring A Chinese string vector.
 ##' @return Converted vectors.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 
-toUTF8 <- function(string)
+toUTF8 <- function(cnstring)
 {
-
-	string <- .verifyChar(string)
-	if(any(isUTF8(string))) {
-		OUT <- string
+	cnstring <- .verifyChar(cnstring)
+	strenc <- Encoding(cnstring)[which(Encoding(cnstring) != "unknown")][1]
+	if(isUTF8(cnstring, TRUE)) {
+		OUT <- cnstring
 		Encoding(OUT) <- "UTF-8"
+		return(OUT)
+	} else if(isGB2312(cnstring, TRUE)) {
+		strenc <- "gb2312"
+	} else if(isBIG5(cnstring, TRUE)) {
+		strenc <- "big5"
+	} else if(isGBK(cnstring, TRUE)) {
+		strenc <- "GBK"
 	} else {
-		strenc <- Encoding(string)[which(Encoding(string) != "unknown")][1]
 		if (is.na(strenc)) strenc <- "GBK"
-		OUT <- iconv(string, strenc, "UTF-8")
 	}
-	
+	OUT <- iconv(cnstring, strenc, "UTF-8")
 	return(OUT)
 }
 

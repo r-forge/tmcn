@@ -6,7 +6,7 @@ LazyLoad: yes
 Author: Jian Li <rweibo@sina.com>
 Maintainer: Jian Li <rweibo@sina.com>
 Description: Text mining for Chinese.
-Version: 0.0-2
-Date: 2013-02-06
+Version: 0.0-3
+Date: 2013-02-24
 Depends: R (>= 2.14.0)
 

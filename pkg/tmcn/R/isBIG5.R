@@ -1,25 +1,25 @@
 
-##' Indicate whether the encoding of input string is GBK.
+##' Indicate whether the encoding of input string is BIG5.
 ##' 
-##' @title Indicate whether the encoding of input string is GBK.
+##' @title Indicate whether the encoding of input string is BIG5.
 ##' @param string A character vector.
 ##' @param combine Whether to combine all the strings.
 ##' @return Logical value.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 
-isGBK <- function(string, combine = FALSE)
+isBIG5 <- function(string, combine = FALSE)
 {
 	string <- .verifyChar(string)
 	if (length(string)  == 1) {
-		OUT <- .C("CWrapper_encoding_isgbk", 
+		OUT <- .C("CWrapper_encoding_isbig5", 
 				characters = as.character(string),  
 				numres = 2L)
 		OUT <- as.logical(OUT$numres)
 	} else {
 		if (combine) {
-			OUT <- isGBK(paste(string, collapse = ""))
+			OUT <- isBIG5(paste(string, collapse = ""))
 		} else {
-			OUT <- as.vector(sapply(string, isGBK))
+			OUT <- as.vector(sapply(string, isBIG5))
 		}
 	}
 	return(OUT)

@@ -1,8 +1,8 @@
-\name{isGB18030}
-\alias{isGB18030}
-\title{Indicate whether the encoding of input string is GB18030.}
+\name{isBIG5}
+\alias{isBIG5}
+\title{Indicate whether the encoding of input string is BIG5.}
 \usage{
-  isGB18030(string, combine = FALSE)
+  isBIG5(string, combine = FALSE)
 }
 \arguments{
   \item{string}{A character vector.}
@@ -13,7 +13,7 @@
   Logical value.
 }
 \description{
-  Indicate whether the encoding of input string is GB18030.
+  Indicate whether the encoding of input string is BIG5.
 }
 \author{
   Jian Li <\email{rweibo@sina.com}>

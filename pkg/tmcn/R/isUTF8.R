@@ -3,12 +3,12 @@
 ##' 
 ##' @title Indicate whether the encoding of input string is UTF-8.
 ##' @param string A character vector.
+##' @param combine Whether to combine all the strings.
 ##' @return Logical value.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 
-isUTF8 <- function(string)
+isUTF8 <- function(string, combine = FALSE)
 {
-	
 	string <- .verifyChar(string)
 	if (length(string)  == 1) {
 		OUT <- .C("CWrapper_encoding_isutf8", 
@@ -16,7 +16,11 @@ isUTF8 <- function(string)
 				numres = 2L)
 		OUT <- as.logical(OUT$numres)
 	} else {
-		OUT <- as.vector(sapply(string, isUTF8))
+		if (combine) {
+			OUT <- isUTF8(paste(string, collapse = ""))
+		} else {
+			OUT <- as.vector(sapply(string, isUTF8))
+		}
 	}
 	return(OUT)
 }

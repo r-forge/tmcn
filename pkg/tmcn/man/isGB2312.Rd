@@ -2,10 +2,12 @@
 \alias{isGB2312}
 \title{Indicate whether the encoding of input string is GB2312.}
 \usage{
-  isGB2312(string)
+  isGB2312(string, combine = FALSE)
 }
 \arguments{
   \item{string}{A character vector.}
+
+  \item{combine}{Whether to combine all the strings.}
 }
 \value{
   Logical value.
