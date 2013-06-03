@@ -8,7 +8,7 @@
 		assign(".tmcnEnv", new.env(), envir = .GlobalEnv)
 	}
 	
-	packageStartupMessage( paste("# Version:", utils:::packageDescription("tmcn", fields = "Version")) )
+	packageStartupMessage( paste("# tmcn Version:", utils:::packageDescription("tmcn", fields = "Version")) )
 }
 
 .onUnload <- function(libpath) {
