@@ -17,6 +17,9 @@ strcap <- function(string, strict = FALSE) {
 	cap <- function(s) paste(toupper(substring(s, 1, 1)),
 				{s <- substring(s, 2); if(strict) tolower(s) else s},
 				sep = "", collapse = " ")
-	sapply(strsplit(string, split = " "), cap, USE.NAMES = !is.null(names(string)))
+	idxspace <- which(!nzchar(strstrip(string)))
+	OUT <- sapply(strsplit(string, split = " "), cap, USE.NAMES = !is.null(names(string)))
+	if (length(idxspace) > 0) OUT[idxspace] <- string[idxspace]
+	return(OUT)
 }
 

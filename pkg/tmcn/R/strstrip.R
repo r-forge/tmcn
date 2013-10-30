@@ -8,11 +8,11 @@
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @keywords string
 ##' @examples \dontrun{
-##' strtrimspace(c("\taaaa ", " bbbb    "))
+##' strstrip(c("\taaaa ", " bbbb    "))
 ##' }
 ##'
 
-strtrimspace <- function(string, side = c("both", "left", "right")) {
+strstrip <- function(string, side = c("both", "left", "right")) {
 	string <- .verifyChar(string)
 	side <- match.arg(side)
 	pattern <- switch(side, left = "^\\s+", right = "\\s+$", both = "^\\s+|\\s+$")

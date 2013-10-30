@@ -23,6 +23,10 @@ crflearn <- function(templet_file, training_file, model_file,
 		eta = 0.0001, algorithm = c("CRFs", "AP", "PA", "L1CRFs"), 
 		depth = 5, isfast = TRUE)
 {
+	if (!file.exists(templet_file)) stop("Can't find the templet file!")
+	if (!file.exists(training_file)) stop("Can't find the training file!")
+	if (!file.exists(dirname(model_file))) dir.create(dirname(model_file), recursive = TRUE)
+	
 	algorithm <- match.arg(algorithm)
 	algorithm <- which(c("CRFs", "AP", "PA", "L1CRFs") == algorithm) - 1
 	if (!is.logical(isfast)) {

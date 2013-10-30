@@ -14,6 +14,9 @@
 crftest <- function(model_file, key_file, result_file,
 		margin = 0, seqp = 0, nbest = 1)
 {
+	if (!file.exists(model_file)) stop("Can't find the model file!")
+	if (!file.exists(key_file)) stop("Can't find the key file!")
+	if (!file.exists(dirname(result_file))) dir.create(dirname(result_file), recursive = TRUE)
 	
 	OUT <- .C("CWrapper_crf_test", 
 			model_file = as.character(model_file), 

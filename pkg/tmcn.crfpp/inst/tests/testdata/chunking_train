@@ -1,0 +1,1973 @@
+Confidence	NN	NN IN DT	B
+in	IN	NN IN DT NN	O
+the	DT	NN IN DT NN VBZ	B
+pound	NN	IN DT NN VBZ RB	I
+is	VBZ	DT NN VBZ RB VBN	O
+widely	RB	NN VBZ RB VBN TO	O
+expected	VBN	VBZ RB VBN TO VB	O
+to	TO	RB VBN TO VB DT	O
+take	VB	VBN TO VB DT JJ	O
+another	DT	TO VB DT JJ NN	B
+sharp	JJ	VB DT JJ NN IN	I
+dive	NN	DT JJ NN IN NN	I
+if	IN	JJ NN IN NN NNS	O
+trade	NN	NN IN NN NNS IN	B
+figures	NNS	IN NN NNS IN NNP	I
+for	IN	NN NNS IN NNP ,	O
+September	NNP	NNS IN NNP , JJ	B
+,	,	IN NNP , JJ IN	O
+due	JJ	NNP , JJ IN NN	O
+for	IN	, JJ IN NN NN	O
+release	NN	JJ IN NN NN ,	B
+tomorrow	NN	IN NN NN , VB	B
+,	,	NN NN , VB TO	O
+fail	VB	NN , VB TO VB	O
+to	TO	, VB TO VB DT	O
+show	VB	VB TO VB DT JJ	O
+a	DT	TO VB DT JJ NN	B
+substantial	JJ	VB DT JJ NN IN	I
+improvement	NN	DT JJ NN IN NNP	I
+from	IN	JJ NN IN NNP CC	O
+July	NNP	NN IN NNP CC NNP	B
+and	CC	IN NNP CC NNP POS	I
+August	NNP	NNP CC NNP POS JJ	I
+'s	POS	CC NNP POS JJ NNS	B
+near-record	JJ	NNP POS JJ NNS .	I
+deficits	NNS	POS JJ NNS .	I
+.	.	JJ NNS .	O
+
+Chancellor	NNP	NNP IN DT	O
+of	IN	NNP IN DT NNP	O
+the	DT	NNP IN DT NNP NNP	B
+Exchequer	NNP	IN DT NNP NNP NNP	I
+Nigel	NNP	DT NNP NNP NNP POS	O
+Lawson	NNP	NNP NNP NNP POS VBN	O
+'s	POS	NNP NNP POS VBN NN	B
+restated	VBN	NNP POS VBN NN TO	I
+commitment	NN	POS VBN NN TO DT	I
+to	TO	VBN NN TO DT NN	O
+a	DT	NN TO DT NN JJ	B
+firm	NN	TO DT NN JJ NN	I
+monetary	JJ	DT NN JJ NN VBZ	I
+policy	NN	NN JJ NN VBZ VBN	I
+has	VBZ	JJ NN VBZ VBN TO	O
+helped	VBN	NN VBZ VBN TO VB	O
+to	TO	VBZ VBN TO VB DT	O
+prevent	VB	VBN TO VB DT NN	O
+a	DT	TO VB DT NN IN	B
+freefall	NN	VB DT NN IN NN	I
+in	IN	DT NN IN NN IN	O
+sterling	NN	NN IN NN IN DT	B
+over	IN	IN NN IN DT JJ	O
+the	DT	NN IN DT JJ NN	B
+past	JJ	IN DT JJ NN .	I
+week	NN	DT JJ NN .	I
+.	.	JJ NN .	O
+
+But	CC	CC NNS VBP	O
+analysts	NNS	CC NNS VBP VBG	B
+reckon	VBP	CC NNS VBP VBG NN	O
+underlying	VBG	NNS VBP VBG NN IN	B
+support	NN	VBP VBG NN IN NN	I
+for	IN	VBG NN IN NN VBZ	O
+sterling	NN	NN IN NN VBZ VBN	B
+has	VBZ	IN NN VBZ VBN VBN	O
+been	VBN	NN VBZ VBN VBN IN	O
+eroded	VBN	VBZ VBN VBN IN DT	O
+by	IN	VBN VBN IN DT NN	O
+the	DT	VBN IN DT NN POS	B
+chancellor	NN	IN DT NN POS NN	I
+'s	POS	DT NN POS NN TO	B
+failure	NN	NN POS NN TO VB	I
+to	TO	POS NN TO VB DT	O
+announce	VB	NN TO VB DT JJ	O
+any	DT	TO VB DT JJ NN	B
+new	JJ	VB DT JJ NN NNS	I
+policy	NN	DT JJ NN NNS IN	I
+measures	NNS	JJ NN NNS IN PRP$	I
+in	IN	NN NNS IN PRP$ NNP	O
+his	PRP$	NNS IN PRP$ NNP NNP	B
+Mansion	NNP	IN PRP$ NNP NNP NN	I
+House	NNP	PRP$ NNP NNP NN JJ	I
+speech	NN	NNP NNP NN JJ NNP	I
+last	JJ	NNP NN JJ NNP .	B
+Thursday	NNP	NN JJ NNP .	I
+.	.	JJ NNP .	O
+
+This	DT	DT VBZ VBN	B
+has	VBZ	DT VBZ VBN DT	O
+increased	VBN	DT VBZ VBN DT NN	O
+the	DT	VBZ VBN DT NN IN	B
+risk	NN	VBN DT NN IN DT	I
+of	IN	DT NN IN DT NN	O
+the	DT	NN IN DT NN VBG	B
+government	NN	IN DT NN VBG VBN	I
+being	VBG	DT NN VBG VBN TO	O
+forced	VBN	NN VBG VBN TO VB	O
+to	TO	VBG VBN TO VB NN	O
+increase	VB	VBN TO VB NN NNS	O
+base	NN	TO VB NN NNS TO	B
+rates	NNS	VB NN NNS TO CD	I
+to	TO	NN NNS TO CD NN	O
+16	CD	NNS TO CD NN IN	B
+%	NN	TO CD NN IN PRP$	I
+from	IN	CD NN IN PRP$ JJ	O
+their	PRP$	NN IN PRP$ JJ CD	B
+current	JJ	IN PRP$ JJ CD NN	I
+15	CD	PRP$ JJ CD NN NN	I
+%	NN	JJ CD NN NN TO	I
+level	NN	CD NN NN TO VB	I
+to	TO	NN NN TO VB DT	O
+defend	VB	NN TO VB DT NN	O
+the	DT	TO VB DT NN ,	B
+pound	NN	VB DT NN , NNS	I
+,	,	DT NN , NNS CC	O
+economists	NNS	NN , NNS CC JJ	B
+and	CC	, NNS CC JJ NN	O
+foreign	JJ	NNS CC JJ NN NN	B
+exchange	NN	CC JJ NN NN NNS	I
+market	NN	JJ NN NN NNS VBP	I
+analysts	NNS	NN NN NNS VBP .	I
+say	VBP	NN NNS VBP .	O
+.	.	NNS VBP .	O
+
+``	``	`` DT NNS	O
+The	DT	`` DT NNS IN	B
+risks	NNS	`` DT NNS IN NN	I
+for	IN	DT NNS IN NN IN	O
+sterling	NN	NNS IN NN IN DT	B
+of	IN	IN NN IN DT JJ	O
+a	DT	NN IN DT JJ NN	B
+bad	JJ	IN DT JJ NN NN	I
+trade	NN	DT JJ NN NN VBP	I
+figure	NN	JJ NN NN VBP RB	I
+are	VBP	NN NN VBP RB RB	O
+very	RB	NN VBP RB RB IN	O
+heavily	RB	VBP RB RB IN DT	O
+on	IN	RB RB IN DT JJ	O
+the	DT	RB IN DT JJ NN	B
+down	JJ	IN DT JJ NN ,	I
+side	NN	DT JJ NN , ''	I
+,	,	JJ NN , '' VBD	O
+''	''	NN , '' VBD NNP	O
+said	VBD	, '' VBD NNP NNP	O
+Chris	NNP	'' VBD NNP NNP ,	B
+Dillow	NNP	VBD NNP NNP , JJ	I
+,	,	NNP NNP , JJ NNP	O
+senior	JJ	NNP , JJ NNP NN	B
+U.K.	NNP	, JJ NNP NN IN	I
+economist	NN	JJ NNP NN IN NNP	I
+at	IN	NNP NN IN NNP NNP	O
+Nomura	NNP	NN IN NNP NNP NNP	B
+Research	NNP	IN NNP NNP NNP .	I
+Institute	NNP	NNP NNP NNP .	I
+.	.	NNP NNP .	O
+
+``	``	`` IN EX	O
+If	IN	`` IN EX VBZ	O
+there	EX	`` IN EX VBZ DT	B
+is	VBZ	IN EX VBZ DT JJ	O
+another	DT	EX VBZ DT JJ NN	B
+bad	JJ	VBZ DT JJ NN NN	I
+trade	NN	DT JJ NN NN ,	I
+number	NN	JJ NN NN , EX	I
+,	,	NN NN , EX MD	O
+there	EX	NN , EX MD VB	B
+could	MD	, EX MD VB DT	O
+be	VB	EX MD VB DT JJ	O
+an	DT	MD VB DT JJ NN	B
+awful	JJ	VB DT JJ NN IN	I
+lot	NN	DT JJ NN IN NN	I
+of	IN	JJ NN IN NN ,	O
+pressure	NN	NN IN NN , ''	B
+,	,	IN NN , '' VBD	O
+''	''	NN , '' VBD NNP	O
+noted	VBD	, '' VBD NNP NNP	O
+Simon	NNP	'' VBD NNP NNP ,	B
+Briscoe	NNP	VBD NNP NNP , NNP	I
+,	,	NNP NNP , NNP NN	O
+U.K.	NNP	NNP , NNP NN IN	B
+economist	NN	, NNP NN IN NNP	I
+for	IN	NNP NN IN NNP NNP	O
+Midland	NNP	NN IN NNP NNP ,	B
+Montagu	NNP	IN NNP NNP , DT	I
+,	,	NNP NNP , DT NN	O
+a	DT	NNP , DT NN IN	B
+unit	NN	, DT NN IN NNP	I
+of	IN	DT NN IN NNP NNP	O
+Midland	NNP	NN IN NNP NNP NNP	B
+Bank	NNP	IN NNP NNP NNP .	I
+PLC	NNP	NNP NNP NNP .	I
+.	.	NNP NNP .	O
+
+Forecasts	NNS	NNS IN DT	B
+for	IN	NNS IN DT NN	O
+the	DT	NNS IN DT NN NNS	B
+trade	NN	IN DT NN NNS VBP	I
+figures	NNS	DT NN NNS VBP RB	I
+range	VBP	NN NNS VBP RB ,	O
+widely	RB	NNS VBP RB , CC	O
+,	,	VBP RB , CC JJ	O
+but	CC	RB , CC JJ NNS	O
+few	JJ	, CC JJ NNS VBP	B
+economists	NNS	CC JJ NNS VBP DT	I
+expect	VBP	JJ NNS VBP DT NNS	O
+the	DT	NNS VBP DT NNS TO	B
+data	NNS	VBP DT NNS TO VB	I
+to	TO	DT NNS TO VB DT	O
+show	VB	NNS TO VB DT RB	O
+a	DT	TO VB DT RB VBN	B
+very	RB	VB DT RB VBN NN	I
+marked	VBN	DT RB VBN NN IN	I
+improvement	NN	RB VBN NN IN DT	I
+from	IN	VBN NN IN DT #	O
+the	DT	NN IN DT # CD	B
+#	#	IN DT # CD CD	I
+2	CD	DT # CD CD (	I
+billion	CD	# CD CD ( $	I
+-LRB-	(	CD CD ( $ CD	I
+$	$	CD ( $ CD CD	I
+3.2	CD	( $ CD CD )	I
+billion	CD	$ CD CD ) NN	I
+-RRB-	)	CD CD ) NN IN	I
+deficit	NN	CD ) NN IN DT	I
+in	IN	) NN IN DT JJ	O
+the	DT	NN IN DT JJ NN	B
+current	JJ	IN DT JJ NN VBD	I
+account	NN	DT JJ NN VBD IN	I
+reported	VBD	JJ NN VBD IN NNP	O
+for	IN	NN VBD IN NNP .	O
+August	NNP	VBD IN NNP .	B
+.	.	IN NNP .	O
+
+The	DT	DT NNP NN	B
+August	NNP	DT NNP NN CC	I
+deficit	NN	DT NNP NN CC DT	I
+and	CC	NNP NN CC DT #	O
+the	DT	NN CC DT # CD	B
+#	#	CC DT # CD CD	I
+2.2	CD	DT # CD CD NN	I
+billion	CD	# CD CD NN VBN	I
+gap	NN	CD CD NN VBN IN	I
+registered	VBN	CD NN VBN IN NNP	O
+in	IN	NN VBN IN NNP VBP	O
+July	NNP	VBN IN NNP VBP VBN	B
+are	VBP	IN NNP VBP VBN RB	O
+topped	VBN	NNP VBP VBN RB IN	O
+only	RB	VBP VBN RB IN DT	O
+by	IN	VBN RB IN DT #	O
+the	DT	RB IN DT # CD	B
+#	#	IN DT # CD CD	I
+2.3	CD	DT # CD CD NN	I
+billion	CD	# CD CD NN IN	I
+deficit	NN	CD CD NN IN NNP	I
+of	IN	CD NN IN NNP CD	O
+October	NNP	NN IN NNP CD .	B
+1988	CD	IN NNP CD .	I
+.	.	NNP CD .	O
+
+Sanjay	NNP	NNP NNP ,	B
+Joshi	NNP	NNP NNP , JJ	I
+,	,	NNP NNP , JJ NN	O
+European	JJ	NNP , JJ NN IN	B
+economist	NN	, JJ NN IN NNP	I
+at	IN	JJ NN IN NNP NNPS	O
+Baring	NNP	NN IN NNP NNPS CC	B
+Brothers	NNPS	IN NNP NNPS CC NNP	I
+&	CC	NNP NNPS CC NNP ,	I
+Co.	NNP	NNPS CC NNP , VBD	I
+,	,	CC NNP , VBD EX	O
+said	VBD	NNP , VBD EX VBZ	O
+there	EX	, VBD EX VBZ DT	B
+is	VBZ	VBD EX VBZ DT NN	O
+no	DT	EX VBZ DT NN IN	B
+sign	NN	VBZ DT NN IN NNP	I
+that	IN	DT NN IN NNP POS	O
+Britain	NNP	NN IN NNP POS NN	B
+'s	POS	IN NNP POS NN NN	B
+manufacturing	NN	NNP POS NN NN VBZ	I
+industry	NN	POS NN NN VBZ VBG	I
+is	VBZ	NN NN VBZ VBG PRP	O
+transforming	VBG	NN VBZ VBG PRP TO	O
+itself	PRP	VBZ VBG PRP TO VB	B
+to	TO	VBG PRP TO VB NNS	O
+boost	VB	PRP TO VB NNS .	O
+exports	NNS	TO VB NNS .	B
+.	.	VB NNS .	O
+
+At	IN	IN DT JJ	O
+the	DT	IN DT JJ NN	B
+same	JJ	IN DT JJ NN ,	I
+time	NN	DT JJ NN , PRP	I
+,	,	JJ NN , PRP VBZ	O
+he	PRP	NN , PRP VBZ RB	B
+remains	VBZ	, PRP VBZ RB JJ	O
+fairly	RB	PRP VBZ RB JJ IN	O
+pessimistic	JJ	VBZ RB JJ IN DT	O
+about	IN	RB JJ IN DT NN	O
+the	DT	JJ IN DT NN IN	B
+outlook	NN	IN DT NN IN NNS	I
+for	IN	DT NN IN NNS ,	O
+imports	NNS	NN IN NNS , VBN	B
+,	,	IN NNS , VBN VBD	O
+given	VBN	NNS , VBN VBD JJ	O
+continued	VBD	, VBN VBD JJ NN	B
+high	JJ	VBN VBD JJ NN CC	I
+consumer	NN	VBD JJ NN CC NN	I
+and	CC	JJ NN CC NN NNS	I
+capital	NN	NN CC NN NNS NNS	I
+goods	NNS	CC NN NNS NNS .	I
+inflows	NNS	NN NNS NNS .	I
+.	.	NNS NNS .	O
+
+He	PRP	PRP VBZ DT	B
+reckons	VBZ	PRP VBZ DT JJ	O
+the	DT	PRP VBZ DT JJ NN	B
+current	JJ	VBZ DT JJ NN NN	I
+account	NN	DT JJ NN NN MD	I
+deficit	NN	JJ NN NN MD VB	I
+will	MD	NN NN MD VB TO	O
+narrow	VB	NN MD VB TO RB	O
+to	TO	MD VB TO RB #	O
+only	RB	VB TO RB # CD	B
+#	#	TO RB # CD CD	I
+1.8	CD	RB # CD CD IN	I
+billion	CD	# CD CD IN NNP	I
+in	IN	CD CD IN NNP .	O
+September	NNP	CD IN NNP .	B
+.	.	IN NNP .	O
+
+However	RB	RB , NNP	O
+,	,	RB , NNP NNP	O
+Mr.	NNP	RB , NNP NNP VBD	B
+Dillow	NNP	, NNP NNP VBD PRP	I
+said	VBD	NNP NNP VBD PRP VBZ	O
+he	PRP	NNP VBD PRP VBZ IN	B
+believes	VBZ	VBD PRP VBZ IN DT	O
+that	IN	PRP VBZ IN DT NN	O
+a	DT	VBZ IN DT NN IN	B
+reduction	NN	IN DT NN IN JJ	I
+in	IN	DT NN IN JJ NN	O
+raw	JJ	NN IN JJ NN VBG	B
+material	NN	IN JJ NN VBG IN	I
+stockbuilding	VBG	JJ NN VBG IN NN	I
+by	IN	NN VBG IN NN MD	O
+industry	NN	VBG IN NN MD VB	B
+could	MD	IN NN MD VB TO	O
+lead	VB	NN MD VB TO DT	O
+to	TO	MD VB TO DT JJ	O
+a	DT	VB TO DT JJ NN	B
+sharp	JJ	TO DT JJ NN IN	I
+drop	NN	DT JJ NN IN NNS	I
+in	IN	JJ NN IN NNS .	O
+imports	NNS	NN IN NNS .	B
+.	.	IN NNS .	O
+
+Combined	VBN	VBN IN IN	O
+with	IN	VBN IN IN JJS	O
+at	IN	VBN IN IN JJS DT	B
+least	JJS	IN IN JJS DT NN	I
+some	DT	IN JJS DT NN IN	I
+rebound	NN	JJS DT NN IN NNS	I
+in	IN	DT NN IN NNS IN	O
+exports	NNS	NN IN NNS IN NNP	B
+after	IN	IN NNS IN NNP POS	O
+August	NNP	NNS IN NNP POS JJ	B
+'s	POS	IN NNP POS JJ NN	B
+unexpected	JJ	NNP POS JJ NN ,	I
+decline	NN	POS JJ NN , DT	I
+,	,	JJ NN , DT NN	O
+the	DT	NN , DT NN MD	B
+deficit	NN	, DT NN MD VB	I
+could	MD	DT NN MD VB TO	O
+narrow	VB	NN MD VB TO RB	O
+to	TO	MD VB TO RB JJ	O
+as	RB	VB TO RB JJ IN	B
+little	JJ	TO RB JJ IN #	I
+as	IN	RB JJ IN # CD	I
+#	#	JJ IN # CD CD	I
+1.3	CD	IN # CD CD .	I
+billion	CD	# CD CD .	I
+.	.	CD CD .	O
+
+Mr.	NNP	NNP NNP ,	B
+Briscoe	NNP	NNP NNP , WP	I
+,	,	NNP NNP , WP RB	O
+who	WP	NNP , WP RB VBZ	B
+also	RB	, WP RB VBZ DT	O
+forecasts	VBZ	WP RB VBZ DT #	O
+a	DT	RB VBZ DT # CD	B
+#	#	VBZ DT # CD CD	I
+1.3	CD	DT # CD CD JJ	I
+billion	CD	# CD CD JJ NN	I
+current	JJ	CD CD JJ NN NN	I
+account	NN	CD JJ NN NN ,	I
+gap	NN	JJ NN NN , VBZ	I
+,	,	NN NN , VBZ IN	O
+warns	VBZ	NN , VBZ IN RB	O
+that	IN	, VBZ IN RB IN	O
+even	RB	VBZ IN RB IN DT	O
+if	IN	IN RB IN DT NN	O
+the	DT	RB IN DT NN NNS	B
+trade	NN	IN DT NN NNS VBP	I
+figures	NNS	DT NN NNS VBP JJ	I
+are	VBP	NN NNS VBP JJ IN	O
+bullish	JJ	NNS VBP JJ IN NN	O
+for	IN	VBP JJ IN NN ,	O
+sterling	NN	JJ IN NN , DT	B
+,	,	IN NN , DT NN	O
+the	DT	NN , DT NN MD	B
+currency	NN	, DT NN MD RB	I
+wo	MD	DT NN MD RB VB	O
+n't	RB	NN MD RB VB JJ	O
+advance	VB	MD RB VB JJ IN	O
+much	JJ	RB VB JJ IN NNS	B
+because	IN	VB JJ IN NNS MD	O
+investors	NNS	JJ IN NNS MD VB	B
+will	MD	IN NNS MD VB TO	O
+want	VB	NNS MD VB TO VB	O
+to	TO	MD VB TO VB JJ	O
+see	VB	VB TO VB JJ NN	O
+further	JJ	TO VB JJ NN IN	B
+evidence	NN	VB JJ NN IN DT	I
+of	IN	JJ NN IN DT NN	O
+the	DT	NN IN DT NN IN	B
+turnaround	NN	IN DT NN IN VBG	I
+before	IN	DT NN IN VBG NNS	O
+adjusting	VBG	NN IN VBG NNS .	O
+positions	NNS	IN VBG NNS .	B
+.	.	VBG NNS .	O
+
+Nevertheless	RB	RB , PRP	O
+,	,	RB , PRP VBD	O
+he	PRP	RB , PRP VBD ,	B
+noted	VBD	, PRP VBD , ``	O
+,	,	PRP VBD , `` DT	O
+``	``	VBD , `` DT PRP	O
+No	DT	, `` DT PRP MD	B
+one	PRP	`` DT PRP MD VB	I
+will	MD	DT PRP MD VB TO	O
+want	VB	PRP MD VB TO VB	O
+to	TO	MD VB TO VB IN	O
+go	VB	VB TO VB IN DT	O
+into	IN	TO VB IN DT NN	O
+the	DT	VB IN DT NN NNS	B
+trade	NN	IN DT NN NNS IN	I
+figures	NNS	DT NN NNS IN DT	I
+without	IN	NN NNS IN DT JJ	O
+a	DT	NNS IN DT JJ NN	B
+flat	JJ	IN DT JJ NN ''	I
+position	NN	DT JJ NN '' IN	I
+''	''	JJ NN '' IN DT	O
+in	IN	NN '' IN DT NN	O
+the	DT	'' IN DT NN .	B
+pound	NN	IN DT NN .	I
+.	.	DT NN .	O
+
+Meanwhile	RB	RB , JJ	O
+,	,	RB , JJ NN	O
+overall	JJ	RB , JJ NN IN	B
+evidence	NN	, JJ NN IN DT	I
+on	IN	JJ NN IN DT NN	O
+the	DT	NN IN DT NN VBZ	B
+economy	NN	IN DT NN VBZ RB	I
+remains	VBZ	DT NN VBZ RB VBN	O
+fairly	RB	NN VBZ RB VBN .	O
+clouded	VBN	VBZ RB VBN .	O
+.	.	RB VBN .	O
+
+In	IN	IN PRP$ NNP	O
+his	PRP$	IN PRP$ NNP NNP	B
+Mansion	NNP	IN PRP$ NNP NNP NN	I
+House	NNP	PRP$ NNP NNP NN ,	I
+speech	NN	NNP NNP NN , NNP	I
+,	,	NNP NN , NNP NNP	O
+Mr.	NNP	NN , NNP NNP VBD	B
+Lawson	NNP	, NNP NNP VBD IN	I
+warned	VBD	NNP NNP VBD IN DT	O
+that	IN	NNP VBD IN DT JJ	O
+a	DT	VBD IN DT JJ NN	B
+further	JJ	IN DT JJ NN MD	I
+slowdown	NN	DT JJ NN MD VB	I
+can	MD	JJ NN MD VB VBN	O
+be	VB	NN MD VB VBN IN	O
+expected	VBN	MD VB VBN IN DT	O
+as	IN	VB VBN IN DT NN	O
+the	DT	VBN IN DT NN IN	B
+impact	NN	IN DT NN IN DT	I
+of	IN	DT NN IN DT JJ	O
+the	DT	NN IN DT JJ NN	B
+last	JJ	IN DT JJ NN IN	I
+rise	NN	DT JJ NN IN NN	I
+in	IN	JJ NN IN NN NNS	O
+interest	NN	NN IN NN NNS RBR	B
+rates	NNS	IN NN NNS RBR DT	I
+earlier	RBR	NN NNS RBR DT NN	B
+this	DT	NNS RBR DT NN VBZ	I
+month	NN	RBR DT NN VBZ NN	I
+takes	VBZ	DT NN VBZ NN .	O
+effect	NN	NN VBZ NN .	B
+.	.	VBZ NN .	O
+
+U.K.	JJ	JJ NN NNS	B
+base	NN	JJ NN NNS VBP	I
+rates	NNS	JJ NN NNS VBP IN	I
+are	VBP	NN NNS VBP IN PRP$	O
+at	IN	NNS VBP IN PRP$ JJS	O
+their	PRP$	VBP IN PRP$ JJS NN	B
+highest	JJS	IN PRP$ JJS NN IN	I
+level	NN	PRP$ JJS NN IN CD	I
+in	IN	JJS NN IN CD NNS	O
+eight	CD	NN IN CD NNS .	B
+years	NNS	IN CD NNS .	I
+.	.	CD NNS .	O
+
+But	CC	CC NN NN	O
+consumer	NN	CC NN NN NNS	B
+expenditure	NN	CC NN NN NNS VBD	I
+data	NNS	NN NN NNS VBD NNP	I
+released	VBD	NN NNS VBD NNP VBP	O
+Friday	NNP	NNS VBD NNP VBP RB	B
+do	VBP	VBD NNP VBP RB VB	O
+n't	RB	NNP VBP RB VB IN	O
+suggest	VB	VBP RB VB IN DT	O
+that	IN	RB VB IN DT NNP	O
+the	DT	VB IN DT NNP NN	B
+U.K.	NNP	IN DT NNP NN VBZ	I
+economy	NN	DT NNP NN VBZ VBG	I
+is	VBZ	NNP NN VBZ VBG DT	O
+slowing	VBG	NN VBZ VBG DT RB	O
+that	DT	VBZ VBG DT RB .	O
+quickly	RB	VBG DT RB .	O
+.	.	DT RB .	O
+
+The	DT	DT NNS VBP	B
+figures	NNS	DT NNS VBP DT	I
+show	VBP	DT NNS VBP DT NN	O
+that	DT	NNS VBP DT NN VBD	O
+spending	NN	VBP DT NN VBD CD	B
+rose	VBD	DT NN VBD CD NN	O
+0.1	CD	NN VBD CD NN IN	B
+%	NN	VBD CD NN IN DT	I
+in	IN	CD NN IN DT JJ	O
+the	DT	NN IN DT JJ NN	B
+third	JJ	IN DT JJ NN IN	I
+quarter	NN	DT JJ NN IN DT	I
+from	IN	JJ NN IN DT JJ	O
+the	DT	NN IN DT JJ NN	B
+second	JJ	IN DT JJ NN CC	I
+quarter	NN	DT JJ NN CC VBD	I
+and	CC	JJ NN CC VBD IN	O
+was	VBD	NN CC VBD IN CD	O
+up	IN	CC VBD IN CD NN	O
+3.8	CD	VBD IN CD NN IN	B
+%	NN	IN CD NN IN DT	I
+from	IN	CD NN IN DT NN	O
+a	DT	NN IN DT NN RB	B
+year	NN	IN DT NN RB .	I
+ago	RB	DT NN RB .	O
+.	.	NN RB .	O
+
+This	DT	DT VBZ IN	B
+compares	VBZ	DT VBZ IN DT	O
+with	IN	DT VBZ IN DT CD	O
+a	DT	VBZ IN DT CD NN	B
+1.6	CD	IN DT CD NN NN	I
+%	NN	DT CD NN NN IN	I
+rise	NN	CD NN NN IN DT	I
+in	IN	NN NN IN DT NN	O
+the	DT	NN IN DT NN IN	B
+second	NN	IN DT NN IN DT	I
+from	IN	DT NN IN DT JJ	O
+the	DT	NN IN DT JJ NN	B
+first	JJ	IN DT JJ NN CC	I
+quarter	NN	DT JJ NN CC DT	I
+and	CC	JJ NN CC DT CD	O
+a	DT	NN CC DT CD NN	B
+5.4	CD	CC DT CD NN NN	I
+%	NN	DT CD NN NN IN	I
+increase	NN	CD NN NN IN DT	I
+from	IN	NN NN IN DT JJ	O
+the	DT	NN IN DT JJ NN	B
+second	JJ	IN DT JJ NN IN	I
+quarter	NN	DT JJ NN IN CD	I
+of	IN	JJ NN IN CD .	O
+1988	CD	NN IN CD .	B
+.	.	IN CD .	O
+
+Mr.	NNP	NNP NNP VBD	B
+Dillow	NNP	NNP NNP VBD DT	I
+said	VBD	NNP NNP VBD DT NNS	O
+the	DT	NNP VBD DT NNS VBP	B
+data	NNS	VBD DT NNS VBP DT	I
+show	VBP	DT NNS VBP DT NN	O
+the	DT	NNS VBP DT NN ``	B
+economy	NN	VBP DT NN `` VBZ	I
+``	``	DT NN `` VBZ RB	O
+is	VBZ	NN `` VBZ RB RB	O
+still	RB	`` VBZ RB RB JJ	O
+quite	RB	VBZ RB RB JJ ,	O
+strong	JJ	RB RB JJ , ''	O
+,	,	RB JJ , '' CC	O
+''	''	JJ , '' CC NNS	O
+but	CC	, '' CC NNS IN	O
+suggestions	NNS	'' CC NNS IN NN	B
+that	IN	CC NNS IN NN IN	O
+much	NN	NNS IN NN IN DT	B
+of	IN	IN NN IN DT NN	O
+the	DT	NN IN DT NN VBD	B
+spending	NN	IN DT NN VBD IN	I
+went	VBD	DT NN VBD IN NNS	O
+on	IN	NN VBD IN NNS RB	O
+services	NNS	VBD IN NNS RB IN	B
+rather	RB	IN NNS RB IN NN	O
+than	IN	NNS RB IN NN NNS	O
+consumer	NN	RB IN NN NNS MD	B
+goods	NNS	IN NN NNS MD VB	I
+should	MD	NN NNS MD VB NNS	O
+reduce	VB	NNS MD VB NNS IN	O
+fears	NNS	MD VB NNS IN JJR	B
+of	IN	VB NNS IN JJR NN	O
+more	JJR	NNS IN JJR NN NNS	B
+import	NN	IN JJR NN NNS .	I
+rises	NNS	JJR NN NNS .	I
+.	.	NN NNS .	O
+
+Certainly	RB	RB , DT	O
+,	,	RB , DT NN	O
+the	DT	RB , DT NN VBZ	B
+chancellor	NN	, DT NN VBZ VBN	I
+has	VBZ	DT NN VBZ VBN PRP	O
+made	VBN	NN VBZ VBN PRP JJ	O
+it	PRP	VBZ VBN PRP JJ IN	B
+clear	JJ	VBN PRP JJ IN PRP	O
+that	IN	PRP JJ IN PRP VBZ	O
+he	PRP	JJ IN PRP VBZ VBN	B
+is	VBZ	IN PRP VBZ VBN TO	O
+prepared	VBN	PRP VBZ VBN TO VB	O
+to	TO	VBZ VBN TO VB NN	O
+increase	VB	VBN TO VB NN NNS	O
+interest	NN	TO VB NN NNS RB	B
+rates	NNS	VB NN NNS RB IN	I
+again	RB	NN NNS RB IN JJ	O
+if	IN	NNS RB IN JJ TO	O
+necessary	JJ	RB IN JJ TO DT	O
+to	TO	IN JJ TO DT VB	O
+both	DT	JJ TO DT VB IN	O
+ensure	VB	TO DT VB IN DT	O
+that	IN	DT VB IN DT JJ	O
+a	DT	VB IN DT JJ NN	B
+substantial	JJ	IN DT JJ NN VBZ	I
+slowdown	NN	DT JJ NN VBZ VB	I
+does	VBZ	JJ NN VBZ VB NN	O
+take	VB	NN VBZ VB NN CC	O
+place	NN	VBZ VB NN CC DT	B
+and	CC	VB NN CC DT NN	O
+that	DT	NN CC DT NN VBZ	O
+sterling	NN	CC DT NN VBZ RB	B
+does	VBZ	DT NN VBZ RB VB	O
+n't	RB	NN VBZ RB VB JJ	O
+decline	VB	VBZ RB VB JJ .	O
+further	JJ	RB VB JJ .	O
+.	.	VB JJ .	O
+
+Thursday	NNP	NNP , PRP	B
+,	,	NNP , PRP VBD	O
+he	PRP	NNP , PRP VBD PRP$	B
+reminded	VBD	, PRP VBD PRP$ NN	O
+his	PRP$	PRP VBD PRP$ NN IN	B
+audience	NN	VBD PRP$ NN IN DT	I
+that	IN	PRP$ NN IN DT NN	O
+the	DT	NN IN DT NN ``	B
+government	NN	IN DT NN `` MD	I
+``	``	DT NN `` MD RB	O
+can	MD	NN `` MD RB VB	O
+not	RB	`` MD RB VB DT	O
+allow	VB	MD RB VB DT JJ	O
+the	DT	RB VB DT JJ NN	B
+necessary	JJ	VB DT JJ NN IN	I
+rigor	NN	DT JJ NN IN JJ	I
+of	IN	JJ NN IN JJ NN	O
+monetary	JJ	NN IN JJ NN TO	B
+policy	NN	IN JJ NN TO VB	I
+to	TO	JJ NN TO VB VBN	O
+be	VB	NN TO VB VBN IN	O
+undermined	VBN	TO VB VBN IN NN	O
+by	IN	VB VBN IN NN NN	O
+exchange	NN	VBN IN NN NN NN	B
+rate	NN	IN NN NN NN .	I
+weakness	NN	NN NN NN . ''	I
+.	.	NN NN . ''	O
+''	''	NN . ''	O
+
+Analysts	NNS	NNS VBP EX	B
+agree	VBP	NNS VBP EX VBZ	O
+there	EX	NNS VBP EX VBZ JJ	B
+is	VBZ	VBP EX VBZ JJ NN	O
+little	JJ	EX VBZ JJ NN NN	B
+holding	NN	VBZ JJ NN NN NN	O
+sterling	NN	JJ NN NN NN IN	B
+firm	NN	NN NN NN IN DT	O
+at	IN	NN NN IN DT NN	O
+the	DT	NN IN DT NN JJ	B
+moment	NN	IN DT NN JJ IN	I
+other	JJ	DT NN JJ IN NNP	O
+than	IN	NN JJ IN NNP NNP	O
+Mr.	NNP	JJ IN NNP NNP POS	B
+Lawson	NNP	IN NNP NNP POS NN	I
+'s	POS	NNP NNP POS NN IN	B
+promise	NN	NNP POS NN IN NNS	I
+that	IN	POS NN IN NNS MD	O
+rates	NNS	NN IN NNS MD VB	B
+will	MD	IN NNS MD VB VBN	O
+be	VB	NNS MD VB VBN JJR	O
+pushed	VBN	MD VB VBN JJR IN	O
+higher	JJR	VB VBN JJR IN JJ	O
+if	IN	VBN JJR IN JJ .	O
+necessary	JJ	JJR IN JJ .	O
+.	.	IN JJ .	O
+
+And	CC	CC , PRP	O
+,	,	CC , PRP VBP	O
+they	PRP	CC , PRP VBP ,	B
+warn	VBP	, PRP VBP , DT	O
+,	,	PRP VBP , DT JJ	O
+any	DT	VBP , DT JJ NN	B
+further	JJ	, DT JJ NN IN	I
+drop	NN	DT JJ NN IN DT	I
+in	IN	JJ NN IN DT NN	O
+the	DT	NN IN DT NN POS	B
+government	NN	IN DT NN POS NN	I
+'s	POS	DT NN POS NN MD	B
+popularity	NN	NN POS NN MD RB	I
+could	MD	POS NN MD RB VB	O
+swiftly	RB	NN MD RB VB DT	O
+make	VB	MD RB VB DT NN	O
+this	DT	RB VB DT NN NN	B
+promise	NN	VB DT NN NN JJ	I
+sound	NN	DT NN NN JJ .	O
+hollow	JJ	NN NN JJ .	O
+.	.	NN JJ .	O
+
+Sterling	NNP	NNP VBD RB	B
+was	VBD	NNP VBD RB VBG	O
+already	RB	NNP VBD RB VBG DT	O
+showing	VBG	VBD RB VBG DT NNS	O
+some	DT	RB VBG DT NNS IN	B
+signs	NNS	VBG DT NNS IN DT	I
+of	IN	DT NNS IN DT NN	O
+a	DT	NNS IN DT NN IN	B
+lack	NN	IN DT NN IN NN	I
+of	IN	DT NN IN NN IN	O
+confidence	NN	NN IN NN IN NNP	B
+in	IN	IN NN IN NNP NNP	O
+Mr.	NNP	NN IN NNP NNP POS	B
+Lawson	NNP	IN NNP NNP POS NN	I
+'s	POS	NNP NNP POS NN NNP	B
+promise	NN	NNP POS NN NNP .	I
+Friday	NNP	POS NN NNP .	B
+.	.	NN NNP .	O
+
+In	IN	IN JJ NN	O
+European	JJ	IN JJ NN PRP	B
+trading	NN	IN JJ NN PRP VBD	I
+it	PRP	JJ NN PRP VBD TO	B
+declined	VBD	NN PRP VBD TO $	O
+to	TO	PRP VBD TO $ CD	O
+$	$	VBD TO $ CD CC	B
+1.5890	CD	TO $ CD CC CD	I
+and	CC	$ CD CC CD NNS	O
+2.9495	CD	CD CC CD NNS IN	B
+marks	NNS	CC CD NNS IN $	I
+from	IN	CD NNS IN $ CD	O
+$	$	NNS IN $ CD CC	B
+1.5940	CD	IN $ CD CC CD	I
+and	CC	$ CD CC CD NNS	O
+2.9429	CD	CD CC CD NNS JJ	B
+marks	NNS	CC CD NNS JJ NNP	I
+late	JJ	CD NNS JJ NNP .	B
+Thursday	NNP	NNS JJ NNP .	I
+.	.	JJ NNP .	O
+
+Economists	NNS	NNS VBD IN	B
+suggested	VBD	NNS VBD IN IN	O
+that	IN	NNS VBD IN IN DT	O
+if	IN	VBD IN IN DT NN	O
+the	DT	IN IN DT NN VBZ	B
+pound	NN	IN DT NN VBZ JJ	I
+falls	VBZ	DT NN VBZ JJ IN	O
+much	JJ	NN VBZ JJ IN CD	B
+below	IN	VBZ JJ IN CD NNS	O
+2.90	CD	JJ IN CD NNS ,	B
+marks	NNS	IN CD NNS , DT	I
+,	,	CD NNS , DT NN	O
+the	DT	NNS , DT NN MD	B
+government	NN	, DT NN MD VB	I
+will	MD	DT NN MD VB VBN	O
+be	VB	NN MD VB VBN TO	O
+forced	VBN	MD VB VBN TO VB	O
+to	TO	VB VBN TO VB NNS	O
+increase	VB	VBN TO VB NNS TO	O
+rates	NNS	TO VB NNS TO CD	B
+to	TO	VB NNS TO CD NN	O
+16	CD	NNS TO CD NN ,	B
+%	NN	TO CD NN , DT	I
+,	,	CD NN , DT TO	O
+both	DT	NN , DT TO VB	O
+to	TO	, DT TO VB DT	O
+halt	VB	DT TO VB DT JJ	O
+any	DT	TO VB DT JJ NN	B
+further	JJ	VB DT JJ NN CC	I
+decline	NN	DT JJ NN CC VB	I
+and	CC	JJ NN CC VB IN	O
+ensure	VB	NN CC VB IN DT	O
+that	IN	CC VB IN DT NN	O
+the	DT	VB IN DT NN IN	B
+balance	NN	IN DT NN IN JJ	I
+of	IN	DT NN IN JJ NN	O
+monetary	JJ	NN IN JJ NN VBZ	B
+policy	NN	IN JJ NN VBZ JJ	I
+remains	VBZ	JJ NN VBZ JJ .	O
+unchanged	JJ	NN VBZ JJ .	O
+.	.	VBZ JJ .	O
+
+Friday	NNP	NNP POS NNP	B
+'s	POS	NNP POS NNP NN	B
+Market	NNP	NNP POS NNP NN	I
+Activity	NN	POS NNP NN	I
+
+The	DT	DT NN VBD	B
+dollar	NN	DT NN VBD NNS	I
+posted	VBD	DT NN VBD NNS IN	O
+gains	NNS	NN VBD NNS IN JJ	B
+in	IN	VBD NNS IN JJ NN	O
+quiet	JJ	NNS IN JJ NN IN	B
+trading	NN	IN JJ NN IN NNS	I
+as	IN	JJ NN IN NNS IN	O
+concerns	NNS	NN IN NNS IN NNS	B
+about	IN	IN NNS IN NNS VBN	O
+equities	NNS	NNS IN NNS VBN .	B
+abated	VBN	IN NNS VBN .	O
+.	.	NNS VBN .	O
+
+Foreign	JJ	JJ NN NNS	B
+exchange	NN	JJ NN NNS VBD	I
+dealers	NNS	JJ NN NNS VBD IN	I
+said	VBD	NN NNS VBD IN DT	O
+that	IN	NNS VBD IN DT NN	O
+the	DT	VBD IN DT NN NN	B
+currency	NN	IN DT NN NN VBZ	I
+market	NN	DT NN NN VBZ VBN	I
+has	VBZ	NN NN VBZ VBN TO	O
+begun	VBN	NN VBZ VBN TO VB	O
+to	TO	VBZ VBN TO VB PRP	O
+distance	VB	VBN TO VB PRP IN	O
+itself	PRP	TO VB PRP IN DT	B
+from	IN	VB PRP IN DT JJ	O
+the	DT	PRP IN DT JJ NN	B
+volatile	JJ	IN DT JJ NN NN	I
+stock	NN	DT JJ NN NN ,	I
+exchange	NN	JJ NN NN , WDT	I
+,	,	NN NN , WDT VBZ	O
+which	WDT	NN , WDT VBZ VBN	B
+has	VBZ	, WDT VBZ VBN DT	O
+preoccupied	VBN	WDT VBZ VBN DT NN	O
+the	DT	VBZ VBN DT NN IN	B
+market	NN	VBN DT NN IN NNP	I
+since	IN	DT NN IN NNP CD	O
+Oct.	NNP	NN IN NNP CD ,	B
+13	CD	IN NNP CD , WRB	I
+,	,	NNP CD , WRB DT	O
+when	WRB	CD , WRB DT NNP	O
+the	DT	, WRB DT NNP NNP	B
+Dow	NNP	WRB DT NNP NNP NNP	I
+Jones	NNP	DT NNP NNP NNP NNP	I
+Industrial	NNP	NNP NNP NNP NNP VBD	I
+Average	NNP	NNP NNP NNP VBD JJR	I
+plunged	VBD	NNP NNP VBD JJR IN	O
+more	JJR	NNP VBD JJR IN CD	B
+than	IN	VBD JJR IN CD NNS	I
+190	CD	JJR IN CD NNS .	I
+points	NNS	IN CD NNS .	I
+.	.	CD NNS .	O
+
+Currency	NN	NN NNS VBP	B
+analysts	NNS	NN NNS VBP IN	I
+predict	VBP	NN NNS VBP IN IN	O
+that	IN	NNS VBP IN IN DT	O
+in	IN	VBP IN IN DT VBG	O
+the	DT	IN IN DT VBG NN	B
+coming	VBG	IN DT VBG NN DT	I
+week	NN	DT VBG NN DT JJ	I
+the	DT	VBG NN DT JJ NN	B
+foreign	JJ	NN DT JJ NN NN	I
+exchange	NN	DT JJ NN NN MD	I
+market	NN	JJ NN NN MD VB	I
+will	MD	NN NN MD VB PRP$	O
+shift	VB	NN MD VB PRP$ NN	O
+its	PRP$	MD VB PRP$ NN RB	B
+focus	NN	VB PRP$ NN RB TO	I
+back	RB	PRP$ NN RB TO JJ	O
+to	TO	NN RB TO JJ NNS	O
+economic	JJ	RB TO JJ NNS ,	B
+fundamentals	NNS	TO JJ NNS , VBG	I
+,	,	JJ NNS , VBG DT	O
+keeping	VBG	NNS , VBG DT NN	O
+a	DT	, VBG DT NN NN	B
+close	NN	VBG DT NN NN IN	I
+eye	NN	DT NN NN IN IN	I
+out	IN	NN NN IN IN DT	O
+for	IN	NN IN IN DT NNS	O
+any	DT	IN IN DT NNS IN	B
+signs	NNS	IN DT NNS IN JJ	I
+of	IN	DT NNS IN JJ NN	O
+monetary	JJ	NNS IN JJ NN IN	B
+easing	NN	IN JJ NN IN NNP	I
+by	IN	JJ NN IN NNP NNP	O
+U.S.	NNP	NN IN NNP NNP NNP	B
+Federal	NNP	IN NNP NNP NNP .	I
+Reserve	NNP	NNP NNP NNP .	I
+.	.	NNP NNP .	O
+
+Late	RB	RB IN DT	O
+in	IN	RB IN DT NNP	O
+the	DT	RB IN DT NNP NNP	B
+New	NNP	IN DT NNP NNP NN	I
+York	NNP	DT NNP NNP NN NN	I
+trading	NN	NNP NNP NN NN ,	I
+day	NN	NNP NN NN , DT	I
+,	,	NN NN , DT NN	O
+the	DT	NN , DT NN VBD	B
+dollar	NN	, DT NN VBD VBN	I
+was	VBD	DT NN VBD VBN IN	O
+quoted	VBN	NN VBD VBN IN CD	O
+at	IN	VBD VBN IN CD NNS	O
+1.8578	CD	VBN IN CD NNS ,	B
+marks	NNS	IN CD NNS , IN	I
+,	,	CD NNS , IN IN	O
+up	IN	NNS , IN IN CD	O
+from	IN	, IN IN CD NNS	O
+1.8470	CD	IN IN CD NNS JJ	B
+marks	NNS	IN CD NNS JJ NNP	I
+late	JJ	CD NNS JJ NNP IN	B
+Thursday	NNP	NNS JJ NNP IN NNP	I
+in	IN	JJ NNP IN NNP NNP	O
+New	NNP	NNP IN NNP NNP .	B
+York	NNP	IN NNP NNP .	I
+.	.	NNP NNP .	O
+
+The	DT	DT NNP NN	B
+U.S.	NNP	DT NNP NN VBD	I
+currency	NN	DT NNP NN VBD RB	I
+was	VBD	NNP NN VBD RB VBG	O
+also	RB	NN VBD RB VBG NNS	O
+changing	VBG	VBD RB VBG NNS IN	O
+hands	NNS	RB VBG NNS IN CD	B
+at	IN	VBG NNS IN CD NN	O
+142.43	CD	NNS IN CD NN ,	B
+yen	NN	IN CD NN , IN	I
+,	,	CD NN , IN IN	O
+up	IN	NN , IN IN CD	O
+from	IN	, IN IN CD NN	O
+141.70	CD	IN IN CD NN IN	B
+yen	NN	IN CD NN IN NNP	I
+in	IN	CD NN IN NNP NNP	O
+New	NNP	NN IN NNP NNP JJ	B
+York	NNP	IN NNP NNP JJ NNP	I
+late	JJ	NNP NNP JJ NNP .	B
+Thursday	NNP	NNP JJ NNP .	I
+.	.	JJ NNP .	O
+
+In	IN	IN NNP IN	O
+Tokyo	NNP	IN NNP IN NNP	B
+on	IN	IN NNP IN NNP ,	O
+Monday	NNP	NNP IN NNP , DT	B
+,	,	IN NNP , DT NNP	O
+the	DT	NNP , DT NNP NN	B
+U.S.	NNP	, DT NNP NN VBD	I
+currency	NN	DT NNP NN VBD IN	I
+opened	VBD	NNP NN VBD IN NN	O
+for	IN	NN VBD IN NN IN	O
+trading	NN	VBD IN NN IN CD	B
+at	IN	IN NN IN CD NN	O
+141.95	CD	NN IN CD NN ,	B
+yen	NN	IN CD NN , IN	I
+,	,	CD NN , IN IN	O
+up	IN	NN , IN IN NNP	O
+from	IN	, IN IN NNP POS	O
+Friday	NNP	IN IN NNP POS NNP	B
+'s	POS	IN NNP POS NNP NN	B
+Tokyo	NNP	NNP POS NNP NN IN	I
+close	NN	POS NNP NN IN CD	I
+of	IN	NNP NN IN CD NN	O
+141.35	CD	NN IN CD NN .	B
+yen	NN	IN CD NN .	I
+.	.	CD NN .	O
+
+On	IN	IN DT NNP	O
+the	DT	IN DT NNP NNP	B
+Commodity	NNP	IN DT NNP NNP IN	I
+Exchange	NNP	DT NNP NNP IN NNP	I
+in	IN	NNP NNP IN NNP NNP	O
+New	NNP	NNP IN NNP NNP ,	B
+York	NNP	IN NNP NNP , NN	I
+,	,	NNP NNP , NN IN	O
+gold	NN	NNP , NN IN JJ	B
+for	IN	, NN IN JJ NN	O
+current	JJ	NN IN JJ NN VBD	B
+delivery	NN	IN JJ NN VBD IN	I
+settled	VBD	JJ NN VBD IN $	O
+at	IN	NN VBD IN $ CD	O
+$	$	VBD IN $ CD DT	B
+367.30	CD	IN $ CD DT NN	I
+an	DT	$ CD DT NN ,	B
+ounce	NN	CD DT NN , IN	I
+,	,	DT NN , IN CD	O
+up	IN	NN , IN CD NNS	O
+20	CD	, IN CD NNS .	B
+cents	NNS	IN CD NNS .	I
+.	.	CD NNS .	O
+
+Estimated	VBN	VBN NN VBD	B
+volume	NN	VBN NN VBD DT	I
+was	VBD	VBN NN VBD DT NN	O
+a	DT	NN VBD DT NN CD	B
+light	NN	VBD DT NN CD CD	I
+2.4	CD	DT NN CD CD NNS	I
+million	CD	NN CD CD NNS .	I
+ounces	NNS	CD CD NNS .	I
+.	.	CD NNS .	O
+
+In	IN	IN JJ NN	O
+early	JJ	IN JJ NN IN	B
+trading	NN	IN JJ NN IN NNP	I
+in	IN	JJ NN IN NNP NNP	O
+Hong	NNP	NN IN NNP NNP NNP	B
+Kong	NNP	IN NNP NNP NNP ,	I
+Monday	NNP	NNP NNP NNP , NN	B
+,	,	NNP NNP , NN VBD	O
+gold	NN	NNP , NN VBD VBN	B
+was	VBD	, NN VBD VBN IN	O
+quoted	VBN	NN VBD VBN IN $	O
+at	IN	VBD VBN IN $ CD	O
+$	$	VBN IN $ CD DT	B
+366.50	CD	IN $ CD DT NN	I
+an	DT	$ CD DT NN .	B
+ounce	NN	CD DT NN .	I
+.	.	DT NN .	O
+
+East	NNP	NNP NNP NNP	B
+Rock	NNP	NNP NNP NNP NNP	I
+Partners	NNP	NNP NNP NNP NNP NNP	I
+Limited	NNP	NNP NNP NNP NNP VBD	I
+Partnership	NNP	NNP NNP NNP VBD PRP	I
+said	VBD	NNP NNP VBD PRP VBD	O
+it	PRP	NNP VBD PRP VBD TO	B
+proposed	VBD	VBD PRP VBD TO VB	O
+to	TO	PRP VBD TO VB NNP	O
+acquire	VB	VBD TO VB NNP NNP	O
+A.P.	NNP	TO VB NNP NNP NNP	B
+Green	NNP	VB NNP NNP NNP NNP	I
+Industries	NNP	NNP NNP NNP NNP IN	I
+Inc.	NNP	NNP NNP NNP IN $	I
+for	IN	NNP NNP IN $ CD	O
+$	$	NNP IN $ CD DT	B
+40	CD	IN $ CD DT NN	I
+a	DT	$ CD DT NN .	B
+share	NN	CD DT NN .	I
+.	.	DT NN .	O
+
+In	IN	IN DT NNP	O
+an	DT	IN DT NNP CD	B
+Oct.	NNP	IN DT NNP CD NN	I
+19	CD	DT NNP CD NN TO	I
+letter	NN	NNP CD NN TO NNP	I
+to	TO	CD NN TO NNP NNP	O
+A.P.	NNP	NN TO NNP NNP POS	B
+Green	NNP	TO NNP NNP POS NN	I
+'s	POS	NNP NNP POS NN ,	B
+board	NN	NNP POS NN , NNP	I
+,	,	POS NN , NNP NNP	O
+East	NNP	NN , NNP NNP VBD	B
+Rock	NNP	, NNP NNP VBD DT	I
+said	VBD	NNP NNP VBD DT NN	O
+the	DT	NNP VBD DT NN VBZ	B
+offer	NN	VBD DT NN VBZ NN	I
+is	VBZ	DT NN VBZ NN TO	O
+subject	NN	NN VBZ NN TO DT	O
+to	TO	VBZ NN TO DT NN	O
+the	DT	NN TO DT NN IN	B
+signing	NN	TO DT NN IN DT	I
+of	IN	DT NN IN DT NN	O
+a	DT	NN IN DT NN NN	B
+merger	NN	IN DT NN NN IN	I
+agreement	NN	DT NN NN IN DT	I
+by	IN	NN NN IN DT RB	O
+no	DT	NN IN DT RB IN	O
+later	RB	IN DT RB IN NNP	O
+than	IN	DT RB IN NNP CD	O
+Oct.	NNP	RB IN NNP CD .	B
+31	CD	IN NNP CD .	I
+.	.	NNP CD .	O
+
+The	DT	DT NN ,	B
+letter	NN	DT NN , VBN	I
+,	,	DT NN , VBN TO	O
+attached	VBN	NN , VBN TO DT	O
+to	TO	, VBN TO DT NN	O
+a	DT	VBN TO DT NN IN	B
+filing	NN	TO DT NN IN DT	I
+with	IN	DT NN IN DT NNP	O
+the	DT	NN IN DT NNP CC	B
+Securities	NNP	IN DT NNP CC NNP	I
+and	CC	DT NNP CC NNP NNP	I
+Exchange	NNP	NNP CC NNP NNP ,	I
+Commission	NNP	CC NNP NNP , VBD	I
+,	,	NNP NNP , VBD DT	O
+said	VBD	NNP , VBD DT NN	O
+the	DT	, VBD DT NN VBZ	B
+approval	NN	VBD DT NN VBZ RB	I
+is	VBZ	DT NN VBZ RB JJ	O
+also	RB	NN VBZ RB JJ IN	O
+contingent	JJ	VBZ RB JJ IN VBG	O
+upon	IN	RB JJ IN VBG JJ	O
+obtaining	VBG	JJ IN VBG JJ NN	O
+satisfactory	JJ	IN VBG JJ NN .	B
+financing	NN	VBG JJ NN .	I
+.	.	JJ NN .	O
+
+An	DT	DT NNP NNP	B
+A.P.	NNP	DT NNP NNP NN	I
+Green	NNP	DT NNP NNP NN VBD	I
+official	NN	NNP NNP NN VBD TO	I
+declined	VBD	NNP NN VBD TO VB	O
+to	TO	NN VBD TO VB IN	O
+comment	VB	VBD TO VB IN DT	O
+on	IN	TO VB IN DT NN	O
+the	DT	VB IN DT NN .	B
+filing	NN	IN DT NN .	I
+.	.	DT NN .	O
+
+The	DT	DT $ JJ	B
+$	$	DT $ JJ NN	I
+40-a-share	JJ	DT $ JJ NN VBZ	I
+proposal	NN	$ JJ NN VBZ DT	I
+values	VBZ	JJ NN VBZ DT NN	O
+the	DT	NN VBZ DT NN IN	B
+company	NN	VBZ DT NN IN RB	I
+at	IN	DT NN IN RB $	O
+about	RB	NN IN RB $ CD	B
+$	$	IN RB $ CD CD	I
+106.6	CD	RB $ CD CD .	I
+million	CD	$ CD CD .	I
+.	.	CD CD .	O
+
+A.P.	NNP	NNP NNP RB	B
+Green	NNP	NNP NNP RB VBZ	I
+currently	RB	NNP NNP RB VBZ CD	O
+has	VBZ	NNP RB VBZ CD NNS	O
+2,664,098	CD	RB VBZ CD NNS JJ	B
+shares	NNS	VBZ CD NNS JJ .	I
+outstanding	JJ	CD NNS JJ .	O
+.	.	NNS JJ .	O
+
+Its	PRP$	PRP$ NN VBD	B
+stock	NN	PRP$ NN VBD IN	I
+closed	VBD	PRP$ NN VBD IN $	O
+at	IN	NN VBD IN $ CD	O
+$	$	VBD IN $ CD ,	B
+38	CD	IN $ CD , IN	I
+,	,	$ CD , IN $	O
+up	IN	CD , IN $ CD	O
+$	$	, IN $ CD ,	B
+1.875	CD	IN $ CD , IN	I
+,	,	$ CD , IN JJ	O
+in	IN	CD , IN JJ JJ	O
+national	JJ	, IN JJ JJ NN	B
+over-the-counter	JJ	IN JJ JJ NN .	I
+trading	NN	JJ JJ NN .	I
+.	.	JJ NN .	O
+
+The	DT	DT NN VBZ	B
+company	NN	DT NN VBZ DT	I
+is	VBZ	DT NN VBZ DT NNP	O
+a	DT	NN VBZ DT NNP ,	B
+Mexico	NNP	VBZ DT NNP , NNP	I
+,	,	DT NNP , NNP ,	I
+Mo.	NNP	NNP , NNP , NN	I
+,	,	, NNP , NN IN	I
+maker	NN	NNP , NN IN JJ	I
+of	IN	, NN IN JJ NNS	O
+refractory	JJ	NN IN JJ NNS .	B
+products	NNS	IN JJ NNS .	I
+.	.	JJ NNS .	O
+
+East	NNP	NNP NNP RB	B
+Rock	NNP	NNP NNP RB VBD	I
+also	RB	NNP NNP RB VBD IN	O
+said	VBD	NNP RB VBD IN DT	O
+in	IN	RB VBD IN DT NN	O
+the	DT	VBD IN DT NN IN	B
+filing	NN	IN DT NN IN PRP	I
+that	IN	DT NN IN PRP VBD	O
+it	PRP	NN IN PRP VBD PRP$	B
+boosted	VBD	IN PRP VBD PRP$ NN	O
+its	PRP$	PRP VBD PRP$ NN IN	B
+stake	NN	VBD PRP$ NN IN NNP	I
+in	IN	PRP$ NN IN NNP NNP	O
+A.P.	NNP	NN IN NNP NNP TO	B
+Green	NNP	IN NNP NNP TO CD	I
+to	TO	NNP NNP TO CD NN	O
+8.7	CD	NNP TO CD NN .	B
+%	NN	TO CD NN .	I
+.	.	CD NN .	O
+
+It	PRP	PRP RB VBZ	B
+now	RB	PRP RB VBZ CD	O
+holds	VBZ	PRP RB VBZ CD NNP	O
+233,000	CD	RB VBZ CD NNP NNP	B
+A.P.	NNP	VBZ CD NNP NNP JJ	I
+Green	NNP	CD NNP NNP JJ NNS	I
+common	JJ	NNP NNP JJ NNS ,	I
+shares	NNS	NNP JJ NNS , VBG	I
+,	,	JJ NNS , VBG CD	O
+including	VBG	NNS , VBG CD NNS	O
+30,000	CD	, VBG CD NNS VBD	B
+shares	NNS	VBG CD NNS VBD JJ	I
+bought	VBD	CD NNS VBD JJ NNP	O
+last	JJ	NNS VBD JJ NNP IN	B
+Thursday	NNP	VBD JJ NNP IN $	I
+for	IN	JJ NNP IN $ CD	O
+$	$	NNP IN $ CD TO	B
+35.50	CD	IN $ CD TO $	I
+to	TO	$ CD TO $ CD	I
+$	$	CD TO $ CD DT	I
+36.50	CD	TO $ CD DT NN	I
+a	DT	$ CD DT NN .	B
+share	NN	CD DT NN .	I
+.	.	DT NN .	O
+
+New	NNP	NNP JJ NNP	B
+York-based	JJ	NNP JJ NNP NNP	I
+John	NNP	NNP JJ NNP NNP CC	I
+Kuhns	NNP	JJ NNP NNP CC NNP	I
+and	CC	NNP NNP CC NNP NNP	I
+Robert	NNP	NNP CC NNP NNP NN	I
+MacDonald	NNP	CC NNP NNP NN NNP	I
+control	NN	NNP NNP NN NNP NNP	O
+East	NNP	NNP NN NNP NNP NNP	B
+Rock	NNP	NN NNP NNP NNP NNP	I
+Partners	NNP	NNP NNP NNP NNP ,	I
+Inc.	NNP	NNP NNP NNP , DT	I
+,	,	NNP NNP , DT JJ	O
+the	DT	NNP , DT JJ JJ	B
+sole	JJ	, DT JJ JJ NN	I
+general	JJ	DT JJ JJ NN IN	I
+partner	NN	JJ JJ NN IN NNP	I
+of	IN	JJ NN IN NNP NNP	O
+East	NNP	NN IN NNP NNP NNP	B
+Rock	NNP	IN NNP NNP NNP NNP	I
+Partners	NNP	NNP NNP NNP NNP .	I
+L.P	NNP	NNP NNP NNP .	I
+.	.	NNP NNP .	O
+
+The	DT	DT JJ JJ	B
+sole	JJ	DT JJ JJ NN	I
+limited	JJ	DT JJ JJ NN IN	I
+partner	NN	JJ JJ NN IN DT	I
+of	IN	JJ NN IN DT NN	O
+the	DT	NN IN DT NN VBZ	B
+partnership	NN	IN DT NN VBZ NNP	I
+is	VBZ	DT NN VBZ NNP NNP	O
+Westwood	NNP	NN VBZ NNP NNP NNP	B
+Brick	NNP	VBZ NNP NNP NNP NNP	I
+Lime	NNP	NNP NNP NNP NNP ,	I
+Inc.	NNP	NNP NNP NNP , DT	I
+,	,	NNP NNP , DT JJ	O
+an	DT	NNP , DT JJ NN	B
+indirect	JJ	, DT JJ NN IN	I
+subsidiary	NN	DT JJ NN IN NNP	I
+of	IN	JJ NN IN NNP NNP	O
+Westwood	NNP	NN IN NNP NNP NNP	B
+Group	NNP	IN NNP NNP NNP .	I
+Inc	NNP	NNP NNP NNP .	I
+.	.	NNP NNP .	O
+
+Both	DT	DT NNP NNP	O
+Westwood	NNP	DT NNP NNP CC	B
+Brick	NNP	DT NNP NNP CC NNP	I
+and	CC	NNP NNP CC NNP NNP	O
+Westwood	NNP	NNP CC NNP NNP VBP	B
+Group	NNP	CC NNP NNP VBP VBN	I
+are	VBP	NNP NNP VBP VBN IN	O
+based	VBN	NNP VBP VBN IN NNP	O
+in	IN	VBP VBN IN NNP .	O
+Boston	NNP	VBN IN NNP .	B
+.	.	IN NNP .	O
+
+Freight	NN	NN NNS ,	B
+rates	NNS	NN NNS , VBG	I
+,	,	NN NNS , VBG IN	O
+declining	VBG	NNS , VBG IN RBS	O
+for	IN	, VBG IN RBS IN	O
+most	RBS	VBG IN RBS IN DT	B
+of	IN	IN RBS IN DT NN	O
+the	DT	RBS IN DT NN IN	B
+decade	NN	IN DT NN IN IN	I
+because	IN	DT NN IN IN NN	O
+of	IN	NN IN IN NN VBN	O
+competition	NN	IN IN NN VBN IN	B
+spurred	VBN	IN NN VBN IN NN	O
+by	IN	NN VBN IN NN ,	O
+deregulation	NN	VBN IN NN , VBP	B
+,	,	IN NN , VBP VBG	O
+are	VBP	NN , VBP VBG IN	O
+bottoming	VBG	, VBP VBG IN ,	O
+out	IN	VBP VBG IN , VBG	O
+,	,	VBG IN , VBG RB	O
+turning	VBG	IN , VBG RB CC	O
+upward	RB	, VBG RB CC VBG	O
+and	CC	VBG RB CC VBG TO	O
+threatening	VBG	RB CC VBG TO VB	O
+to	TO	CC VBG TO VB NN	O
+fuel	VB	VBG TO VB NN .	O
+inflation	NN	TO VB NN .	B
+.	.	VB NN .	O
+
+Trucking	NNP	NNP , VBG	B
+,	,	NNP , VBG CC	I
+shipping	VBG	NNP , VBG CC NN	I
+and	CC	, VBG CC NN NNS	I
+air-freight	NN	VBG CC NN NNS VBP	I
+companies	NNS	CC NN NNS VBP VBN	I
+have	VBP	NN NNS VBP VBN NN	O
+announced	VBN	NNS VBP VBN NN NNS	O
+rate	NN	VBP VBN NN NNS ,	B
+increases	NNS	VBN NN NNS , VBN	I
+,	,	NN NNS , VBN IN	O
+scheduled	VBN	NNS , VBN IN DT	O
+for	IN	, VBN IN DT NN	O
+this	DT	VBN IN DT NN CC	B
+fall	NN	IN DT NN CC JJ	I
+or	CC	DT NN CC JJ JJ	O
+early	JJ	NN CC JJ JJ NN	B
+next	JJ	CC JJ JJ NN ,	I
+year	NN	JJ JJ NN , VBG	I
+,	,	JJ NN , VBG JJR	O
+reflecting	VBG	NN , VBG JJR NNS	O
+higher	JJR	, VBG JJR NNS CC	B
+costs	NNS	VBG JJR NNS CC VBD	I
+and	CC	JJR NNS CC VBD NN	O
+tightened	VBD	NNS CC VBD NN IN	B
+demand	NN	CC VBD NN IN NN	I
+for	IN	VBD NN IN NN NN	O
+freight	NN	NN IN NN NN .	B
+transport	NN	IN NN NN .	I
+.	.	NN NN .	O
+
+Major	JJ	JJ NNS VBP	B
+shippers	NNS	JJ NNS VBP PRP	I
+say	VBP	JJ NNS VBP PRP VBP	O
+they	PRP	NNS VBP PRP VBP NN	B
+expect	VBP	VBP PRP VBP NN NNS	O
+freight	NN	PRP VBP NN NNS TO	B
+rates	NNS	VBP NN NNS TO VB	I
+to	TO	NN NNS TO VB IN	O
+rise	VB	NNS TO VB IN JJS	O
+at	IN	TO VB IN JJS RB	O
+least	JJS	VB IN JJS RB RB	O
+as	RB	IN JJS RB RB IN	O
+fast	RB	JJS RB RB IN NN	O
+as	IN	RB RB IN NN CC	O
+inflation	NN	RB IN NN CC RB	B
+and	CC	IN NN CC RB RBR	O
+maybe	RB	NN CC RB RBR IN	O
+faster	RBR	CC RB RBR IN DT	O
+in	IN	RB RBR IN DT JJ	O
+the	DT	RBR IN DT JJ JJ	B
+next	JJ	IN DT JJ JJ NNS	I
+few	JJ	DT JJ JJ NNS .	I
+years	NNS	JJ JJ NNS .	I
+.	.	JJ NNS .	O
+
+That	DT	DT VBZ DT	B
+'s	VBZ	DT VBZ DT JJ	O
+a	DT	DT VBZ DT JJ NN	B
+big	JJ	VBZ DT JJ NN IN	I
+change	NN	DT JJ NN IN JJ	I
+from	IN	JJ NN IN JJ NNS	O
+recent	JJ	NN IN JJ NNS WRB	B
+years	NNS	IN JJ NNS WRB NN	I
+when	WRB	JJ NNS WRB NN NN	O
+freight	NN	NNS WRB NN NN VBD	B
+haulage	NN	WRB NN NN VBD DT	I
+was	VBD	NN NN VBD DT JJ	O
+a	DT	NN VBD DT JJ NN	B
+bright	JJ	VBD DT JJ NN IN	I
+spot	NN	DT JJ NN IN NNP	I
+for	IN	JJ NN IN NNP NN	O
+U.S.	NNP	NN IN NNP NN ,	B
+productivity	NN	IN NNP NN , VBG	I
+,	,	NNP NN , VBG TO	O
+helping	VBG	NN , VBG TO VB	O
+to	TO	, VBG TO VB NN	O
+restrain	VB	VBG TO VB NN CC	O
+inflation	NN	TO VB NN CC VB	B
+and	CC	VB NN CC VB NNP	O
+make	VB	NN CC VB NNP NN	O
+U.S.	NNP	CC VB NNP NN RBR	B
+industry	NN	VB NNP NN RBR JJ	I
+more	RBR	NNP NN RBR JJ RB	O
+competitive	JJ	NN RBR JJ RB .	O
+abroad	RB	RBR JJ RB .	O
+.	.	JJ RB .	O
+
+``	``	`` NN VBZ	O
+Demand	NN	`` NN VBZ VBN	B
+has	VBZ	`` NN VBZ VBN IN	O
+caught	VBN	NN VBZ VBN IN IN	O
+up	IN	VBZ VBN IN IN DT	O
+with	IN	VBN IN IN DT NN	O
+the	DT	IN IN DT NN IN	B
+supply	NN	IN DT NN IN JJ	I
+of	IN	DT NN IN JJ NNS	O
+certain	JJ	NN IN JJ NNS IN	B
+types	NNS	IN JJ NNS IN NN	I
+of	IN	JJ NNS IN NN NN	O
+freight	NN	NNS IN NN NN ,	B
+transportation	NN	IN NN NN , CC	I
+,	,	NN NN , CC NNS	O
+and	CC	NN , CC NNS VBP	O
+rates	NNS	, CC NNS VBP VBG	B
+are	VBP	CC NNS VBP VBG TO	O
+starting	VBG	NNS VBP VBG TO VB	O
+to	TO	VBP VBG TO VB IN	O
+move	VB	VBG TO VB IN ''	O
+up	IN	TO VB IN '' IN	O
+''	''	VB IN '' IN DT	O
+at	IN	IN '' IN DT NN	O
+a	DT	'' IN DT NN ``	B
+rate	NN	IN DT NN `` RB	I
+``	``	DT NN `` RB TO	O
+close	RB	NN `` RB TO CC	O
+to	TO	`` RB TO CC RB	O
+or	CC	RB TO CC RB JJR	O
+slightly	RB	TO CC RB JJR IN	O
+more	JJR	CC RB JJR IN DT	O
+than	IN	RB JJR IN DT NN	O
+the	DT	JJR IN DT NN NN	B
+inflation	NN	IN DT NN NN ,	I
+rate	NN	DT NN NN , ''	I
+,	,	NN NN , '' VBD	O
+''	''	NN , '' VBD NNP	O
+said	VBD	, '' VBD NNP NNP	O
+Clifford	NNP	'' VBD NNP NNP ,	B
+Sayre	NNP	VBD NNP NNP , NN	I
+,	,	NNP NNP , NN IN	O
+director	NN	NNP , NN IN NNS	B
+of	IN	, NN IN NNS IN	O
+logistics	NNS	NN IN NNS IN NNP	B
+at	IN	IN NNS IN NNP NNP	O
+Du	NNP	NNS IN NNP NNP NNP	B
+Pont	NNP	IN NNP NNP NNP .	I
+Co	NNP	NNP NNP NNP .	I
+.	.	NNP NNP .	O
+
+Shippers	NNS	NNS VBN RB	B
+surveyed	VBN	NNS VBN RB IN	O
+recently	RB	NNS VBN RB IN NNP	O
+by	IN	VBN RB IN NNP NNP	O
+Ohio	NNP	RB IN NNP NNP NNP	B
+State	NNP	IN NNP NNP NNP VBD	I
+University	NNP	NNP NNP NNP VBD PRP	I
+said	VBD	NNP NNP VBD PRP VBP	O
+they	PRP	NNP VBD PRP VBP PRP$	B
+expect	VBP	VBD PRP VBP PRP$ JJ	O
+their	PRP$	PRP VBP PRP$ JJ ,	B
+freight-transport	JJ	VBP PRP$ JJ , NN	I
+,	,	PRP$ JJ , NN CC	I
+storage	NN	JJ , NN CC NN	I
+and	CC	, NN CC NN NNS	I
+distribution	NN	NN CC NN NNS TO	I
+costs	NNS	CC NN NNS TO VB	I
+to	TO	NN NNS TO VB IN	O
+rise	VB	NNS TO VB IN CD	O
+about	IN	TO VB IN CD NN	B
+4	CD	VB IN CD NN DT	I
+%	NN	IN CD NN DT NN	I
+this	DT	CD NN DT NN .	B
+year	NN	NN DT NN .	I
+.	.	DT NN .	O
+
+Only	RB	RB CD NN	B
+10	CD	RB CD NN IN	I
+%	NN	RB CD NN IN DT	I
+of	IN	CD NN IN DT CD	O
+the	DT	NN IN DT CD NNS	B
+250	CD	IN DT CD NNS VBN	I
+shippers	NNS	DT CD NNS VBN VBN	I
+polled	VBN	CD NNS VBN VBN PRP$	O
+expected	VBN	NNS VBN VBN PRP$ JJ	O
+their	PRP$	VBN VBN PRP$ JJ NNS	B
+freight-transport	JJ	VBN PRP$ JJ NNS TO	I
+costs	NNS	PRP$ JJ NNS TO VB	I
+to	TO	JJ NNS TO VB ,	O
+decrease	VB	NNS TO VB , VBN	O
+,	,	TO VB , VBN IN	O
+compared	VBN	VB , VBN IN CD	O
+with	IN	, VBN IN CD NN	O
+30	CD	VBN IN CD NN WP	B
+%	NN	IN CD NN WP VBD	I
+who	WP	CD NN WP VBD VBN	B
+had	VBD	NN WP VBD VBN TO	O
+looked	VBN	WP VBD VBN TO VB	O
+to	TO	VBD VBN TO VB NN	O
+freight	VB	VBN TO VB NN TO	B
+transport	NN	TO VB NN TO VB	I
+to	TO	VB NN TO VB NNS	O
+reduce	VB	NN TO VB NNS IN	O
+costs	NNS	TO VB NNS IN JJ	B
+in	IN	VB NNS IN JJ NNS	O
+past	JJ	NNS IN JJ NNS .	B
+years	NNS	IN JJ NNS .	I
+.	.	JJ NNS .	O
+
+``	``	`` DT VBZ	O
+This	DT	`` DT VBZ DT	B
+is	VBZ	`` DT VBZ DT JJ	O
+the	DT	DT VBZ DT JJ NN	B
+first	JJ	VBZ DT JJ NN IN	I
+year	NN	DT JJ NN IN NN	I
+since	IN	JJ NN IN NN NN	O
+transportation	NN	NN IN NN NN IN	B
+deregulation	NN	IN NN NN IN CD	I
+in	IN	NN NN IN CD IN	O
+1980	CD	NN IN CD IN PRP	B
+that	IN	IN CD IN PRP VBP	O
+we	PRP	CD IN PRP VBP VBN	B
+have	VBP	IN PRP VBP VBN JJ	O
+had	VBN	PRP VBP VBN JJ DT	O
+such	JJ	VBP VBN JJ DT JJ	B
+a	DT	VBN JJ DT JJ CC	I
+dramatic	JJ	JJ DT JJ CC JJ	I
+and	CC	DT JJ CC JJ NN	I
+broad-based	JJ	JJ CC JJ NN IN	I
+upturn	NN	CC JJ NN IN VBN	I
+in	IN	JJ NN IN VBN NN	O
+perceived	VBN	NN IN VBN NN NNS	B
+transportation	NN	IN VBN NN NNS ,	I
+rates	NNS	VBN NN NNS , ''	I
+,	,	NN NNS , '' VBD	O
+''	''	NNS , '' VBD NNP	O
+said	VBD	, '' VBD NNP NNP	O
+Bernard	NNP	'' VBD NNP NNP ,	B
+LaLonde	NNP	VBD NNP NNP , DT	I
+,	,	NNP NNP , DT NN	O
+a	DT	NNP , DT NN NNS	B
+transportation	NN	, DT NN NNS NN	I
+logistics	NNS	DT NN NNS NN IN	I
+professor	NN	NN NNS NN IN NNP	I
+at	IN	NNS NN IN NNP NNP	O
+Ohio	NNP	NN IN NNP NNP IN	B
+State	NNP	IN NNP NNP IN NNP	I
+in	IN	NNP NNP IN NNP .	O
+Columbus	NNP	NNP IN NNP .	B
+.	.	IN NNP .	O
+
+The	DT	DT NN IN	B
+deregulation	NN	DT NN IN NNS	I
+of	IN	DT NN IN NNS CC	O
+railroads	NNS	NN IN NNS CC NN	B
+and	CC	IN NNS CC NN NNS	I
+trucking	NN	NNS CC NN NNS WDT	I
+companies	NNS	CC NN NNS WDT VBD	I
+that	WDT	NN NNS WDT VBD IN	B
+began	VBD	NNS WDT VBD IN CD	O
+in	IN	WDT VBD IN CD VBD	O
+1980	CD	VBD IN CD VBD NNS	B
+enabled	VBD	IN CD VBD NNS TO	O
+shippers	NNS	CD VBD NNS TO VB	B
+to	TO	VBD NNS TO VB IN	O
+bargain	VB	NNS TO VB IN NN	O
+for	IN	TO VB IN NN .	O
+transportation	NN	VB IN NN .	B
+.	.	IN NN .	O
+
+Carriers	NNP	NNP MD VB	B
+could	MD	NNP MD VB PRP$	O
+use	VB	NNP MD VB PRP$ NN	O
+their	PRP$	MD VB PRP$ NN RBR	B
+equipment	NN	VB PRP$ NN RBR RB	I
+more	RBR	PRP$ NN RBR RB ,	O
+efficiently	RB	NN RBR RB , VBG	O
+,	,	RBR RB , VBG TO	O
+leading	VBG	RB , VBG TO NN	O
+to	TO	, VBG TO NN PRP	O
+overcapacity	NN	VBG TO NN PRP VBD	B
+they	PRP	TO NN PRP VBD JJ	B
+were	VBD	NN PRP VBD JJ TO	O
+eager	JJ	PRP VBD JJ TO VB	O
+to	TO	VBD JJ TO VB .	O
+fill	VB	JJ TO VB .	O
+.	.	TO VB .	O
+
+Shippers	NNS	NNS VBP RB	B
+cut	VBP	NNS VBP RB $	O
+about	RB	NNS VBP RB $ CD	B
+$	$	VBP RB $ CD CD	I
+35	CD	RB $ CD CD IN	I
+billion	CD	$ CD CD IN PRP$	I
+from	IN	CD CD IN PRP$ JJ	O
+their	PRP$	CD IN PRP$ JJ ,	B
+annual	JJ	IN PRP$ JJ , JJ	I
+,	,	PRP$ JJ , JJ NN	I
+inter-city	JJ	JJ , JJ NN CC	I
+truck	NN	, JJ NN CC NN	I
+and	CC	JJ NN CC NN NNS	I
+rail	NN	NN CC NN NNS ,	I
+costs	NNS	CC NN NNS , TO	I
+,	,	NN NNS , TO RB	O
+to	TO	NNS , TO RB $	O
+about	RB	, TO RB $ CD	B
+$	$	TO RB $ CD CD	I
+150	CD	RB $ CD CD ,	I
+billion	CD	$ CD CD , CC	I
+,	,	CD CD , CC IN	O
+or	CC	CD , CC IN CD	O
+about	IN	, CC IN CD NN	B
+6.4	CD	CC IN CD NN IN	I
+%	NN	IN CD NN IN JJ	I
+of	IN	CD NN IN JJ JJ	O
+gross	JJ	NN IN JJ JJ NN	B
+national	JJ	IN JJ JJ NN ,	I
+product	NN	JJ JJ NN , RB	I
+,	,	JJ NN , RB IN	O
+down	RB	NN , RB IN CD	O
+from	IN	, RB IN CD NN	O
+8	CD	RB IN CD NN IN	B
+%	NN	IN CD NN IN NNP	I
+of	IN	CD NN IN NNP IN	O
+GNP	NNP	NN IN NNP IN CD	B
+in	IN	IN NNP IN CD .	O
+1981	CD	NNP IN CD .	B
+.	.	IN CD .	O
+
+But	CC	CC IN NN	O
+with	IN	CC IN NN IN	O
+much	NN	CC IN NN IN DT	B
+of	IN	IN NN IN DT NN	O
+the	DT	NN IN DT NN VBN	B
+inefficiency	NN	IN DT NN VBN IN	I
+squeezed	VBN	DT NN VBN IN IN	O
+out	IN	NN VBN IN IN DT	O
+of	IN	VBN IN IN DT JJ	O
+the	DT	IN IN DT JJ NN	B
+freight-transport	JJ	IN DT JJ NN ,	I
+system	NN	DT JJ NN , VBG	I
+,	,	JJ NN , VBG NNS	O
+rising	VBG	NN , VBG NNS VBP	B
+costs	NNS	, VBG NNS VBP JJ	I
+are	VBP	VBG NNS VBP JJ TO	O
+likely	JJ	NNS VBP JJ TO VB	O
+to	TO	VBP JJ TO VB VBN	O
+be	VB	JJ TO VB VBN RB	O
+reflected	VBN	TO VB VBN RB IN	O
+directly	RB	VB VBN RB IN JJR	O
+in	IN	VBN RB IN JJR NN	O
+higher	JJR	RB IN JJR NN NNS	B
+freight	NN	IN JJR NN NNS .	I
+rates	NNS	JJR NN NNS .	I
+.	.	NN NNS .	O
+
+``	``	`` NNS VBP	O
+Shippers	NNS	`` NNS VBP VBG	B
+are	VBP	`` NNS VBP VBG ``	O
+saying	VBG	NNS VBP VBG `` DT	O
+`	``	VBP VBG `` DT NN	O
+the	DT	VBG `` DT NN POS	B
+party	NN	`` DT NN POS IN	I
+'s	POS	DT NN POS IN ,	O
+over	IN	NN POS IN , ''	O
+,	,	POS IN , '' ''	O
+'	''	IN , '' '' VBD	O
+''	''	, '' '' VBD NNP	O
+said	VBD	'' '' VBD NNP NNP	O
+Mr.	NNP	'' VBD NNP NNP .	B
+LaLonde	NNP	VBD NNP NNP .	I
+.	.	NNP NNP .	O
+
+``	``	`` NNS MD	O
+Shippers	NNS	`` NNS MD RB	B
+wo	MD	`` NNS MD RB VB	O
+n't	RB	NNS MD RB VB JJ	O
+be	VB	MD RB VB JJ TO	O
+able	JJ	RB VB JJ TO VB	O
+to	TO	VB JJ TO VB IN	O
+look	VB	JJ TO VB IN JJ	O
+for	IN	TO VB IN JJ NNS	O
+transportation-cost	JJ	VB IN JJ NNS IN	B
+savings	NNS	IN JJ NNS IN PRP	I
+as	IN	JJ NNS IN PRP VBP	O
+they	PRP	NNS IN PRP VBP IN	B
+have	VBP	IN PRP VBP IN DT	O
+for	IN	PRP VBP IN DT JJ	O
+the	DT	VBP IN DT JJ CD	B
+last	JJ	IN DT JJ CD CC	I
+eight	CD	DT JJ CD CC CD	I
+or	CC	JJ CD CC CD NNS	I
+nine	CD	CD CC CD NNS .	I
+years	NNS	CC CD NNS .	I
+.	.	CD NNS .	O
+
+Transport	NN	NN NNS MD	B
+rates	NNS	NN NNS MD RB	I
+wo	MD	NN NNS MD RB VB	O
+n't	RB	NNS MD RB VB DT	O
+be	VB	MD RB VB DT NN	O
+an	DT	RB VB DT NN IN	B
+opportunity	NN	VB DT NN IN VBG	I
+for	IN	DT NN IN VBG NN	O
+offsetting	VBG	NN IN VBG NN NNS	O
+cost	NN	IN VBG NN NNS IN	B
+increases	NNS	VBG NN NNS IN JJ	I
+in	IN	NN NNS IN JJ NNS	O
+other	JJ	NNS IN JJ NNS IN	B
+segments	NNS	IN JJ NNS IN DT	I
+of	IN	JJ NNS IN DT NN	O
+the	DT	NNS IN DT NN .	B
+economy	NN	IN DT NN . ''	I
+.	.	DT NN . ''	O
+''	''	NN . ''	O
+
+Robert	NNP	NNP NNP ,	B
+Delaney	NNP	NNP NNP , DT	I
+,	,	NNP NNP , DT NN	O
+a	DT	NNP , DT NN IN	B
+consultant	NN	, DT NN IN NNP	I
+at	IN	DT NN IN NNP NNP	O
+Arthur	NNP	NN IN NNP NNP NNP	B
+D.	NNP	IN NNP NNP NNP NNP	I
+Little	NNP	NNP NNP NNP NNP ,	I
+Inc.	NNP	NNP NNP NNP , NNP	I
+,	,	NNP NNP , NNP ,	O
+Cambridge	NNP	NNP , NNP , NNP	B
+,	,	, NNP , NNP ,	O
+Mass.	NNP	NNP , NNP , VBD	B
+,	,	, NNP , VBD ``	O
+said	VBD	NNP , VBD `` PRP	O
+``	``	, VBD `` PRP VBP	O
+We	PRP	VBD `` PRP VBP VBN	B
+'ve	VBP	`` PRP VBP VBN PDT	O
+gotten	VBN	PRP VBP VBN PDT DT	O
+all	PDT	VBP VBN PDT DT NNS	B
+the	DT	VBN PDT DT NNS IN	I
+benefits	NNS	PDT DT NNS IN NN	I
+of	IN	DT NNS IN NN IN	O
+deregulation	NN	NNS IN NN IN JJ	B
+in	IN	IN NN IN JJ NNS	O
+freight-cost	JJ	NN IN JJ NNS .	B
+reductions	NNS	IN JJ NNS .	I
+.	.	JJ NNS .	O
+
+Now	RB	RB PRP VBP	O
+we	PRP	RB PRP VBP VBG	B
+are	VBP	RB PRP VBP VBG TO	O
+starting	VBG	PRP VBP VBG TO VB	O
+to	TO	VBP VBG TO VB JJ	O
+see	VB	VBG TO VB JJ JJ	O
+real	JJ	TO VB JJ JJ NNS	B
+freight-rate	JJ	VB JJ JJ NNS IN	I
+increases	NNS	JJ JJ NNS IN NNS	I
+as	IN	JJ NNS IN NNS VBP	O
+carriers	NNS	NNS IN NNS VBP NN	B
+replace	VBP	IN NNS VBP NN ,	O
+equipment	NN	NNS VBP NN , VB	B
+,	,	VBP NN , VB JJR	O
+pay	VB	NN , VB JJR NN	O
+higher	JJR	, VB JJR NN NNS	B
+fuel	NN	VB JJR NN NNS CC	I
+costs	NNS	JJR NN NNS CC VB	I
+and	CC	NN NNS CC VB JJR	O
+pay	VB	NNS CC VB JJR IN	O
+more	JJR	CC VB JJR IN NN	B
+for	IN	VB JJR IN NN .	O
+labor	NN	JJR IN NN .	B
+.	.	IN NN .	O
+
+You	PRP	PRP MD VB	B
+'ll	MD	PRP MD VB NNS	O
+see	VB	PRP MD VB NNS VB	O
+carriers	NNS	MD VB NNS VB TO	B
+try	VB	VB NNS VB TO VB	O
+to	TO	NNS VB TO VB DT	O
+recoup	VB	VB TO VB DT IN	O
+some	DT	TO VB DT IN DT	B
+of	IN	VB DT IN DT NN	O
+the	DT	DT IN DT NN VBG	B
+price	NN	IN DT NN VBG WDT	I
+cutting	VBG	DT NN VBG WDT VBD	I
+that	WDT	NN VBG WDT VBD RB	B
+occurred	VBD	VBG WDT VBD RB .	O
+previously	RB	WDT VBD RB . ''	O
+.	.	VBD RB . ''	O
+''	''	RB . ''	O
+
+Not	RB	RB NN VBZ	B
+everyone	NN	RB NN VBZ IN	I
+believes	VBZ	RB NN VBZ IN DT	O
+that	IN	NN VBZ IN DT JJ	O
+the	DT	VBZ IN DT JJ NNS	B
+good	JJ	IN DT JJ NNS VBP	I
+times	NNS	DT JJ NNS VBP IN	I
+are	VBP	JJ NNS VBP IN IN	O
+over	IN	NNS VBP IN IN NNS	O
+for	IN	VBP IN IN NNS .	O
+shippers	NNS	IN IN NNS .	B
+.	.	IN NNS .	O
+
+``	``	`` EX VBZ	O
+There	EX	`` EX VBZ RB	B
+'s	VBZ	`` EX VBZ RB DT	O
+still	RB	EX VBZ RB DT NN	O
+a	DT	VBZ RB DT NN IN	B
+lot	NN	RB DT NN IN NN	I
+of	IN	DT NN IN NN IN	O
+pressure	NN	NN IN NN IN NNS	B
+on	IN	IN NN IN NNS IN	O
+rates	NNS	NN IN NNS IN DT	B
+in	IN	IN NNS IN DT NN	O
+both	DT	NNS IN DT NN CC	B
+rail	NN	IN DT NN CC NN	I
+and	CC	DT NN CC NN ,	I
+truck	NN	NN CC NN , ''	I
+,	,	CC NN , '' VBD	O
+''	''	NN , '' VBD NNP	O
+said	VBD	, '' VBD NNP NNP	O
+Gerard	NNP	'' VBD NNP NNP ,	B
+McCullough	NNP	VBD NNP NNP , NN	I
+,	,	NNP NNP , NN IN	O
+lecturer	NN	NNP , NN IN NN	B
+in	IN	, NN IN NN IN	O
+transportation	NN	NN IN NN IN NNP	B
+at	IN	IN NN IN NNP NNP	O
+Massachusetts	NNP	NN IN NNP NNP IN	B
+Institute	NNP	IN NNP NNP IN NNP	I
+of	IN	NNP NNP IN NNP .	O
+Technology	NNP	NNP IN NNP .	B
+.	.	IN NNP .	O
+
+Less-than-truckload	JJ	JJ NNS ,	B
+companies	NNS	JJ NNS , WDT	I
+,	,	JJ NNS , WDT VBP	O
+which	WDT	NNS , WDT VBP DT	B
+carry	VBP	, WDT VBP DT NN	O
+the	DT	WDT VBP DT NN IN	B
+freight	NN	VBP DT NN IN JJ	I
+of	IN	DT NN IN JJ NNS	O
+several	JJ	NN IN JJ NNS IN	B
+shippers	NNS	IN JJ NNS IN DT	I
+in	IN	JJ NNS IN DT NN	O
+each	DT	NNS IN DT NN NN	B
+truck	NN	IN DT NN NN ,	I
+trailer	NN	DT NN NN , VBD	I
+,	,	NN NN , VBD RB	O
+discounted	VBD	NN , VBD RB DT	O
+away	RB	, VBD RB DT CD	O
+a	DT	VBD RB DT CD NN	B
+4.7	CD	RB DT CD NN NN	I
+%	NN	DT CD NN NN NN	I
+rate	NN	CD NN NN NN VBD	I
+increase	NN	NN NN NN VBD JJ	I
+implemented	VBD	NN NN VBD JJ NNP	O
+last	JJ	NN VBD JJ NNP .	B
+April	NNP	VBD JJ NNP .	I
+.	.	JJ NNP .	O
+
+The	DT	DT NNS VBD	B
+carriers	NNS	DT NNS VBD VBG	I
+were	VBD	DT NNS VBD VBG RB	O
+competing	VBG	NNS VBD VBG RB IN	O
+fiercely	RB	VBD VBG RB IN NN	O
+for	IN	VBG RB IN NN NN	O
+market	NN	RB IN NN NN .	B
+share	NN	IN NN NN .	I
+.	.	NN NN .	O
+
+Railroad-rate	JJ	JJ NNS VBP	B
+increases	NNS	JJ NNS VBP JJ	I
+are	VBP	JJ NNS VBP JJ TO	O
+likely	JJ	NNS VBP JJ TO VB	O
+to	TO	VBP JJ TO VB VBN	O
+be	VB	JJ TO VB VBN IN	O
+restrained	VBN	TO VB VBN IN VBG	O
+by	IN	VB VBN IN VBG JJ	O
+weakening	VBG	VBN IN VBG JJ NNS	B
+rail-traffic	JJ	IN VBG JJ NNS CC	I
+levels	NNS	VBG JJ NNS CC JJ	I
+and	CC	JJ NNS CC JJ NN	O
+keen	JJ	NNS CC JJ NN IN	B
+competition	NN	CC JJ NN IN NN	I
+for	IN	JJ NN IN NN IN	O
+freight	NN	NN IN NN IN NNS	B
+from	IN	IN NN IN NNS .	O
+trucks	NNS	NN IN NNS .	B
+.	.	IN NNS .	O
+
+An	DT	DT NN IN	B
+official	NN	DT NN IN NNP	I
+at	IN	DT NN IN NNP NNP	O
+Consolidated	NNP	NN IN NNP NNP NNP	B
+Freightways	NNP	IN NNP NNP NNP ,	I
+Inc.	NNP	NNP NNP NNP , DT	I
+,	,	NNP NNP , DT NNP	O
+a	DT	NNP , DT NNP NNP	B
+Menlo	NNP	, DT NNP NNP ,	I
+Park	NNP	DT NNP NNP , NNP	I
+,	,	NNP NNP , NNP ,	I
+Calif.	NNP	NNP , NNP , JJ	I
+,	,	, NNP , JJ NN	I
+less-than-truckload	JJ	NNP , JJ NN ,	I
+carrier	NN	, JJ NN , VBD	I
+,	,	JJ NN , VBD NN	O
+said	VBD	NN , VBD NN NN	O
+rate	NN	, VBD NN NN IN	B
+discounting	NN	VBD NN NN IN DT	I
+in	IN	NN NN IN DT NN	O
+that	DT	NN IN DT NN VBZ	B
+industry	NN	IN DT NN VBZ VBN	I
+has	VBZ	DT NN VBZ VBN TO	O
+begun	VBN	NN VBZ VBN TO ``	O
+to	TO	VBZ VBN TO `` VB	O
+``	``	VBN TO `` VB .	O
+stabilize	VB	TO `` VB . ''	O
+.	.	`` VB . ''	O
+''	''	VB . ''	O
+
+Consolidated	NNP	NNP NNP VBZ	B
+Freightways	NNP	NNP NNP VBZ TO	I
+plans	VBZ	NNP NNP VBZ TO VB	O
+to	TO	NNP VBZ TO VB PRP$	O
+raise	VB	VBZ TO VB PRP$ NNS	O
+its	PRP$	TO VB PRP$ NNS CD	B
+rates	NNS	VB PRP$ NNS CD NN	I
+5.3	CD	PRP$ NNS CD NN JJ	B
+%	NN	NNS CD NN JJ DT	I
+late	JJ	CD NN JJ DT NN	B
+this	DT	NN JJ DT NN CC	I
+year	NN	JJ DT NN CC JJ	I
+or	CC	DT NN CC JJ JJ	O
+early	JJ	NN CC JJ JJ NN	B
+next	JJ	CC JJ JJ NN ,	I
+year	NN	JJ JJ NN , CC	I
+,	,	JJ NN , CC IN	O
+and	CC	NN , CC IN JJS	O
+at	IN	, CC IN JJS CD	B
+least	JJS	CC IN JJS CD NNS	I
+two	CD	IN JJS CD NNS VBP	I
+competitors	NNS	JJS CD NNS VBP VBN	I
+have	VBP	CD NNS VBP VBN JJ	O
+announced	VBN	NNS VBP VBN JJ NNS	O
+similar	JJ	VBP VBN JJ NNS .	B
+increases	NNS	VBN JJ NNS .	I
+.	.	JJ NNS .	O
+

@@ -2,15 +2,24 @@
 ##' Get the word frequency data.frame.
 ##' 
 ##' @title Get the word frequency data.frame.
-##' @param string A character vector.
+##' @param string A character vector to calculate words frequency.
 ##' @param onlyCN Keep only chinese words. 
+##' @param stopwords A character vector of stop words.
+##' @param useStopDic Whether to use the default stop words.
 ##' @return A data.frame.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples \dontrun{
+##' getWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
+##' }
 
-getWordFreq <- function(string, onlyCN = TRUE)
+getWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = FALSE)
 {
 	string <- .verifyChar(string)
-	stopwords <- readLines(system.file("dic", "stopwords.txt", package = "tmcn"), encoding = "UTF-8")
+	stopwords <- .verifyChar(stopwords)
+	if (identical(useStopDic, TRUE)) {
+		stopwords <- union(stopwords, 
+				readLines(system.file("dic", "stopwords.txt", package = "tmcn"), encoding = "UTF-8"))
+	}
 	
 	if (onlyCN) {
 		string.vec <- gsub("[^\u4e00-\u9fa5]", "", string)

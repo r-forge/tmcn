@@ -1,0 +1,3 @@
+useDynLib("tmcn.crfpp")
+exportPattern("^[^\\.]")
+

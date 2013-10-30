@@ -1,8 +1,8 @@
-\name{strtrimspace}
-\alias{strtrimspace}
+\name{strstrip}
+\alias{strstrip}
 \title{Trim space of a string.}
 \usage{
-  strtrimspace(string, side = c("both", "left", "right"))
+  strstrip(string, side = c("both", "left", "right"))
 }
 \arguments{
   \item{string}{A character vector.}
@@ -18,7 +18,7 @@
 }
 \examples{
 \dontrun{
-strtrimspace(c("\\taaaa ", " bbbb    "))
+strstrip(c("\\taaaa ", " bbbb    "))
 }
 }
 \author{

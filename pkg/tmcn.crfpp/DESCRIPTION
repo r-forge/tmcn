@@ -1,14 +1,13 @@
-Package: tmcn
+Package: tmcn.crfpp
 License: LGPL
-Title: Text mining for Chinese
+Title: R package for conditional random fields
 Type: Package
 LazyLoad: yes
 Author: Jian Li <rweibo@sina.com>
 Maintainer: Jian Li <rweibo@sina.com>
-Description: Text mining for Chinese.
-Version: 0.1-1
+Description: R package for conditional random fields.
+Version: 0.0-1
 Date: 2013-10-30
 Depends: R (>= 2.14.0)
 Suggests: RUnit
-Enhances: tm, Rwordseg
 

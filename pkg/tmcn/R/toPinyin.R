@@ -14,15 +14,21 @@
 
 toPinyin <- function(string, capitalize = FALSE) {
 	string <- .verifyChar(string)
-	data(Dataset.GBK, envir = parent.frame())
-	if (capitalize) Dataset.GBK$py0 <- strcap(Dataset.GBK$py0) 
-	e.hash <- createHashmapEnv(Dataset.GBK$GBK, Dataset.GBK$py0)
+	if (!exists(".pinyinEnv", env = .tmcnEnv)) {
+		curEnv <- environment()
+		data(Dataset.GBK, envir = curEnv)
+		assign(".pinyinEnv", createHashmapEnv(Dataset.GBK$GBK, Dataset.GBK$py0), envir = .tmcnEnv)
+	}
 	OUT <- strsplit(string, split = "")
 	OUT <- lapply(OUT, FUN = function(X) 
-				sapply(X, FUN = function(Y) 
-						{res <- Y; try(res <- as.character(get(Y, envir = e.hash)), silent = TRUE); res}
+				sapply(X, FUN = function(Y) {
+							res <- Y
+							try(res <- as.character(get(Y, envir = get(".pinyinEnv", env = .tmcnEnv))), silent = TRUE)
+							res
+						}
 				)
 	)
+	if (capitalize) OUT <- lapply(OUT, strcap)
 	OUT <- sapply(OUT, FUN = function(X) paste(X, collapse = ""))
 	return(OUT)
 }
