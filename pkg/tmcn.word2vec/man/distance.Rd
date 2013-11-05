@@ -1,0 +1,21 @@
+\name{distance}
+\alias{distance}
+\title{Calculate the distance of the word.}
+\usage{
+  distance(file_name, word)
+}
+\arguments{
+  \item{file_name}{Path of the modle file.}
+
+  \item{word}{The search word.}
+}
+\value{
+  A list with the input.
+}
+\description{
+  Calculate the distance of the word.
+}
+\author{
+  Jian Li <\email{rweibo@sina.com}>
+}
+

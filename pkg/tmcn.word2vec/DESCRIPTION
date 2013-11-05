@@ -1,0 +1,12 @@
+Package: tmcn.word2vec
+License: Apache License (== 2.0)
+Title: R interface for word2vec
+Type: Package
+LazyLoad: yes
+Author: Jian Li <rweibo@sina.com>
+Maintainer: Jian Li <rweibo@sina.com>
+Description: R interface for word2vec.
+Version: 0.1-1
+Date: 2013-11-06
+Depends: R (>= 2.14.0)
+

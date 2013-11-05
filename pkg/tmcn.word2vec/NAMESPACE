@@ -1,0 +1,3 @@
+useDynLib("tmcn.word2vec")
+exportPattern("^[^\\.]")
+
