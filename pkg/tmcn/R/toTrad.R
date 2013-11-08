@@ -11,8 +11,8 @@ toTrad <- function(string, rev = FALSE)
 {
 	string <- .verifyChar(string)
 	string <- toUTF8(string)
-	if (!exists("Dataset.Sim2Tra", envir = .tmcnEnv)) data(Dataset.Sim2Tra, envir = .tmcnEnv)
-	transDf <- get("Dataset.Sim2Tra", envir = .tmcnEnv)
+	if (!exists("SIMTRA", envir = .tmcnEnv)) data(SIMTRA, envir = .tmcnEnv)
+	transDf <- get("SIMTRA", envir = .tmcnEnv)
 	if (rev) {
 		OUT <- chartr(transDf$Tra, transDf$Sim, string)
 	} else {

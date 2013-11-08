@@ -1,13 +1,12 @@
 Package: tmcn.crfpp
 License: LGPL
-Title: R package for conditional random fields
+Title: R interface to CRF++ for conditional random fields 
 Type: Package
 LazyLoad: yes
 Author: Jian Li <rweibo@sina.com>
 Maintainer: Jian Li <rweibo@sina.com>
-Description: R package for conditional random fields.
-Version: 0.0-1
-Date: 2013-10-30
+Description: R interface to CRF++ for conditional random fields .
+Version: 0.0-3
+Date: 2013-11-08
 Depends: R (>= 2.14.0)
-Suggests: RUnit
 

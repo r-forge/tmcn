@@ -16,8 +16,8 @@ toPinyin <- function(string, capitalize = FALSE) {
 	string <- .verifyChar(string)
 	if (!exists(".pinyinEnv", env = .tmcnEnv)) {
 		curEnv <- environment()
-		data(Dataset.GBK, envir = curEnv)
-		assign(".pinyinEnv", createHashmapEnv(Dataset.GBK$GBK, Dataset.GBK$py0), envir = .tmcnEnv)
+		data(GBK, envir = curEnv)
+		assign(".pinyinEnv", createHashmapEnv(GBK$GBK, GBK$py0), envir = .tmcnEnv)
 	}
 	OUT <- strsplit(string, split = "")
 	OUT <- lapply(OUT, FUN = function(X) 

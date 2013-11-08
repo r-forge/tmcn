@@ -8,7 +8,7 @@
 ##' @param margin Whether output margin probability.
 ##' @param seqp Whether output label sequence probability.
 ##' @param nbest Output n best results.
-##' @return No results.
+##' @return A list with the input.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 
 crftest <- function(model_file, key_file, result_file,
@@ -25,6 +25,7 @@ crftest <- function(model_file, key_file, result_file,
 			margin = as.character(margin),
 			seqp = as.character(seqp), 
 			nbest = as.character(nbest))
+	cat(paste("The result file was generated in '", dirname(result_file), "'!\n", sep = ""))
 	return(OUT)
 }
 

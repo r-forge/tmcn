@@ -19,7 +19,7 @@
   \item{nbest}{Output n best results.}
 }
 \value{
-  No results.
+  A list with the input.
 }
 \description{
   CRF test.

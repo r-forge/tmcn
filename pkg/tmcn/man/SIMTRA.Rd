@@ -1,11 +1,11 @@
-\name{Dataset.Sim2Tra}
-\alias{Dataset.Sim2Tra}
+\name{SIMTRA}
+\alias{SIMTRA}
 \docType{data}
 \title{Dictionary of simplified and traditional Chinese}
 \description{
 Dictionary of simplified and traditional Chinese
 }
-\usage{data(Dataset.Sim2Tra)}
+\usage{data(SIMTRA)}
 \format{
   A data frame with 2 columns.
   \describe{

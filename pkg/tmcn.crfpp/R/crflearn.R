@@ -15,7 +15,7 @@
 ##' @param depth LBFGS depth. Default value is 5.
 ##' @param isfast A logical value. TRUE means fast train crf, FALSE means slow but 
 ##'        requires less memory. Default value is TRUE.
-##' @return No results.
+##' @return A list with the input.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 
 crflearn <- function(templet_file, training_file, model_file,
@@ -47,6 +47,7 @@ crflearn <- function(templet_file, training_file, model_file,
 			algorithm = as.character(algorithm),
 			depth = as.character(depth),
 			prior = as.character(prior))
+	cat(paste("The model was generated in '", dirname(model_file), "'!\n", sep = ""))
 	return(OUT)
 }
 

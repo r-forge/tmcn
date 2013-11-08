@@ -40,7 +40,7 @@
   is TRUE.}
 }
 \value{
-  No results.
+  A list with the input.
 }
 \description{
   CRF learn.

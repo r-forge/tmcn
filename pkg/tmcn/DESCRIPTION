@@ -1,13 +1,13 @@
 Package: tmcn
 License: LGPL
-Title: Text mining for Chinese
+Title: A Text mining toolkit for international characters especially for Chinese.
 Type: Package
 LazyLoad: yes
 Author: Jian Li <rweibo@sina.com>
 Maintainer: Jian Li <rweibo@sina.com>
-Description: Text mining for Chinese.
-Version: 0.1-1
-Date: 2013-10-30
+Description: A Text mining toolkit for international characters especially for Chinese.
+Version: 0.1-2
+Date: 2013-11-08
 Depends: R (>= 2.14.0)
 Suggests: RUnit
 Enhances: tm, Rwordseg
