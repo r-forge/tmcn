@@ -2,7 +2,7 @@
 \alias{strstrip}
 \title{Trim space of a string.}
 \usage{
-  strstrip(string, side = c("both", "left", "right"))
+strstrip(string, side = c("both", "left", "right"))
 }
 \arguments{
   \item{string}{A character vector.}
@@ -11,10 +11,10 @@
   'both', 'left' or 'right'.}
 }
 \value{
-  Trimed vector.
+Trimed vector.
 }
 \description{
-  Trim space of a string.
+Trim space of a string.
 }
 \examples{
 \dontrun{
@@ -22,7 +22,7 @@ strstrip(c("\\taaaa ", " bbbb    "))
 }
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 \keyword{string}
 

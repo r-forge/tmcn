@@ -2,8 +2,8 @@
 \alias{tmcnTest}
 \title{Run unit tests.}
 \usage{
-  tmcnTest(TestPath = system.file(package = "tmcn", "unittests"),
-    TestResult = NULL, ResultsType = c("html", "text"))
+tmcnTest(TestPath = system.file(package = "tmcn", "unittests"),
+  TestResult = NULL, ResultsType = c("html", "text"))
 }
 \arguments{
   \item{TestPath}{Path of the folder which contains the
@@ -14,15 +14,14 @@
   \item{ResultsType}{'html' or 'text'.}
 }
 \value{
-  The results of function
-  \code{\link{[RUnit]runTestSuite}}.
+The results of function \code{\link{[RUnit]runTestSuite}}.
 }
 \description{
-  Run unit tests.
+Run unit tests.
 }
 \details{
-  Run the unit tests by RUnit package, and generate a html
-  or text report.
+Run the unit tests by RUnit package, and generate a html or
+text report.
 }
 \examples{
 \dontrun{
@@ -31,7 +30,7 @@ summary(x)
 }
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 \keyword{debugging}
 

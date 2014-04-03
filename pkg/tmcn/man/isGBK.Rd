@@ -2,7 +2,7 @@
 \alias{isGBK}
 \title{Indicate whether the encoding of input string is GBK.}
 \usage{
-  isGBK(string, combine = FALSE)
+isGBK(string, combine = FALSE)
 }
 \arguments{
   \item{string}{A character vector.}
@@ -10,12 +10,12 @@
   \item{combine}{Whether to combine all the strings.}
 }
 \value{
-  Logical value.
+Logical value.
 }
 \description{
-  Indicate whether the encoding of input string is GBK.
+Indicate whether the encoding of input string is GBK.
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 

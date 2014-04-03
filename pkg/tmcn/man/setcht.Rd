@@ -1,19 +1,19 @@
-\name{setCN}
-\alias{setCN}
+\name{setcht}
+\alias{setcht}
 \title{Set locale to Simplified Chinese.}
 \usage{
-  setCN(rev = FALSE)
+setcht(rev = FALSE)
 }
 \arguments{
   \item{rev}{Whethet to set the locale back.}
 }
 \value{
-  No results.
+No results.
 }
 \description{
-  Set locale to Simplified Chinese.
+Set locale to Traditional Chinese.
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 

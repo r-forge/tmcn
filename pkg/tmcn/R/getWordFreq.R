@@ -25,7 +25,7 @@ getWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = FA
 		string.vec <- gsub("[^\u4e00-\u9fa5]", "", string)
 	} else {
 		#string.vec <- gsub("^[^\u4e00-\u9fa5A-z]*$", "", string)
-		string.vec <- gsub("[^\u4e00-\u9fa5A-z]", "", string)
+		string.vec <- gsub("[^\u4e00-\u9fa5A-Za-z]", "", string)
 	}
 	string.vec <- string.vec[nzchar(string.vec)]
 	string.vec <- string.vec[!string.vec %in% stopwords]

@@ -2,8 +2,8 @@
 \alias{strextract}
 \title{Extract matched substrings by regular expression.}
 \usage{
-  strextract(string, pattern, invert = FALSE,
-    ignore.case = FALSE, perl = FALSE, useBytes = FALSE)
+strextract(string, pattern, invert = FALSE, ignore.case = FALSE,
+  perl = FALSE, useBytes = FALSE)
 }
 \arguments{
   \item{string}{A character vector.}
@@ -24,11 +24,11 @@
   done byte-by-byte rather than character-by-character.}
 }
 \value{
-  A character vector with the matched or non-matched
-  substrings.
+A character vector with the matched or non-matched
+substrings.
 }
 \description{
-  Extract matched substrings by regular expression.
+Extract matched substrings by regular expression.
 }
 \examples{
 \dontrun{
@@ -39,7 +39,7 @@ strextract(txt2, "(?<first>[[:upper:]][[:lower:]]+)", perl = TRUE)
 }
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 \keyword{string}
 

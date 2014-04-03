@@ -2,8 +2,7 @@
 \alias{getWordFreq}
 \title{Get the word frequency data.frame.}
 \usage{
-  getWordFreq(string, onlyCN = TRUE, stopwords = NULL,
-    useStopDic = FALSE)
+getWordFreq(string, onlyCN = TRUE, stopwords = NULL, useStopDic = FALSE)
 }
 \arguments{
   \item{string}{A character vector to calculate words
@@ -16,10 +15,10 @@
   \item{useStopDic}{Whether to use the default stop words.}
 }
 \value{
-  A data.frame.
+A data.frame.
 }
 \description{
-  Get the word frequency data.frame.
+Get the word frequency data.frame.
 }
 \examples{
 \dontrun{
@@ -27,6 +26,6 @@ getWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
 }
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 

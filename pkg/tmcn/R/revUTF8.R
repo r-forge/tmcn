@@ -15,7 +15,7 @@ revUTF8 <- function(string, utype = "R")
 	string <- .verifyChar(string)
 	utype = match.arg(utype)
 	if (length(string)  == 1) {
-		str1 <- strsplit(string, "<U\\+[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]>")[[1]]
+		str1 <- strsplit(string, "<U\\+[0-9A-Za-z][0-9A-Za-z][0-9A-Za-z][0-9A-Za-z]>")[[1]]
 		str2 <- c(gsub("<U\\+|>", "", strextract(string, "<U\\+[^>]*>")[[1]]), "")
 		str2 <- intToUtf8(as.hexmode(str2), multiple = TRUE)
 		length(str1) <- length(str2) <- max(length(str1), length(str2))

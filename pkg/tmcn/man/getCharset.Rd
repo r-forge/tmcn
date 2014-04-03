@@ -2,15 +2,15 @@
 \alias{getCharset}
 \title{Get the current encoding of the locale.}
 \usage{
-  getCharset()
+getCharset()
 }
 \value{
-  Character of encoding.
+Character of encoding.
 }
 \description{
-  Get the current encoding of the locale.
+Get the current encoding of the locale.
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 

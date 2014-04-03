@@ -2,18 +2,18 @@
 \alias{catUTF8}
 \title{Print the UTF-8 codes of a string.}
 \usage{
-  catUTF8(string)
+catUTF8(string)
 }
 \arguments{
   \item{string}{A character vector.}
 }
 \value{
-  No results.
+No results.
 }
 \description{
-  Print the UTF-8 codes of a string.
+Print the UTF-8 codes of a string.
 }
 \author{
-  Jian Li <\email{rweibo@sina.com}>
+Jian Li <\email{rweibo@sina.com}>
 }
 
