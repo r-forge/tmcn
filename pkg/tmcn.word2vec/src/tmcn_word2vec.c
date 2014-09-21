@@ -18,10 +18,9 @@ void tmcn_word2vec(char *train_file0, char *output_file0, char *binary0)
 	TrainModel();
 }
 
-extern "C" {
-    void CWrapper_word2vec(char **train_file, char **output_file, char **binary)
-    {
-        tmcn_word2vec(*train_file, *output_file, *binary);
-    }
+
+void CWrapper_word2vec(char **train_file, char **output_file, char **binary)
+{
+    tmcn_word2vec(*train_file, *output_file, *binary);
 }
 
