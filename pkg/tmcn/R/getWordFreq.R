@@ -34,6 +34,7 @@ getWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = FA
 	
 	string.table <- table(string.vec)
 	OUT <- data.frame(Word = names(string.table), Freq = as.vector(string.table), stringsAsFactors = FALSE)
+	OUT <- OUT[order(OUT$Freq, decreasing = TRUE), ]
 	
 	return(OUT)
 }
