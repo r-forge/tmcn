@@ -1,7 +1,7 @@
 
-##' Get the word frequency data.frame.
+##' Create a word frequency data.frame.
 ##' 
-##' @title Get the word frequency data.frame.
+##' @title Create a word frequency data.frame.
 ##' @param string A character vector to calculate words frequency.
 ##' @param onlyCN Keep only chinese words. 
 ##' @param stopwords A character vector of stop words.
@@ -9,16 +9,16 @@
 ##' @return A data.frame.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @examples \dontrun{
-##' getWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
+##' createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
 ##' }
 
-getWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = FALSE)
+createWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
 {
 	string <- .verifyChar(string)
 	stopwords <- .verifyChar(stopwords)
+	data(STOPWORDS, envir = parent.frame())
 	if (identical(useStopDic, TRUE)) {
-		stopwords <- union(stopwords, 
-				readLines(system.file("dic", "stopwords.txt", package = "tmcn"), encoding = "UTF-8"))
+		stopwords <- union(stopwords, STOPWORDS$word)
 	}
 	
 	if (onlyCN) {
@@ -30,10 +30,10 @@ getWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = FA
 	string.vec <- string.vec[nzchar(string.vec)]
 	string.vec <- string.vec[!string.vec %in% stopwords]
 	
-	if (length(string.vec) == 0) return(data.frame(Word = character(), Freq = integer(), stringsAsFactors = FALSE))
+	if (length(string.vec) == 0) return(data.frame(word = character(), freq = integer(), stringsAsFactors = FALSE))
 	
 	string.table <- table(string.vec)
-	OUT <- data.frame(Word = names(string.table), Freq = as.vector(string.table), stringsAsFactors = FALSE)
+	OUT <- data.frame(word = names(string.table), freq = as.vector(string.table), stringsAsFactors = FALSE)
 	OUT <- OUT[order(OUT$Freq, decreasing = TRUE), ]
 	
 	return(OUT)

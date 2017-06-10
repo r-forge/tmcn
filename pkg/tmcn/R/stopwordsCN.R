@@ -10,9 +10,10 @@
 stopwordsCN <- function(stopwords = NULL, useStopDic = TRUE)
 {
 	stopwords <- .verifyChar(stopwords)
+	data(STOPWORDS, envir = .tmcnEnv)
+	STOPWORDS <- get("STOPWORDS", envir = .tmcnEnv)
 	if (identical(useStopDic, TRUE)) {
-		stopwords <- union(stopwords, 
-				readLines(system.file("dic", "stopwords.txt", package = "tmcn"), encoding = "UTF-8"))
+		stopwords <- union(stopwords, STOPWORDS$word)
 	}
 	return(stopwords)
 }

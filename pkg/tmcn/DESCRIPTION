@@ -6,9 +6,8 @@ LazyLoad: yes
 Author: Jian Li <rweibo@sina.com>
 Maintainer: Jian Li <rweibo@sina.com>
 Description: A Text mining toolkit for international characters especially for Chinese.
-Version: 0.1-4
-Date: 2015-03-02
+Version: 0.2-1
+Date: 2017-06-10
 Depends: R (>= 2.14.0)
-Suggests: RUnit, wordcloud
-Enhances: tm, Rwordseg
-
+Suggests: tm, Rwordseg, jiebaR
+RoxygenNote: 6.0.1

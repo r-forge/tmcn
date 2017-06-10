@@ -6,3 +6,6 @@ setCN <- function(...) {
 	.Deprecated(new="setchs")
 }
 
+getWordFreq <- function(...) {
+	.Deprecated(new="createWordFreq")
+}

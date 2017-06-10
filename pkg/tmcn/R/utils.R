@@ -12,3 +12,8 @@
 	return(OUT)
 }
 
+.strsplit_space_tokenizer <- function(x) {
+	unlist(strsplit(as.character(x), "[[:space:]]+"))
+}
+
+
