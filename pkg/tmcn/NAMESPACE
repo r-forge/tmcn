@@ -1,3 +1,3 @@
-useDynLib("tmcn")
+useDynLib("tmcn", .registration = TRUE)
 exportPattern("^[^\\.]")
 

@@ -16,48 +16,41 @@
 ##' segmentCN("hello world!")
 ##' }
 
-segmentCN <- function(strwords, package = c("Rwordseg", "jiebaR"), 
+segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"), 
 		nature = FALSE, nosymbol = TRUE, returnType = c("vector", "tm"), ...) 
 {
 	if (!is.character(strwords)) stop("Please input character!")
 	package <- match.arg(package)
 	returnType <- match.arg(returnType)
+	.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
 	
 	if (package == "Rwordseg") {
-		if (!suppressWarnings(require("Rwordseg", quietly = TRUE, warn.conflicts = FALSE))) {
-			if (suppressWarnings(require("jiebaR", quietly = TRUE, warn.conflicts = FALSE))) {
-				package <- "jiebaR"
-			} else {
-				stop("Either package \"Rwordseg\" or \"jiebaR\" is required!")
-			}
-		} 
+		cat("Please load the package Rwordseg: library(Rwordseg) \n") 
+		OUT <- NULL
 	} else {
-		if (suppressWarnings(require("jiebaR", quietly = TRUE, warn.conflicts = FALSE))) {
+		if (suppressWarnings(requireNamespace("jiebaR", quietly = TRUE))) {
 			package <- "jiebaR"
 		} else {
-			stop("Either package \"Rwordseg\" or \"jiebaR\" is required!")
+			stop("Package \"jiebaR\" is required!")
 		}
 	}
 	
-	if (package == "Rwordseg") {
-		OUT <- Rwordseg::segmentCN(strwords = strwords, nature = nature, nosymbol = nosymbol, returnType = returnType, ...)
-	}
 	
 	if (package == "jiebaR") {
 		if (!exists(".tmcnEnv", envir = .GlobalEnv)) {
 			assign(".tmcnEnv", new.env(), envir = .GlobalEnv)
 		}
 		if (!exists("jiebaAnalyzer", envir = .tmcnEnv)) {
-			jiebaAnalyzer <- worker(bylines = TRUE)
+			jiebaAnalyzer <- jiebaR::worker(bylines = TRUE)
 			assign("jiebaAnalyzer", jiebaAnalyzer, envir = .tmcnEnv)
 		} else {
 			jiebaAnalyzer <- get("jiebaAnalyzer", envir = .tmcnEnv)
 		}
 		
 		jiebaAnalyzer$symbol <- !nosymbol
-		OUT <- segment(strwords, jiebaAnalyzer)
+		OUT <- jiebaR::segment(strwords, jiebaAnalyzer)
 		
-		if (nature) OUT <- lapply(OUT, vector_tag, jiebaAnalyzer)
+		if (nature) OUT <- lapply(OUT, jiebaR::vector_tag, jiebaAnalyzer)
 		if (returnType == "tm") OUT <- sapply(OUT, paste, collapse = " ")
 		if (length(OUT) == 1) OUT <- OUT[[1]]
 	}

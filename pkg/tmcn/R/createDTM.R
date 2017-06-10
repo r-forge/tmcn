@@ -29,17 +29,17 @@
 
 createDTM <- function(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE) {
 	
-	if (suppressWarnings(!require("tm", quietly = TRUE, warn.conflicts = FALSE))) {
+	if (suppressWarnings(!requireNamespace("tm", quietly = TRUE))) {
 		stop("Package \"tm\" is required!")
 	}
 	
-	corpus_m <- Corpus(VectorSource(string))
+	corpus_m <- tm::Corpus(tm::VectorSource(string))
 	if (removeStopwords) {
-		corpus_m <- tm_map(corpus_m, removeWords, stopwordsCN())
+		corpus_m <- tm::tm_map(corpus_m, tm::removeWords, stopwordsCN())
 	}
 	
 	if (is.null(tokenize)) tokenize <- .strsplit_space_tokenizer
-	dtm_m <- DocumentTermMatrix(corpus_m, control = list(tokenize = tokenize, wordLengths = c(1, Inf), removePunctuation = removePunctuation) )
+	dtm_m <- tm::DocumentTermMatrix(corpus_m, control = list(tokenize = tokenize, wordLengths = c(1, Inf), removePunctuation = removePunctuation) )
 	colnames(dtm_m) <- toUTF8(colnames(dtm_m))
 	return(dtm_m)
 	
@@ -47,17 +47,17 @@ createDTM <- function(string, tokenize = NULL, removePunctuation = TRUE, removeS
 
 createTDM <- function(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE) {
 	
-	if (suppressWarnings(!require("tm", quietly = TRUE, warn.conflicts = FALSE))) {
+	if (suppressWarnings(!requireNamespace("tm", quietly = TRUE))) {
 		stop("Package \"tm\" is required!")
 	}
 	
-	corpus_m <- Corpus(VectorSource(string))
+	corpus_m <- tm::Corpus(tm::VectorSource(string))
 	if (removeStopwords) {
-		corpus_m <- tm_map(corpus_m, removeWords, c(stopwordsCN()))
+		corpus_m <- tm::tm_map(corpus_m, tm::removeWords, c(stopwordsCN()))
 	}
 	
 	if (is.null(tokenize)) tokenize <- .strsplit_space_tokenizer
-	tdm_m <- TermDocumentMatrix(corpus_m, control = list(tokenize = tokenize, wordLengths = c(1, Inf), removePunctuation = removePunctuation) )
+	tdm_m <- tm::TermDocumentMatrix(corpus_m, control = list(tokenize = tokenize, wordLengths = c(1, Inf), removePunctuation = removePunctuation) )
 	rownames(tdm_m) <- toUTF8(rownames(tdm_m))
 	return(tdm_m)
 	

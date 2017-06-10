@@ -16,6 +16,6 @@ National Taiwan University Semantic Dictionary.
   }
 }
 \references{
-\url{http://nlg18.csie.ntu.edu.tw:8080/opinion/pub1.html }
+\url{http://nlg.csie.ntu.edu.tw}
 }
 \keyword{datasets}

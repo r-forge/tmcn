@@ -4,7 +4,7 @@
 \alias{segmentCN}
 \title{Sengment a sentence.}
 \usage{
-segmentCN(strwords, package = c("Rwordseg", "jiebaR"), nature = FALSE,
+segmentCN(strwords, package = c("jiebaR", "Rwordseg"), nature = FALSE,
   nosymbol = TRUE, returnType = c("vector", "tm"), ...)
 }
 \arguments{

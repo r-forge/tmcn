@@ -11,12 +11,13 @@ toTrad <- function(string, rev = FALSE)
 {
 	string <- .verifyChar(string)
 	string <- toUTF8(string)
-	if (!exists("SIMTRA", envir = .tmcnEnv)) data(SIMTRA, envir = .tmcnEnv)
-	transDf <- get("SIMTRA", envir = .tmcnEnv)
+	.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+	utils::data(SIMTRA, envir = .tmcnEnv)
+	SIMTRA <- get("SIMTRA", envir = .tmcnEnv)
 	if (rev) {
-		OUT <- chartr(transDf$Tra, transDf$Sim, string)
+		OUT <- chartr(SIMTRA$Tra, SIMTRA$Sim, string)
 	} else {
-		OUT <- chartr(transDf$Sim, transDf$Tra, string)
+		OUT <- chartr(SIMTRA$Sim, SIMTRA$Tra, string)
 	}
 		
 	return(OUT)

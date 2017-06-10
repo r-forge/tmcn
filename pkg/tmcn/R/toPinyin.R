@@ -14,16 +14,18 @@
 
 toPinyin <- function(string, capitalize = FALSE) {
 	string <- .verifyChar(string)
-	if (!exists(".pinyinEnv", env = .tmcnEnv)) {
+	.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+	if (!exists(".pinyinEnv", envir = .tmcnEnv)) {
 		curEnv <- environment()
-		data(GBK, envir = curEnv)
+		utils::data(GBK, envir = curEnv)
+		GBK <- get("GBK", envir = curEnv)
 		assign(".pinyinEnv", createHashmapEnv(GBK$GBK, GBK$py0), envir = .tmcnEnv)
 	}
 	OUT <- strsplit(string, split = "")
 	OUT <- lapply(OUT, FUN = function(X) 
 				sapply(X, FUN = function(Y) {
 							res <- Y
-							try(res <- as.character(get(Y, envir = get(".pinyinEnv", env = .tmcnEnv))), silent = TRUE)
+							try(res <- as.character(get(Y, envir = get(".pinyinEnv", envir = .tmcnEnv))), silent = TRUE)
 							res
 						}
 				)

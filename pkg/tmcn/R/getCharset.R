@@ -7,7 +7,7 @@
 
 getCharset <- function()
 {
-	charsetChar <- localeToCharset(locale = Sys.getlocale("LC_CTYPE"))
+	charsetChar <- utils::localeToCharset(locale = Sys.getlocale("LC_CTYPE"))
 	iconvList <- iconvlist()
 	iconvId <- which(iconvList == charsetChar)
 	if (length(iconvId) == 0) iconvId <- which(toupper(iconvList) == toupper(charsetChar))[1]
