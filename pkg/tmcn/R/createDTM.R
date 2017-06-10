@@ -4,6 +4,9 @@
 ##' Package "tm" is required.
 ##' @title Create a Chinese term-document matrix or a document-term matrix.
 ##' @aliases createTDM
+##' @usage
+##' createDTM(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE)
+##' createTDM(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE)
 ##' @param string A character vector.
 ##' @param tokenize A tokenizers function. 
 ##' @param removePunctuation Whether to remove the punctuations.

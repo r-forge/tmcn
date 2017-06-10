@@ -5,8 +5,8 @@
 \alias{createTDM}
 \title{Create a Chinese term-document matrix or a document-term matrix.}
 \usage{
-createDTM(string, tokenize = NULL, removePunctuation = TRUE,
-  removeStopwords = TRUE)
+createDTM(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE)
+createTDM(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE)
 }
 \arguments{
 \item{string}{A character vector.}

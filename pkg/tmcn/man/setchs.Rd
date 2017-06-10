@@ -2,9 +2,13 @@
 % Please edit documentation in R/setchs.R
 \name{setchs}
 \alias{setchs}
-\title{Set locale to Simplified Chinese.}
+\alias{setcht}
+\alias{setuk}
+\title{Set locale to Simplified Chinese/Traditional Chinese/UK.}
 \usage{
 setchs(rev = FALSE)
+setcht(rev = FALSE)
+setuk(rev = FALSE)
 }
 \arguments{
 \item{rev}{Whethet to set the locale back.}
@@ -13,7 +17,7 @@ setchs(rev = FALSE)
 No results.
 }
 \description{
-Set locale to Simplified Chinese.
+Set locale to Simplified Chinese/Traditional Chinese/UK.
 }
 \author{
 Jian Li <\email{rweibo@sina.com}>
