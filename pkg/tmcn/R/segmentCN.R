@@ -38,7 +38,8 @@ segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"),
 	
 	if (package == "jiebaR") {
 		if (!exists(".tmcnEnv", envir = .GlobalEnv)) {
-			assign(".tmcnEnv", new.env(), envir = .GlobalEnv)
+			envir0 = as.environment(1)
+			assign(".tmcnEnv", new.env(), envir = envir0)
 		}
 		if (!exists("jiebaAnalyzer", envir = .tmcnEnv)) {
 			jiebaAnalyzer <- jiebaR::worker(bylines = TRUE)

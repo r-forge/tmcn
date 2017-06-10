@@ -3,11 +3,11 @@ License: LGPL
 Title: A Text mining toolkit for Chinese
 Type: Package
 LazyLoad: yes
-Author: Jian Li <rweibo@sina.com>
+Author: Jian Li
 Maintainer: Jian Li <rweibo@sina.com>
 Description: A Text mining toolkit for Chinese.
-Version: 0.2-4
+Version: 0.2-5
 Date: 2017-06-11
-Depends: R (>= 3.1.0), utils
+Depends: R (>= 3.0.0), utils
 Suggests: tm, jiebaR
 RoxygenNote: 6.0.1
