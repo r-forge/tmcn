@@ -5,8 +5,9 @@
 \alias{insertWords}
 \title{Sengment a sentence.}
 \usage{
-segmentCN(strwords, package = c("jiebaR", "Rwordseg"), nature = FALSE,
+segmentCN(strwords, package = c("jiebaR", "Rwordseg"), nature = FALSE, 
   nosymbol = TRUE, returnType = c("vector", "tm"))
+insertWords(inswords, package = c("jiebaR", "Rwordseg"))
 }
 \arguments{
 \item{strwords}{A string vector of Chinese sentences in UTF-8.}

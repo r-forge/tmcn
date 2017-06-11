@@ -13,7 +13,7 @@ toTrad <- function(string, rev = FALSE)
 {
 	string <- .verifyChar(string)
 	string <- toUTF8(string)
-	.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+	.tmcnEnv <- .verifyEnv()
 	utils::data(SIMTRA, envir = .tmcnEnv)
 	SIMTRA <- get("SIMTRA", envir = .tmcnEnv)
 	if (rev) {

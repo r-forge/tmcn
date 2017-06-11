@@ -14,7 +14,7 @@
 
 toPinyin <- function(string, capitalize = FALSE) {
 	string <- .verifyChar(string)
-	.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+	.tmcnEnv <- .verifyEnv()
 	if (!exists(".pinyinEnv", envir = .tmcnEnv)) {
 		curEnv <- environment()
 		utils::data(GBK, envir = curEnv)

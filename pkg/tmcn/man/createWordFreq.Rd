@@ -22,7 +22,7 @@ A data.frame.
 Create a word frequency data.frame.
 }
 \examples{
-createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
+createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE, useStopDic = FALSE)
 
 }
 \author{

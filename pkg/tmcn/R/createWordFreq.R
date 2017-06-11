@@ -9,18 +9,21 @@
 ##' @return A data.frame.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @examples
-##' createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
+##' createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE, useStopDic = FALSE)
 ##' 
 
 createWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
 {
 	string <- .verifyChar(string)
-	stopwords <- .verifyChar(stopwords)
-	.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
-	utils::data(STOPWORDS, envir = .tmcnEnv)
-	STOPWORDS <- get("STOPWORDS", envir = .tmcnEnv)
+	
 	if (identical(useStopDic, TRUE)) {
+		stopwords <- .verifyChar(stopwords)
+		.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+		utils::data(STOPWORDS, envir = .tmcnEnv)
+		STOPWORDS <- get("STOPWORDS", envir = .tmcnEnv)
 		stopwords <- union(stopwords, STOPWORDS$word)
+	} else {
+		stopwords <- character()
 	}
 	
 	if (onlyCN) {

@@ -12,6 +12,15 @@
 	return(OUT)
 }
 
+.verifyEnv <- function() {
+	if (!exists(".tmcnEnv", envir = .GlobalEnv)) {
+		envir0 = as.environment(1)
+		assign(".tmcnEnv", new.env(), envir = envir0)
+	} 
+	OUT <- get(".tmcnEnv", envir = .GlobalEnv)
+	return(OUT)
+}
+
 .strsplit_space_tokenizer <- function(x) {
 	unlist(strsplit(as.character(x), "[[:space:]]+"))
 }

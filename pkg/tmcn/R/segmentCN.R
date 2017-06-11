@@ -16,6 +16,10 @@
 ##' '\code{jiebaR}' package for segmentation.
 ##' @title Sengment a sentence.
 ##' @aliases insertWords
+##' @usage
+##' segmentCN(strwords, package = c("jiebaR", "Rwordseg"), nature = FALSE, 
+##'   nosymbol = TRUE, returnType = c("vector", "tm"))
+##' insertWords(inswords, package = c("jiebaR", "Rwordseg")) 
 ##' @param strwords A string vector of Chinese sentences in UTF-8.
 ##' @param package Use which package, "jiebaR" or "Rwordseg"?
 ##' @param nature Whether to recognise the nature of the words.
@@ -34,7 +38,7 @@ segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"),
 	if (!is.character(strwords)) stop("Please input character!")
 	package <- match.arg(package)
 	returnType <- match.arg(returnType)
-	.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+	.tmcnEnv <- .verifyEnv()
 	
 	if (package == "Rwordseg") {
 		cat("Please load the package Rwordseg: library(Rwordseg) \n") 
@@ -78,7 +82,7 @@ insertWords <- function(inswords, package = c("jiebaR", "Rwordseg"))
 		cat("Please load the package \"Rwordseg\": library(Rwordseg) \n")
 	} else {
 		if (suppressWarnings(requireNamespace("jiebaR", quietly = TRUE))) {
-			.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+			.tmcnEnv <- .verifyEnv()
 			if (exists("jiebaAnalyzer", envir = .tmcnEnv)) {
 				jiebaAnalyzer <- get("jiebaAnalyzer", envir = .tmcnEnv)
 			} else {
