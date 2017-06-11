@@ -18,9 +18,8 @@ Trimed vector.
 Trim space of a string.
 }
 \examples{
-\dontrun{
 strstrip(c("\\taaaa ", " bbbb    "))
-}
+
 
 }
 \author{

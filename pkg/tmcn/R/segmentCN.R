@@ -1,23 +1,35 @@
 
 ##' A function segment Chinese sentence into words.
 ##' 
-##' Either package "Rwordseg" (\url{http://jianl.org/cn/R/Rwordseg.html}) or "jiebaR" (\url{http://qinwenfeng.com/jiebaR}) is required.
+##' The function \code{segmentCN} is originated from the '\code{Rwordseg}' package. 
+##' If '\code{Rwordseg}' was installed successfully (JRE and '\code{rJava}' package 
+##' are required), using 'Rwordseg::segmentCN' directly may be the easiest choice. 
+##' More detailed can be found in \url{http://jianl.org/cn/R/Rwordseg.html}.
+##' 
+##' In this package the function \code{segmentCN} is a wrapper of '\code{jiebaR}', 
+##' which can be easily installed from CRAN. This function \code{segmentCN} only 
+##' provide some basic functionalities of '\code{jiebaR}'. More detailed can be 
+##' found in \url{http://qinwenfeng.com/jiebaR}.
+##'
+##' The function \code{insertWords} is used to add new words into dictionary temporarily.
+##' If you want to manage your own dictionary, please select either '\code{Rwordseg}' or 
+##' '\code{jiebaR}' package for segmentation.
 ##' @title Sengment a sentence.
-##' @param strwords A Chinese sentence in UTF-8.
-##' @param package Use which package, "Rwordseg" or "jiebaR"?
+##' @aliases insertWords
+##' @param strwords A string vector of Chinese sentences in UTF-8.
+##' @param package Use which package, "jiebaR" or "Rwordseg"?
 ##' @param nature Whether to recognise the nature of the words.
 ##' @param nosymbol Whether to keep symbols in the sentence.
 ##' @param returnType Default is a string vector but we also can choose 'tm' 
 ##' to output a single string separated by space so that it can be used by \code{\link[tm]{Corpus}} directly. 
-##' @param ... Other arguments of Rwordseg.
+##' @param inswords A string vector of words will be added into dictionary.
 ##' @return a vector of words (list if input is vecter) which have been segmented or the path of output file.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
-##' @examples \dontrun{
-##' segmentCN("hello world!")
-##' }
+##' @keywords NLP
+##' 
 
 segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"), 
-		nature = FALSE, nosymbol = TRUE, returnType = c("vector", "tm"), ...) 
+		nature = FALSE, nosymbol = TRUE, returnType = c("vector", "tm")) 
 {
 	if (!is.character(strwords)) stop("Please input character!")
 	package <- match.arg(package)
@@ -26,7 +38,7 @@ segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"),
 	
 	if (package == "Rwordseg") {
 		cat("Please load the package Rwordseg: library(Rwordseg) \n") 
-		OUT <- NULL
+		invisible(NULL)
 	} else {
 		if (suppressWarnings(requireNamespace("jiebaR", quietly = TRUE))) {
 			package <- "jiebaR"
@@ -34,7 +46,6 @@ segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"),
 			stop("Package \"jiebaR\" is required!")
 		}
 	}
-	
 	
 	if (package == "jiebaR") {
 		if (!exists(".tmcnEnv", envir = .GlobalEnv)) {
@@ -54,9 +65,30 @@ segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"),
 		if (nature) OUT <- lapply(OUT, jiebaR::vector_tag, jiebaAnalyzer)
 		if (returnType == "tm") OUT <- sapply(OUT, paste, collapse = " ")
 		if (length(OUT) == 1) OUT <- OUT[[1]]
+		return(OUT)
 	}
 	
-	return(OUT)
 }
+
+
+insertWords <- function(inswords, package = c("jiebaR", "Rwordseg")) 
+{
+	package <- match.arg(package)
+	if (package == "Rwordseg") {
+		cat("Please load the package \"Rwordseg\": library(Rwordseg) \n")
+	} else {
+		if (suppressWarnings(requireNamespace("jiebaR", quietly = TRUE))) {
+			.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
+			if (exists("jiebaAnalyzer", envir = .tmcnEnv)) {
+				jiebaAnalyzer <- get("jiebaAnalyzer", envir = .tmcnEnv)
+			} else {
+				jiebaAnalyzer <- jiebaR::worker(bylines = TRUE)
+			}
+			jiebaR::new_user_word(jiebaAnalyzer, inswords, tags = rep("userDefine", length(inswords)))
+			assign("jiebaAnalyzer", jiebaAnalyzer, envir = .tmcnEnv)
+		}
+	} 
+}
+
 
 

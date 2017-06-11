@@ -6,6 +6,8 @@
 ##' @param useStopDic Whether to use the default stop words.
 ##' @return A vector of stop words.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples
+##' stopwordsCN()[1:5]
 
 stopwordsCN <- function(stopwords = NULL, useStopDic = TRUE)
 {

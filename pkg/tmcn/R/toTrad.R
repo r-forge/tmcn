@@ -6,6 +6,8 @@
 ##' @param rev Reverse. TRUE means traditional to simplified. Default is FALSE.
 ##' @return Converted vectors.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples
+##' toTrad("hello")
 
 toTrad <- function(string, rev = FALSE)
 {

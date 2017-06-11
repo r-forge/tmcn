@@ -17,6 +17,9 @@ Converted vectors.
 \description{
 Convert a chinese text from simplified to traditional characters and vice versa.
 }
+\examples{
+toTrad("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

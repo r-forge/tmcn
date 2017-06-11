@@ -5,6 +5,8 @@
 ##' @param cnstring A Chinese string vector.
 ##' @return Converted vectors.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples
+##' toUTF8("hello")
 
 toUTF8 <- function(cnstring)
 {

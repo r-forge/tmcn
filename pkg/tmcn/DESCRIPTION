@@ -5,8 +5,11 @@ Type: Package
 LazyLoad: yes
 Author: Jian Li
 Maintainer: Jian Li <rweibo@sina.com>
-Description: A Text mining toolkit for Chinese.
-Version: 0.2-5
+Description: A Text mining toolkit for Chinese, which includes facilities for 
+    Chinese string processing, Chinese NLP supporting, encoding detecting and 
+    converting. Moreover, it provides some functions to support 'tm' package 
+    in Chinese.
+Version: 0.2-6
 Date: 2017-06-11
 Depends: R (>= 3.0.0), utils
 Suggests: tm, jiebaR

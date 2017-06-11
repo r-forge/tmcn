@@ -17,6 +17,9 @@ A vector of stop words.
 \description{
 Return Chinese stop words.
 }
+\examples{
+stopwordsCN()[1:5]
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

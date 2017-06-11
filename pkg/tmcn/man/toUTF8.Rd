@@ -15,6 +15,9 @@ Converted vectors.
 \description{
 Convert encoding of Chinese string to UTF-8.
 }
+\examples{
+toUTF8("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

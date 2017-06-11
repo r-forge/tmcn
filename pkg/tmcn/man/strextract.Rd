@@ -30,12 +30,11 @@ A character vector with the matched or non-matched substrings.
 Extract matched substrings by regular expression.
 }
 \examples{
-\dontrun{
 txt1 <- c("\\t(x1)a(aa2)a ", " bb(bb)")
 strextract(txt1, "\\\\([^)]*\\\\)")
 txt2 <- c("  Ben Franklin and Jefferson Davis", "\\tMillard Fillmore")
 strextract(txt2, "(?<first>[[:upper:]][[:lower:]]+)", perl = TRUE)
-}
+
 
 }
 \author{

@@ -17,6 +17,9 @@ Logical value.
 \description{
 Indicate whether the encoding of input string is GBK.
 }
+\examples{
+isGBK("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

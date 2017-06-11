@@ -17,6 +17,9 @@ Logical value.
 \description{
 Indicate whether the encoding of input string is GB18030.
 }
+\examples{
+isGB18030("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

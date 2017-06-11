@@ -6,6 +6,8 @@
 ##' @param file A \code{\link{connection}}, or a character string naming the file to print to. If "" (the default), cat prints to the standard output connection, the console unless redirected by \code{\link{sink}}.
 ##' @return No results.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples
+##' catUTF8("hello")
 
 catUTF8 <- function(string, file = "")
 {

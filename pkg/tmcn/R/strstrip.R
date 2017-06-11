@@ -7,9 +7,9 @@
 ##' @return Trimed vector.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @keywords string
-##' @examples \dontrun{
+##' @examples
 ##' strstrip(c("\taaaa ", " bbbb    "))
-##' }
+##' 
 ##'
 
 strstrip <- function(string, side = c("both", "left", "right")) {

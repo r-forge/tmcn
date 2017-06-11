@@ -17,6 +17,9 @@ Logical value.
 \description{
 Indicate whether the encoding of input string is GB2312.
 }
+\examples{
+isGB2312("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

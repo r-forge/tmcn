@@ -12,6 +12,9 @@ Character of encoding.
 \description{
 Get the current encoding of the locale.
 }
+\examples{
+getCharset()
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

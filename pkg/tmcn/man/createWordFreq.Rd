@@ -22,9 +22,8 @@ A data.frame.
 Create a word frequency data.frame.
 }
 \examples{
-\dontrun{
 createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
-}
+
 }
 \author{
 Jian Li <\email{rweibo@sina.com}>

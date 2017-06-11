@@ -17,6 +17,9 @@ Logical value.
 \description{
 Indicate whether the encoding of input string is UTF-8.
 }
+\examples{
+isUTF8("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

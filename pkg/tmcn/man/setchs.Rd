@@ -19,6 +19,10 @@ No results.
 \description{
 Set locale to Simplified Chinese/Traditional Chinese/UK.
 }
+\examples{
+setchs()
+setchs(rev = TRUE)
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

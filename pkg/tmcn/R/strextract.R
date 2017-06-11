@@ -14,12 +14,12 @@
 ##' @return A character vector with the matched or non-matched substrings.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @keywords string
-##' @examples \dontrun{
+##' @examples
 ##' txt1 <- c("\t(x1)a(aa2)a ", " bb(bb)")
 ##' strextract(txt1, "\\([^)]*\\)")
 ##' txt2 <- c("  Ben Franklin and Jefferson Davis", "\tMillard Fillmore")
 ##' strextract(txt2, "(?<first>[[:upper:]][[:lower:]]+)", perl = TRUE)
-##' }
+##' 
 ##'
 
 strextract <- function(string, pattern, invert = FALSE,

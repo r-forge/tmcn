@@ -2,15 +2,16 @@
 % Please edit documentation in R/segmentCN.R
 \name{segmentCN}
 \alias{segmentCN}
+\alias{insertWords}
 \title{Sengment a sentence.}
 \usage{
 segmentCN(strwords, package = c("jiebaR", "Rwordseg"), nature = FALSE,
-  nosymbol = TRUE, returnType = c("vector", "tm"), ...)
+  nosymbol = TRUE, returnType = c("vector", "tm"))
 }
 \arguments{
-\item{strwords}{A Chinese sentence in UTF-8.}
+\item{strwords}{A string vector of Chinese sentences in UTF-8.}
 
-\item{package}{Use which package, "Rwordseg" or "jiebaR"?}
+\item{package}{Use which package, "jiebaR" or "Rwordseg"?}
 
 \item{nature}{Whether to recognise the nature of the words.}
 
@@ -19,7 +20,7 @@ segmentCN(strwords, package = c("jiebaR", "Rwordseg"), nature = FALSE,
 \item{returnType}{Default is a string vector but we also can choose 'tm' 
 to output a single string separated by space so that it can be used by \code{\link[tm]{Corpus}} directly.}
 
-\item{...}{Other arguments of Rwordseg.}
+\item{inswords}{A string vector of words will be added into dictionary.}
 }
 \value{
 a vector of words (list if input is vecter) which have been segmented or the path of output file.
@@ -28,13 +29,21 @@ a vector of words (list if input is vecter) which have been segmented or the pat
 A function segment Chinese sentence into words.
 }
 \details{
-Either package "Rwordseg" (\url{http://jianl.org/cn/R/Rwordseg.html}) or "jiebaR" (\url{http://qinwenfeng.com/jiebaR}) is required.
-}
-\examples{
-\dontrun{
-segmentCN("hello world!")
-}
+The function \code{segmentCN} is originated from the '\code{Rwordseg}' package. 
+If '\code{Rwordseg}' was installed successfully (JRE and '\code{rJava}' package 
+are required), using 'Rwordseg::segmentCN' directly may be the easiest choice. 
+More detailed can be found in \url{http://jianl.org/cn/R/Rwordseg.html}.
+
+In this package the function \code{segmentCN} is a wrapper of '\code{jiebaR}', 
+which can be easily installed from CRAN. This function \code{segmentCN} only 
+provide some basic functionalities of '\code{jiebaR}'. More detailed can be 
+found in \url{http://qinwenfeng.com/jiebaR}.
+
+The function \code{insertWords} is used to add new words into dictionary temporarily.
+If you want to manage your own dictionary, please select either '\code{Rwordseg}' or 
+'\code{jiebaR}' package for segmentation.
 }
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }
+\keyword{NLP}

@@ -8,9 +8,9 @@
 ##' @param useStopDic Whether to use the default stop words.
 ##' @return A data.frame.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
-##' @examples \dontrun{
+##' @examples
 ##' createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE)
-##' }
+##' 
 
 createWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
 {
@@ -36,7 +36,7 @@ createWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic =
 	
 	string.table <- table(string.vec)
 	OUT <- data.frame(word = names(string.table), freq = as.vector(string.table), stringsAsFactors = FALSE)
-	OUT <- OUT[order(OUT$Freq, decreasing = TRUE), ]
+	OUT <- OUT[order(OUT$freq, decreasing = TRUE), ]
 	
 	return(OUT)
 }

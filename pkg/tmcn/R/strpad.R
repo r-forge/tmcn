@@ -9,9 +9,9 @@
 ##' @return A character vector after padding.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @keywords string
-##' @examples \dontrun{
+##' @examples
 ##' strpad(1:5, width = 4, pad = "0")
-##' }
+##' 
 ##'
 
 strpad <- function(string, width = 0, side = c("left", "right", "both"), pad = " ") {

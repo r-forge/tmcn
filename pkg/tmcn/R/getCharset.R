@@ -4,6 +4,8 @@
 ##' @title Get the current encoding of the locale.
 ##' @return Character of encoding.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples
+##' getCharset()
 
 getCharset <- function()
 {

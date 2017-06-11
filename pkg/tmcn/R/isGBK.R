@@ -6,6 +6,8 @@
 ##' @param combine Whether to combine all the strings.
 ##' @return Logical value.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples
+##' isGBK("hello")
 
 isGBK <- function(string, combine = FALSE)
 {

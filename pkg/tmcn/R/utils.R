@@ -16,4 +16,15 @@
 	unlist(strsplit(as.character(x), "[[:space:]]+"))
 }
 
+.createHashmapEnv <- function(key, value)
+{
+	key <- .verifyChar(key)
+	value <- .verifyChar(value)
+	if (length(key) != length(value)) stop("Length of 'key' and 'value' are not same!")
+	e <- new.env(hash = TRUE, size = length(key))
+	for (ikey in 1:length(key)) {
+		assign(x = key[ikey], value = value[ikey], envir = e)
+	}
+	return(e)
+}
 

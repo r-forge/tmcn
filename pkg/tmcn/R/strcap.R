@@ -7,9 +7,8 @@
 ##' @return A character vector with the first letter of each word capitalized.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @keywords string
-##' @examples \dontrun{
+##' @examples
 ##' strcap("the quick red fox jumps over the lazy brown dog")
-##' }
 ##'
 
 strcap <- function(string, strict = FALSE) {

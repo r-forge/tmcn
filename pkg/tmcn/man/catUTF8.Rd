@@ -17,6 +17,9 @@ No results.
 \description{
 Print the UTF-8 codes of a string.
 }
+\examples{
+catUTF8("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

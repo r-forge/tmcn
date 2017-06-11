@@ -6,9 +6,9 @@
 ##' @param utype UTF-8 string type, the default is R type, such as "<U+XXXX>".
 ##' @return A character vector.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
-##' @examples \dontrun{
+##' @examples
 ##' revUTF8("1<U+4E8C>3<U+56DB>5")
-##' }
+##' 
 
 revUTF8 <- function(string, utype = "R")
 {

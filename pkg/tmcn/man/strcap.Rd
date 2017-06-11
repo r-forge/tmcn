@@ -18,9 +18,7 @@ A character vector with the first letter of each word capitalized.
 To capitalize every first letter of a word.
 }
 \examples{
-\dontrun{
 strcap("the quick red fox jumps over the lazy brown dog")
-}
 
 }
 \author{

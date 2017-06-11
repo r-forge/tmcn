@@ -17,6 +17,9 @@ Logical value.
 \description{
 Indicate whether the encoding of input string is BIG5.
 }
+\examples{
+isBIG5("hello")
+}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }

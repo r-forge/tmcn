@@ -18,9 +18,8 @@ A character vector in pinyin format.
 Convert a chinese text to pinyin format.
 }
 \examples{
-\dontrun{
 toPinyin("the quick red fox jumps over the lazy brown dog")
-}
+
 
 }
 \author{

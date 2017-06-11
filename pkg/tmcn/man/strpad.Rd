@@ -22,9 +22,8 @@ A character vector after padding.
 Pad a string to a specified length with a padding character.
 }
 \examples{
-\dontrun{
 strpad(1:5, width = 4, pad = "0")
-}
+
 
 }
 \author{

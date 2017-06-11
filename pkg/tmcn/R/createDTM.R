@@ -13,18 +13,7 @@
 ##' @param removeStopwords Whether to remove the stop words.
 ##' @return An object of class \code{TermDocumentMatrix} or class \code{DocumentTermMatrix}.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
-##' @keywords string
-##' @examples \dontrun{
-##' library(tmcn)
-##' data(INTRO)
-##' vec1 <- segmentCN(INTRO, returnType = "tm")
-##' 
-##' dtm1 <- createDTM(vec1)
-##' inspect(dtm1)
-##' 
-##' tdm1 <- createTDM(vec1)
-##' inspect(tdm1)
-##' }
+##' @keywords NLP
 ##'
 
 createDTM <- function(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE) {

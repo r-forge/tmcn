@@ -26,21 +26,7 @@ Create a Chinese term-document matrix or a document-term matrix.
 \details{
 Package "tm" is required.
 }
-\examples{
-\dontrun{
-library(tmcn)
-data(INTRO)
-vec1 <- segmentCN(INTRO, returnType = "tm")
-
-dtm1 <- createDTM(vec1)
-inspect(dtm1)
-
-tdm1 <- createTDM(vec1)
-inspect(tdm1)
-}
-
-}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }
-\keyword{string}
+\keyword{NLP}

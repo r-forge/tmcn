@@ -10,6 +10,9 @@
 ##' @param rev Whethet to set the locale back.
 ##' @return No results.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
+##' @examples
+##' setchs()
+##' setchs(rev = TRUE)
 
 setchs <- function(rev = FALSE)
 {

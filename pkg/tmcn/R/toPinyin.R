@@ -7,9 +7,9 @@
 ##' @return A character vector in pinyin format.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @keywords string
-##' @examples \dontrun{
+##' @examples
 ##' toPinyin("the quick red fox jumps over the lazy brown dog")
-##' }
+##' 
 ##'
 
 toPinyin <- function(string, capitalize = FALSE) {
@@ -19,7 +19,7 @@ toPinyin <- function(string, capitalize = FALSE) {
 		curEnv <- environment()
 		utils::data(GBK, envir = curEnv)
 		GBK <- get("GBK", envir = curEnv)
-		assign(".pinyinEnv", createHashmapEnv(GBK$GBK, GBK$py0), envir = .tmcnEnv)
+		assign(".pinyinEnv", .createHashmapEnv(GBK$GBK, GBK$py0), envir = .tmcnEnv)
 	}
 	OUT <- strsplit(string, split = "")
 	OUT <- lapply(OUT, FUN = function(X) 
