@@ -4,16 +4,16 @@
 \alias{createWordFreq}
 \title{Create a word frequency data.frame.}
 \usage{
-createWordFreq(string, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
+createWordFreq(obj, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
 }
 \arguments{
-\item{string}{A character vector to calculate words frequency.}
-
 \item{onlyCN}{Keep only chinese words.}
 
 \item{stopwords}{A character vector of stop words.}
 
 \item{useStopDic}{Whether to use the default stop words.}
+
+\item{string}{A character vector to calculate words frequency.}
 }
 \value{
 A data.frame.

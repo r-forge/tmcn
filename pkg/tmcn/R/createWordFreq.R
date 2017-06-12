@@ -12,9 +12,28 @@
 ##' createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE, useStopDic = FALSE)
 ##' 
 
-createWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
+createWordFreq <- function(obj, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
 {
-	string <- .verifyChar(string)
+	if (inherits(obj, "DocumentTermMatrix")) {
+		t0 <- apply(obj, 2, sum)
+	} else if (inherits(obj, "TermDocumentMatrix")) {
+		t0 <- apply(obj, 1, sum)
+	} else {
+		obj <- .verifyChar(obj)
+		if (length(obj) == 0) {
+			return(data.frame(word = character(), freq = integer(), stringsAsFactors = FALSE))
+		}
+		t0 <- table(obj)
+	}
+	
+	OUT <- data.frame(word = names(t0), freq = as.vector(t0), stringsAsFactors = FALSE)
+	OUT <- OUT[order(OUT$freq, decreasing = TRUE), ]
+		
+	if (onlyCN) {
+		OUT <- OUT[!grepl("[^\u4e00-\u9fa5]", OUT$word), ]
+	} else {
+		OUT <- OUT[!grepl("[^\u4e00-\u9fa5A-Za-z]", OUT$word), ]
+	}
 	
 	if (identical(useStopDic, TRUE)) {
 		stopwords <- .verifyChar(stopwords)
@@ -22,25 +41,9 @@ createWordFreq <- function(string, onlyCN = TRUE, stopwords = NULL, useStopDic =
 		utils::data(STOPWORDS, envir = .tmcnEnv)
 		STOPWORDS <- get("STOPWORDS", envir = .tmcnEnv)
 		stopwords <- union(stopwords, STOPWORDS$word)
-	} else {
-		stopwords <- character()
-	}
-	
-	if (onlyCN) {
-		string.vec <- gsub("[^\u4e00-\u9fa5]", "", string)
-	} else {
-		#string.vec <- gsub("^[^\u4e00-\u9fa5A-z]*$", "", string)
-		string.vec <- gsub("[^\u4e00-\u9fa5A-Za-z]", "", string)
-	}
-	string.vec <- string.vec[nzchar(string.vec)]
-	string.vec <- string.vec[!string.vec %in% stopwords]
-	
-	if (length(string.vec) == 0) return(data.frame(word = character(), freq = integer(), stringsAsFactors = FALSE))
-	
-	string.table <- table(string.vec)
-	OUT <- data.frame(word = names(string.table), freq = as.vector(string.table), stringsAsFactors = FALSE)
-	OUT <- OUT[order(OUT$freq, decreasing = TRUE), ]
-	
+		OUT <- OUT[!OUT$word %in% stopwords, ]
+	} 
+
 	return(OUT)
 }
 
