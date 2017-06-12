@@ -1,6 +1,6 @@
 Package: tmcn
 License: LGPL
-Title: A Text mining toolkit for Chinese
+Title: A Text Mining Toolkit for Chinese
 Type: Package
 LazyLoad: yes
 Author: Jian Li
@@ -9,8 +9,8 @@ Description: A Text mining toolkit for Chinese, which includes facilities for
     Chinese string processing, Chinese NLP supporting, encoding detecting and 
     converting. Moreover, it provides some functions to support 'tm' package 
     in Chinese.
-Version: 0.2-7
-Date: 2017-06-11
+Version: 0.2-8
+Date: 2017-06-12
 Depends: R (>= 3.0.0), utils
 Suggests: tm, jiebaR
 RoxygenNote: 6.0.1
