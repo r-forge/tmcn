@@ -10,7 +10,7 @@ Description: A Text mining toolkit for Chinese, which includes facilities for
     converting. Moreover, it provides some functions to support 'tm' package 
     in Chinese.
 Version: 0.2-9
-Date: 2017-06-12
+Date: 2017-06-13
 Depends: R (>= 3.0.0), utils
 Suggests: tm, jiebaR
 RoxygenNote: 6.0.1

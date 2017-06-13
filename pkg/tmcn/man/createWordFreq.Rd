@@ -7,13 +7,13 @@
 createWordFreq(obj, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
 }
 \arguments{
+\item{obj}{A character vector or \code{DocumentTermMatrix} to calculate words frequency.}
+
 \item{onlyCN}{Keep only chinese words.}
 
 \item{stopwords}{A character vector of stop words.}
 
 \item{useStopDic}{Whether to use the default stop words.}
-
-\item{string}{A character vector to calculate words frequency.}
 }
 \value{
 A data.frame.
