@@ -18,7 +18,7 @@
 ##' @aliases insertWords
 ##' @usage
 ##' segmentCN(strwords, package = c("jiebaR", "Rwordseg"), nature = FALSE, 
-##'   nosymbol = TRUE, returnType = c("vector", "tm"))
+##'   nosymbol = TRUE, useStopDic = FALSE, returnType = c("vector", "tm"))
 ##' insertWords(inswords, package = c("jiebaR", "Rwordseg")) 
 ##' @param strwords A string vector of Chinese sentences in UTF-8.
 ##' @param package Use which package, "jiebaR" or "Rwordseg"?

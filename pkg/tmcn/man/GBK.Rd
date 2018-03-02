@@ -23,7 +23,4 @@ GBK character set including some useful information.
 \author{
   Jian Li <\email{rweibo@sina.com}>
 }
-\references{
-  \url{http://www.sogou.com/labs/dl/ca.html}
-}
 \keyword{datasets}

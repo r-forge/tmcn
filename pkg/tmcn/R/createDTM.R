@@ -5,8 +5,10 @@
 ##' @title Create a Chinese term-document matrix or a document-term matrix.
 ##' @aliases createTDM
 ##' @usage
-##' createDTM(string, language = c("zh", "en"), tokenize = NULL, removePunctuation = TRUE, removeNumbers = TRUE, removeStopwords = TRUE)
-##' createTDM(string, language = c("zh", "en"), tokenize = NULL, removePunctuation = TRUE, removeNumbers = TRUE, removeStopwords = TRUE)
+##' createDTM(string, language = c("zh", "en"), tokenize = NULL, removePunctuation = TRUE, 
+##'   removeNumbers = TRUE, removeStopwords = TRUE)
+##' createTDM(string, language = c("zh", "en"), tokenize = NULL, removePunctuation = TRUE, 
+##'   removeNumbers = TRUE, removeStopwords = TRUE)
 ##' @param string A character vector.
 ##' @param language The language type, 'zh' means Chinese.
 ##' @param tokenize A tokenizers function. 
@@ -27,7 +29,7 @@ createDTM <- function(string, language = c("zh", "en"), tokenize = NULL,
 	language <- match.arg(language)
 	
 	#corpus_m <- tm::Corpus(tm::VectorSource(string), encoding = "UTF-8")
-	corpus_m <- VCorpus(VectorSource(string), readerControl = list(language = language))
+	corpus_m <- tm::VCorpus(tm::VectorSource(string), readerControl = list(language = language))
 	
 	if (removeStopwords) {
 		corpus_m <- tm::tm_map(corpus_m, tm::removeWords, stopwordsCN())
@@ -49,7 +51,7 @@ createTDM <- function(string, language = c("zh", "en"), tokenize = NULL,
 		stop("Package \"tm\" is required!")
 	}
 	
-	corpus_m <- VCorpus(VectorSource(string), readerControl = list(language = language))
+	corpus_m <- tm::VCorpus(tm::VectorSource(string), readerControl = list(language = language))
 	if (removeStopwords) {
 		corpus_m <- tm::tm_map(corpus_m, tm::removeWords, c(stopwordsCN()))
 	}
