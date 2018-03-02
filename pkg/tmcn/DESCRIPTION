@@ -9,8 +9,8 @@ Description: A Text mining toolkit for Chinese, which includes facilities for
     Chinese string processing, Chinese NLP supporting, encoding detecting and 
     converting. Moreover, it provides some functions to support 'tm' package 
     in Chinese.
-Version: 0.2-11
-Date: 2018-03-02
+Version: 0.2-12
+Date: 2018-03-03
 Depends: R (>= 3.0.0), utils
 Suggests: tm, jiebaR
 RoxygenNote: 6.0.1

@@ -17,10 +17,6 @@ A character vector.
 \description{
 Revert UTF-8 string to Chinese character.
 }
-\examples{
-revUTF8("1<U+4E8C>3<U+56DB>5")
-
-}
 \author{
 Jian Li <\email{rweibo@sina.com}>
 }
