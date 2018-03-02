@@ -13,9 +13,7 @@ stopwordsCN <- function(stopwords = NULL, useStopDic = TRUE)
 {
 	stopwords <- .verifyChar(stopwords)
 	if (identical(useStopDic, TRUE)) {
-		.tmcnEnv <- .verifyEnv()
-		utils::data(STOPWORDS, envir = .tmcnEnv)
-		STOPWORDS <- get("STOPWORDS", envir = .tmcnEnv)
+		STOPWORDS <- .getStopWords()
 		stopwords <- union(stopwords, STOPWORDS$word)
 	}
 	return(stopwords)

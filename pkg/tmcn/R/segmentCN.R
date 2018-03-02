@@ -24,6 +24,7 @@
 ##' @param package Use which package, "jiebaR" or "Rwordseg"?
 ##' @param nature Whether to recognise the nature of the words.
 ##' @param nosymbol Whether to keep symbols in the sentence.
+##' @param useStopDic Whether to use the default stop words.
 ##' @param returnType Default is a string vector but we also can choose 'tm' 
 ##' to output a single string separated by space so that it can be used by \code{\link[tm]{Corpus}} directly. 
 ##' @param inswords A string vector of words will be added into dictionary.
@@ -33,7 +34,8 @@
 ##' 
 
 segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"), 
-		nature = FALSE, nosymbol = TRUE, returnType = c("vector", "tm")) 
+		nature = FALSE, nosymbol = TRUE, useStopDic = FALSE, 
+		returnType = c("vector", "tm")) 
 {
 	if (!is.character(strwords)) stop("Please input character!")
 	package <- match.arg(package)
@@ -66,6 +68,10 @@ segmentCN <- function(strwords, package = c("jiebaR", "Rwordseg"),
 		jiebaAnalyzer$symbol <- !nosymbol
 		OUT <- jiebaR::segment(strwords, jiebaAnalyzer)
 		
+		if (useStopDic) {
+			STOPWORDS <- .getStopWords()
+			OUT <- lapply(OUT, setdiff, STOPWORDS$word)
+		}
 		if (nature) OUT <- lapply(OUT, jiebaR::vector_tag, jiebaAnalyzer)
 		if (returnType == "tm") OUT <- sapply(OUT, paste, collapse = " ")
 		if (length(OUT) == 1) OUT <- OUT[[1]]

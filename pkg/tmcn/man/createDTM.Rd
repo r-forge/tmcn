@@ -5,15 +5,19 @@
 \alias{createTDM}
 \title{Create a Chinese term-document matrix or a document-term matrix.}
 \usage{
-createDTM(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE)
-createTDM(string, tokenize = NULL, removePunctuation = TRUE, removeStopwords = TRUE)
+createDTM(string, language = c("zh", "en"), tokenize = NULL, removePunctuation = TRUE, removeNumbers = TRUE, removeStopwords = TRUE)
+createTDM(string, language = c("zh", "en"), tokenize = NULL, removePunctuation = TRUE, removeNumbers = TRUE, removeStopwords = TRUE)
 }
 \arguments{
 \item{string}{A character vector.}
 
+\item{language}{The language type, 'zh' means Chinese.}
+
 \item{tokenize}{A tokenizers function.}
 
 \item{removePunctuation}{Whether to remove the punctuations.}
+
+\item{removeNumbers}{Whether to remove the numbers.}
 
 \item{removeStopwords}{Whether to remove the stop words.}
 }

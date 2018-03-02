@@ -37,9 +37,7 @@ createWordFreq <- function(obj, onlyCN = TRUE, stopwords = NULL, useStopDic = TR
 	
 	if (identical(useStopDic, TRUE)) {
 		stopwords <- .verifyChar(stopwords)
-		.tmcnEnv <- get(".tmcnEnv", envir = .GlobalEnv)
-		utils::data(STOPWORDS, envir = .tmcnEnv)
-		STOPWORDS <- get("STOPWORDS", envir = .tmcnEnv)
+		STOPWORDS <- .getStopWords()
 		stopwords <- union(stopwords, STOPWORDS$word)
 		OUT <- OUT[!OUT$word %in% stopwords, ]
 	} 
