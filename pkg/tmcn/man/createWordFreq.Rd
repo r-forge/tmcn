@@ -10,7 +10,9 @@ createWordFreq(obj, onlyCN = TRUE, nosymbol = TRUE, stopwords = NULL,
 \arguments{
 \item{obj}{A character vector or \code{DocumentTermMatrix} to calculate words frequency.}
 
-\item{onlyCN}{Keep only chinese words.}
+\item{onlyCN}{Whether to keep only Chinese words.}
+
+\item{nosymbol}{Whether to keep symbols.}
 
 \item{stopwords}{A character vector of stop words.}
 

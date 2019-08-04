@@ -3,7 +3,8 @@
 ##' 
 ##' @title Create a word frequency data.frame.
 ##' @param obj A character vector or \code{DocumentTermMatrix} to calculate words frequency.
-##' @param onlyCN Keep only chinese words. 
+##' @param onlyCN Whether to keep only Chinese words. 
+##' @param nosymbol Whether to keep symbols. 
 ##' @param stopwords A character vector of stop words.
 ##' @param useStopDic Whether to use the default stop words.
 ##' @return A data.frame.
