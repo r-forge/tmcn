@@ -4,7 +4,8 @@
 \alias{strpad}
 \title{Pad a string to a specified length with a padding character.}
 \usage{
-strpad(string, width = 0, side = c("left", "right", "both"), pad = " ")
+strpad(string, width = 0, side = c("left", "right", "both"),
+  pad = " ")
 }
 \arguments{
 \item{string}{A character vector.}

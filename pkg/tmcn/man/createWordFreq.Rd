@@ -4,7 +4,8 @@
 \alias{createWordFreq}
 \title{Create a word frequency data.frame.}
 \usage{
-createWordFreq(obj, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
+createWordFreq(obj, onlyCN = TRUE, nosymbol = TRUE, stopwords = NULL,
+  useStopDic = FALSE)
 }
 \arguments{
 \item{obj}{A character vector or \code{DocumentTermMatrix} to calculate words frequency.}
@@ -22,7 +23,7 @@ A data.frame.
 Create a word frequency data.frame.
 }
 \examples{
-createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE, useStopDic = FALSE)
+createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE, nosymbol = TRUE, useStopDic = FALSE)
 
 }
 \author{

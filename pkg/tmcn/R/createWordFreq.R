@@ -9,10 +9,10 @@
 ##' @return A data.frame.
 ##' @author Jian Li <\email{rweibo@@sina.com}>
 ##' @examples
-##' createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE, useStopDic = FALSE)
+##' createWordFreq(c("a", "a", "b", "c"), onlyCN = FALSE, nosymbol = TRUE, useStopDic = FALSE)
 ##' 
 
-createWordFreq <- function(obj, onlyCN = TRUE, stopwords = NULL, useStopDic = TRUE)
+createWordFreq <- function(obj, onlyCN = TRUE, nosymbol = TRUE, stopwords = NULL, useStopDic = FALSE)
 {
 	if (inherits(obj, "DocumentTermMatrix")) {
 		t0 <- apply(obj, 2, sum)
@@ -29,11 +29,11 @@ createWordFreq <- function(obj, onlyCN = TRUE, stopwords = NULL, useStopDic = TR
 	OUT <- data.frame(word = names(t0), freq = as.vector(t0), stringsAsFactors = FALSE)
 	OUT <- OUT[order(OUT$freq, decreasing = TRUE), ]
 		
-	if (onlyCN) {
+	if (identical(onlyCN, TRUE)) {
 		OUT <- OUT[!grepl("[^\u4e00-\u9fa5]", OUT$word), ]
-	} else {
+	} else if (identical(nosymbol, TRUE)) {
 		OUT <- OUT[!grepl("[^\u4e00-\u9fa5A-Za-z]", OUT$word), ]
-	}
+	} 
 	
 	if (identical(useStopDic, TRUE)) {
 		stopwords <- .verifyChar(stopwords)
